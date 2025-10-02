@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, MapPin, Clock, Users, Filter, Search, ExternalLink, ChevronRight } from 'lucide-react';
+import { Calendar, MapPin, Clock, Users, Filter, Search, ExternalLink, ChevronRight, Zap } from 'lucide-react';
 
 const Events = () => {
   const [activeTab, setActiveTab] = useState('upcoming');
@@ -150,77 +150,102 @@ const Events = () => {
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     return diffDays <= 7 && diffDays >= 0;
   };
+  
+  // Helper to determine badge color based on type
+  const getTypeBadgeClasses = (type) => {
+    switch(type) {
+      case 'International': return 'bg-red-500 text-white shadow-md';
+      case 'Technical': return 'bg-blue-800 text-white shadow-md';
+      case 'Educational': return 'bg-green-600 text-white shadow-md';
+      case 'Student': return 'bg-purple-600 text-white shadow-md';
+      case 'Networking': return 'bg-amber-500 text-white shadow-md';
+      default: return 'bg-gray-700 text-white shadow-md';
+    }
+  };
+
 
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-800 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-50 min-h-screen">
+      {/* Hero Section - Elevated Banner with Diagonal Cut */}
+      <section className="relative py-32 bg-gradient-to-r from-blue-900 to-blue-700 overflow-hidden">
+        <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+                backgroundImage: `url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
+                clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0% 100%)', // Diagonal bottom cut
+                opacity: 0.1
+            }}
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-6">Events & Activities</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Stay connected with our academic events, workshops, conferences, and departmental activities
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">Events & Activities</h1>
+            <p className="text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+              Stay connected with our high-impact academic events, workshops, and departmental activities.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Search and Filter */}
-      <section className="py-8 bg-gray-50">
+      {/* Sticky Search/Filter and Tab Navigation */}
+      <div className="sticky top-0 z-20 bg-white shadow-xl py-6 border-b border-gray-200 -mt-16 pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            {/* Search */}
+            <div className="flex-1 relative w-full">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
               <input
                 type="text"
                 placeholder="Search events by title, description, or category..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-12 pr-6 py-3 border border-gray-300 rounded-full bg-gray-50 focus:ring-4 focus:ring-amber-200 focus:border-amber-500 transition-all duration-300 shadow-inner"
               />
             </div>
-            <div className="md:w-48">
+            
+            {/* Filter */}
+            <div className="md:w-64 relative w-full">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full py-3 px-6 border border-gray-300 rounded-full bg-white focus:ring-4 focus:ring-blue-200 focus:border-blue-500 transition-all duration-300 appearance-none shadow-md"
               >
                 {categories.map(category => (
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                <Filter className="h-5 w-5"/>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Tab Navigation */}
-      <section className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex space-x-8">
+        {/* Tab Navigation */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+          <div className="flex space-x-8 border-b border-gray-200">
             <button
               onClick={() => setActiveTab('upcoming')}
-              className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200 ${
+              className={`py-2 px-1 border-b-2 font-semibold text-lg transition-colors duration-200 ${
                 activeTab === 'upcoming'
-                  ? 'border-blue-800 text-blue-800'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  ? 'border-blue-800 text-blue-800 scale-105'
+                  : 'border-transparent text-gray-500 hover:text-blue-600 hover:border-blue-300'
               }`}
             >
               Upcoming Events
             </button>
             <button
               onClick={() => setActiveTab('past')}
-              className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200 ${
+              className={`py-2 px-1 border-b-2 font-semibold text-lg transition-colors duration-200 ${
                 activeTab === 'past'
-                  ? 'border-blue-800 text-blue-800'
-                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  ? 'border-blue-800 text-blue-800 scale-105'
+                  : 'border-transparent text-gray-500 hover:text-blue-600 hover:border-blue-300'
               }`}
             >
               Past Events
             </button>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Events Content */}
       <section className="py-20 bg-gray-50">
@@ -233,47 +258,41 @@ const Events = () => {
                   <p className="text-gray-500 text-lg">No upcoming events found matching your criteria.</p>
                 </div>
               ) : (
-                <div className="grid lg:grid-cols-2 gap-8">
+                <div className="grid lg:grid-cols-2 gap-10">
                   {filterEvents(upcomingEvents).map((event, index) => (
                     <div
                       key={index}
-                      className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
+                      className="bg-white rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden border border-gray-100 group transform hover:-translate-y-1"
                     >
                       <div className="relative">
                         <img
                           src={event.image}
                           alt={event.title}
-                          className="w-full h-48 object-cover"
+                          className="w-full h-56 object-cover transition-transform duration-500 transform group-hover:scale-105"
                         />
                         <div className="absolute top-4 left-4">
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            event.type === 'International' ? 'bg-red-100 text-red-800' :
-                            event.type === 'Technical' ? 'bg-blue-100 text-blue-800' :
-                            event.type === 'Educational' ? 'bg-green-100 text-green-800' :
-                            event.type === 'Student' ? 'bg-purple-100 text-purple-800' :
-                            'bg-gray-100 text-gray-800'
-                          }`}>
+                          <span className={`px-4 py-1 rounded-full text-sm font-semibold ${getTypeBadgeClasses(event.type)}`}>
                             {event.type}
                           </span>
                         </div>
                         {isEventSoon(event.date) && (
                           <div className="absolute top-4 right-4">
-                            <span className="px-3 py-1 bg-amber-500 text-white rounded-full text-sm font-medium">
-                              Coming Soon
+                            <span className="px-4 py-1 bg-amber-500 text-white rounded-full text-sm font-semibold shadow-lg">
+                              Coming Soon!
                             </span>
                           </div>
                         )}
                       </div>
 
-                      <div className="p-6">
-                        <div className="flex items-start justify-between mb-3">
-                          <h3 className="text-xl font-bold text-gray-900 flex-1">{event.title}</h3>
-                          <span className="px-2 py-1 bg-blue-100 text-blue-800 text-sm rounded ml-2">
+                      <div className="p-8">
+                        <div className="flex items-start justify-between mb-4">
+                          <h3 className="text-2xl font-extrabold text-gray-900 flex-1 hover:text-blue-800 transition-colors">{event.title}</h3>
+                          <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full ml-3 whitespace-nowrap">
                             {event.category}
                           </span>
                         </div>
 
-                        <div className="space-y-2 mb-4 text-sm text-gray-600">
+                        <div className="grid grid-cols-2 gap-y-2 mb-5 text-sm text-gray-700 font-medium">
                           <div className="flex items-center">
                             <Calendar className="h-4 w-4 mr-2 text-blue-600" />
                             <span>{formatDate(event.date, event.endDate)}</span>
@@ -282,26 +301,26 @@ const Events = () => {
                             <Clock className="h-4 w-4 mr-2 text-blue-600" />
                             <span>{event.time}</span>
                           </div>
-                          <div className="flex items-center">
+                          <div className="flex items-center col-span-2">
                             <MapPin className="h-4 w-4 mr-2 text-blue-600" />
                             <span>{event.venue}</span>
                           </div>
-                          <div className="flex items-center">
+                          <div className="flex items-center col-span-2">
                             <Users className="h-4 w-4 mr-2 text-blue-600" />
-                            <span>{event.organizer}</span>
+                            <span>Organizer: {event.organizer}</span>
                           </div>
                         </div>
 
-                        <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3">
+                        <p className="text-gray-700 mb-6 leading-relaxed line-clamp-3 border-l-4 border-amber-500/50 pl-3">
                           {event.description}
                         </p>
 
                         {event.speakers && (
-                          <div className="mb-4">
-                            <h4 className="font-medium text-gray-900 mb-2">Speakers</h4>
+                          <div className="mb-6">
+                            <h4 className="font-bold text-gray-900 mb-2 text-sm">Distinguished Speakers</h4>
                             <div className="flex flex-wrap gap-2">
                               {event.speakers.map((speaker, idx) => (
-                                <span key={idx} className="px-2 py-1 bg-amber-100 text-amber-800 text-xs rounded">
+                                <span key={idx} className="px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-medium shadow-sm">
                                   {speaker}
                                 </span>
                               ))}
@@ -309,11 +328,11 @@ const Events = () => {
                           </div>
                         )}
 
-                        <div className="border-t border-gray-100 pt-4">
-                          <div className="flex items-center justify-between text-sm">
+                        <div className="border-t border-gray-100 pt-5">
+                          <div className="flex items-center justify-between text-sm font-semibold">
                             <div>
-                              <span className="font-medium text-gray-900">Registration:</span>
-                              <span className="ml-1 text-gray-600">{event.registrationFee}</span>
+                              <span className="text-gray-900">Fee:</span>
+                              <span className="ml-1 text-green-600">{event.registrationFee}</span>
                             </div>
                             {event.deadline !== 'Walk-in' && event.deadline !== 'Open to all' && (
                               <div className="text-red-600">
@@ -321,10 +340,10 @@ const Events = () => {
                               </div>
                             )}
                           </div>
-                          <div className="mt-3">
-                            <button className="w-full bg-blue-800 hover:bg-blue-900 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
-                              <span>Register Now</span>
-                              <ChevronRight className="h-4 w-4 ml-1" />
+                          <div className="mt-4">
+                            <button className="w-full bg-blue-800 hover:bg-blue-900 text-white py-3 px-4 rounded-full font-bold transition-colors duration-200 flex items-center justify-center transform hover:scale-[1.01] shadow-xl">
+                              <span>Secure Your Spot</span>
+                              <ChevronRight className="h-5 w-5 ml-2" />
                             </button>
                           </div>
                         </div>
@@ -344,38 +363,38 @@ const Events = () => {
                   <p className="text-gray-500 text-lg">No past events found matching your criteria.</p>
                 </div>
               ) : (
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {filterEvents(pastEvents).map((event, index) => (
                     <div
                       key={index}
-                      className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100"
+                      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200 group transform hover:-translate-y-1"
                     >
                       <img
                         src={event.image}
                         alt={event.title}
-                        className="w-full h-40 object-cover"
+                        className="w-full h-44 object-cover transition-transform duration-500 transform group-hover:scale-105"
                       />
-                      <div className="p-5">
+                      <div className="p-6">
                         <div className="flex items-start justify-between mb-3">
-                          <h3 className="text-lg font-bold text-gray-900 flex-1">{event.title}</h3>
-                          <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded ml-2">
+                          <h3 className="text-xl font-bold text-gray-900 flex-1 line-clamp-2">{event.title}</h3>
+                          <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-semibold rounded-full ml-3 whitespace-nowrap">
                             {event.category}
                           </span>
                         </div>
 
-                        <div className="space-y-1 mb-3 text-sm text-gray-600">
+                        <div className="space-y-2 mb-4 text-sm text-gray-700">
                           <div className="flex items-center">
-                            <Calendar className="h-4 w-4 mr-2 text-gray-500" />
-                            <span>{formatDate(event.date, event.endDate)}</span>
+                            <Calendar className="h-4 w-4 mr-2 text-blue-600" />
+                            <span className='font-medium'>{formatDate(event.date, event.endDate)}</span>
                           </div>
                           <div className="flex items-center">
-                            <MapPin className="h-4 w-4 mr-2 text-gray-500" />
-                            <span>{event.venue}</span>
+                            <MapPin className="h-4 w-4 mr-2 text-blue-600" />
+                            <span className='font-medium'>{event.venue}</span>
                           </div>
                           {event.attendees && (
                             <div className="flex items-center">
-                              <Users className="h-4 w-4 mr-2 text-gray-500" />
-                              <span>{event.attendees} Attendees</span>
+                              <Users className="h-4 w-4 mr-2 text-blue-600" />
+                              <span className='font-medium'>{event.attendees} Attendees</span>
                             </div>
                           )}
                         </div>
@@ -384,9 +403,9 @@ const Events = () => {
                           {event.description}
                         </p>
 
-                        <div className="mt-4 pt-3 border-t border-gray-100">
-                          <button className="w-full text-blue-800 hover:text-blue-900 font-medium text-sm flex items-center justify-center transition-colors">
-                            <span>View Details</span>
+                        <div className="mt-4 pt-4 border-t border-gray-100">
+                          <button className="w-full text-blue-800 hover:text-amber-600 font-semibold text-sm flex items-center justify-center transition-colors">
+                            <span>View Post-Event Report</span>
                             <ExternalLink className="h-4 w-4 ml-1" />
                           </button>
                         </div>
@@ -400,23 +419,24 @@ const Events = () => {
         </div>
       </section>
 
-      {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-r from-blue-800 to-blue-600">
+      {/* Newsletter Signup - High Contrast CTA */}
+      <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Stay Updated</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Subscribe to our newsletter to receive notifications about upcoming events, 
-              workshops, and important announcements from the Civil Engineering Department.
+            <h2 className="text-4xl font-extrabold text-white mb-6">Never Miss An Event</h2>
+            <p className="text-xl text-blue-200 mb-8 max-w-4xl mx-auto">
+              Subscribe to our newsletter for instant notifications about upcoming conferences, 
+              workshops, and important announcements.
             </p>
             <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-4">
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg border border-transparent focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                className="flex-1 px-5 py-3 rounded-full border border-transparent focus:ring-4 focus:ring-amber-200 focus:border-amber-500 transition-all duration-300 shadow-inner"
               />
-              <button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
-                Subscribe
+              <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-bold transition-colors duration-200 transform hover:scale-[1.05] shadow-xl flex items-center justify-center">
+                <Zap className="h-5 w-5 mr-2"/>
+                Subscribe Now
               </button>
             </div>
           </div>

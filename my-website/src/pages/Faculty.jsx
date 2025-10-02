@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Award, BookOpen, Users, Search } from 'lucide-react';
+import { Mail, Phone, MapPin, Award, BookOpen, Users, Search, Target, Briefcase } from 'lucide-react';
 
 const Faculty = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -123,41 +123,49 @@ const Faculty = () => {
   });
 
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-800 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-50">
+      {/* Hero Section - Diagonal Cut */}
+      <section className="relative py-32 bg-gradient-to-r from-blue-900 to-blue-700 overflow-hidden">
+        <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+                backgroundImage: `url('https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
+                clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0% 100%)', // Diagonal bottom cut
+                opacity: 0.1
+            }}
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-6">Our Faculty</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Meet our distinguished faculty members who are leaders in their respective fields
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">Our Distinguished Faculty</h1>
+            <p className="text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+              Meet our experts who are leaders, researchers, and mentors shaping the field of Civil Engineering.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Search and Filter */}
-      <section className="py-8 bg-gray-50">
+      {/* Search and Filter - Elegant Sticky Bar */}
+      <section className="sticky top-0 z-20 bg-white shadow-lg py-6 border-b border-gray-200 -mt-16 pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col md:flex-row gap-6">
             {/* Search */}
             <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
               <input
                 type="text"
                 placeholder="Search faculty by name, specialization, or research area..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-12 pr-6 py-3 border border-gray-300 rounded-full bg-gray-50 focus:ring-4 focus:ring-amber-200 focus:border-amber-500 transition-all duration-300 shadow-inner"
               />
             </div>
 
             {/* Filter */}
-            <div className="md:w-64">
+            <div className="md:w-64 relative">
               <select
                 value={selectedSpecialization}
                 onChange={(e) => setSelectedSpecialization(e.target.value)}
-                className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full py-3 px-6 border border-gray-300 rounded-full bg-white focus:ring-4 focus:ring-blue-200 focus:border-blue-500 transition-all duration-300 appearance-none shadow-md"
               >
                 {specializations.map(spec => (
                   <option key={spec} value={spec}>{spec}</option>
@@ -168,8 +176,8 @@ const Faculty = () => {
         </div>
       </section>
 
-      {/* Faculty Grid */}
-      <section className="py-20">
+      {/* Faculty Grid - Interactive Cards */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filteredFaculty.length === 0 ? (
             <div className="text-center py-12">
@@ -180,40 +188,42 @@ const Faculty = () => {
               {filteredFaculty.map((member, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group"
+                  className="bg-white rounded-xl shadow-2xl transition-all duration-300 overflow-hidden border-t-8 border-blue-800/0 hover:border-blue-800 transform hover:-translate-y-1 group"
                 >
-                  <div className="p-6">
+                  <div className="p-8">
                     {/* Photo and Basic Info */}
-                    <div className="text-center mb-6">
+                    <div className="flex items-center mb-6 border-b border-gray-100 pb-4">
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-blue-100 group-hover:border-amber-200 transition-colors duration-300"
+                        className="w-20 h-20 rounded-full object-cover border-4 border-amber-200 flex-shrink-0 mr-4 group-hover:border-amber-500 transition-colors duration-300 shadow-md"
                       />
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                      <p className="text-blue-800 font-medium mb-2">{member.designation}</p>
-                      <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-sm rounded-full">
-                        {member.specialization}
-                      </span>
+                      <div>
+                        <h3 className="text-xl font-extrabold text-gray-900 mb-1">{member.name}</h3>
+                        <p className="text-blue-800 font-semibold mb-2 text-sm">{member.designation}</p>
+                        <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-xs rounded-full font-semibold shadow-sm">
+                          {member.specialization}
+                        </span>
+                      </div>
                     </div>
 
                     {/* Education */}
                     <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
+                      <h4 className="font-bold text-gray-900 mb-2 flex items-center text-sm">
                         <BookOpen className="h-4 w-4 mr-2 text-blue-600" />
                         Education
                       </h4>
-                      <p className="text-sm text-gray-600 leading-relaxed">{member.education}</p>
+                      <p className="text-sm text-gray-700 leading-relaxed italic">{member.education}</p>
                     </div>
 
                     {/* Research Areas */}
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">Research Areas</h4>
-                      <div className="flex flex-wrap gap-1">
+                    <div className="mb-6">
+                      <h4 className="font-bold text-gray-900 mb-2 text-sm">Research Focus</h4>
+                      <div className="flex flex-wrap gap-2">
                         {member.research.map((area, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded"
+                            className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full font-medium"
                           >
                             {area}
                           </span>
@@ -222,35 +232,35 @@ const Faculty = () => {
                     </div>
 
                     {/* Stats */}
-                    <div className="flex justify-between text-center mb-4 py-3 bg-gray-50 rounded-lg">
+                    <div className="grid grid-cols-3 gap-4 text-center mb-6 py-4 bg-gray-100 rounded-xl border border-gray-200">
                       <div>
-                        <div className="text-lg font-bold text-blue-800">{member.publications}</div>
+                        <div className="text-xl font-extrabold text-blue-800">{member.publications}</div>
                         <div className="text-xs text-gray-600">Publications</div>
                       </div>
                       <div>
-                        <div className="text-lg font-bold text-amber-600">{member.projects}</div>
+                        <div className="text-xl font-extrabold text-amber-600">{member.projects}</div>
                         <div className="text-xs text-gray-600">Projects</div>
                       </div>
                       <div>
-                        <div className="text-lg font-bold text-green-600">{member.experience}</div>
+                        <div className="text-xl font-extrabold text-green-600">{member.experience}</div>
                         <div className="text-xs text-gray-600">Experience</div>
                       </div>
                     </div>
 
                     {/* Contact */}
-                    <div className="space-y-2 text-sm">
-                      <div className="flex items-center text-gray-600">
-                        <Mail className="h-4 w-4 mr-2 text-blue-600" />
+                    <div className="space-y-3 text-sm pt-4 border-t border-gray-100">
+                      <div className="flex items-center text-gray-700">
+                        <Mail className="h-4 w-4 mr-3 text-blue-600" />
                         <a 
                           href={`mailto:${member.email}`}
-                          className="hover:text-blue-800 transition-colors"
+                          className="hover:text-blue-800 font-medium transition-colors"
                         >
                           {member.email}
                         </a>
                       </div>
-                      <div className="flex items-center text-gray-600">
-                        <Phone className="h-4 w-4 mr-2 text-blue-600" />
-                        <span>{member.phone}</span>
+                      <div className="flex items-center text-gray-700">
+                        <Phone className="h-4 w-4 mr-3 text-blue-600" />
+                        <span className="font-medium">{member.phone}</span>
                       </div>
                     </div>
                   </div>
@@ -261,32 +271,32 @@ const Faculty = () => {
         </div>
       </section>
 
-      {/* Department Stats */}
-      <section className="py-20 bg-gradient-to-r from-blue-800 to-blue-600">
+      {/* Department Stats - High Contrast */}
+      <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Faculty Excellence</h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Our faculty's collective achievements and contributions to the field
+            <h2 className="text-4xl font-extrabold text-white mb-4">Faculty Excellence</h2>
+            <p className="text-xl text-blue-200 max-w-4xl mx-auto">
+              Our faculty's collective achievements and contributions to the field.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-amber-500 mb-2">25+</div>
-              <div className="text-blue-100 font-medium">Faculty Members</div>
+            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
+              <div className="text-5xl font-extrabold text-amber-400 mb-2">25+</div>
+              <div className="text-blue-100 font-semibold">Faculty Members</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-amber-500 mb-2">500+</div>
-              <div className="text-blue-100 font-medium">Research Papers</div>
+            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
+              <div className="text-5xl font-extrabold text-amber-400 mb-2">500+</div>
+              <div className="text-blue-100 font-semibold">Research Papers</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-amber-500 mb-2">50+</div>
-              <div className="text-blue-100 font-medium">Active Projects</div>
+            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
+              <div className="text-5xl font-extrabold text-amber-400 mb-2">50+</div>
+              <div className="text-blue-100 font-semibold">Active Projects</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-amber-500 mb-2">15+</div>
-              <div className="text-blue-100 font-medium">Years Average Experience</div>
+            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
+              <div className="text-5xl font-extrabold text-amber-400 mb-2">15+</div>
+              <div className="text-blue-100 font-semibold">Years Average Experience</div>
             </div>
           </div>
         </div>
