@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, Calendar, Users, BookOpen, Award, ArrowRight, Zap, Lightbulb } from 'lucide-react';
+import { 
+  ChevronLeft, ChevronRight, Calendar, Users, BookOpen, Award, ArrowRight, 
+  Zap, Lightbulb, Building, Droplet, Truck, Leaf, Target, FlaskConical, Wrench,
+  Mail, Phone, Microscope, Cpu, Layers, HardHat
+} from 'lucide-react';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [statsAnimated, setStatsAnimated] = useState(false);
+  const [activeDomain, setActiveDomain] = useState('Structural Engineering'); // Set default active domain
   
   const slides = [
     {
@@ -21,14 +26,66 @@ const Home = () => {
       cta: 'View Research',
       link: '/research'
     },
-    {
-      image: 'https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'World-Class Faculty',
-      subtitle: 'Learn from industry experts and renowned academicians',
-      cta: 'Meet Faculty',
-      link: '/faculty'
-    }
   ];
+  
+  const domainData = [
+    {
+      name: 'Structural Engineering',
+      icon: Building,
+      color: 'text-red-600',
+      description: 'Focuses on the design, analysis, and behavior of safe, resilient, and durable structures.',
+      labs: [
+        { name: 'Structural Engineering Laboratory', icon: Wrench, details: 'Testing of concrete, steel, and composites (2000kN UTM, Shake Table).' },
+        { name: 'Materials Testing Laboratory', icon: Layers, details: 'Quality control, durability, and advanced material research.' }
+      ]
+    },
+    {
+      name: 'Geotechnical Engineering',
+      icon: Target,
+      color: 'text-yellow-600',
+      description: 'Expertise in soil mechanics, foundation design, and ground improvement techniques for critical projects.',
+      labs: [
+        { name: 'Geotechnical Engineering Laboratory', icon: Microscope, details: 'Soil testing (Triaxial, Direct Shear, Consolidation), foundation modeling.' },
+        { name: 'Rock Mechanics Unit', icon: Cpu, details: 'Testing and analysis of rock strength and slope stability.' }
+      ]
+    },
+    {
+      name: 'Transportation Engineering',
+      icon: Truck,
+      color: 'text-green-600',
+      description: 'Dedicated to the planning, design, and management of sustainable and intelligent transport systems.',
+      labs: [
+        { name: 'Transportation Engineering Laboratory', icon: Truck, details: 'Pavement testing (Marshall Stability, LA Abrasion) and traffic simulation.' },
+        { name: 'Intelligent Systems Lab', icon: Zap, details: 'Research on smart mobility, ITS, and autonomous vehicle infrastructure.' }
+      ]
+    },
+    {
+      name: 'Environmental Engineering',
+      icon: Leaf,
+      color: 'text-purple-600',
+      description: 'Focus on water quality, wastewater treatment, solid waste management, and air pollution control technologies.',
+      labs: [
+        { name: 'Environmental Engineering Laboratory', icon: FlaskConical, details: 'Water and air quality analysis (Spectrophotometer, BOD Incubator, AQS).' },
+        { name: 'Waste Management Unit', icon: Layers, details: 'Research into sustainable solid waste processing and recycling.' }
+      ]
+    },
+    {
+      name: 'Water Resources Engineering',
+      icon: Droplet,
+      color: 'text-blue-600',
+      description: 'Specializing in hydrology, hydraulics, river engineering, and sustainable water management practices.',
+      labs: [
+        { name: 'Water Resources Engineering Laboratory', icon: Droplet, details: 'Hydraulics experiments (Flume Systems, Pipe Flow Apparatus, Pumps).' },
+        { name: 'Hydrology Field Station', icon: Calendar, details: 'Real-time rainfall and water level data collection and modeling.' }
+      ]
+    },
+  ];
+
+  // Helper function to get labs for the active domain
+  const getActiveLabs = () => {
+    const domain = domainData.find(d => d.name === activeDomain);
+    return domain ? domain.labs : [];
+  };
 
   const stats = [
     { icon: Users, label: 'Faculty Experts', value: '25+', color: 'text-amber-500' },
@@ -56,14 +113,10 @@ const Home = () => {
   ];
 
   useEffect(() => {
-    // Auto-slide functionality
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
-    
-    // Simple way to trigger stats animation once (can be improved with Intersection Observer)
     setStatsAnimated(true);
-
     return () => clearInterval(timer);
   }, [slides.length]);
 
@@ -77,7 +130,7 @@ const Home = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section with Carousel */}
+      {/* Hero and Stats Sections (UI maintained) */}
       <section className="relative h-screen overflow-hidden">
         {slides.map((slide, index) => (
           <div
@@ -90,7 +143,7 @@ const Home = () => {
               className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-in-out"
               style={{
                 backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.75), rgba(59, 130, 246, 0.75)), url(${slide.image})`,
-                transform: index === currentSlide ? 'scale(1.05)' : 'scale(1.0)' // Subtle zoom effect
+                transform: index === currentSlide ? 'scale(1.05)' : 'scale(1.0)'
               }}
             />
             <div className="relative h-full flex items-center justify-center z-20">
@@ -113,7 +166,7 @@ const Home = () => {
           </div>
         ))}
 
-        {/* Navigation Arrows and Indicators (Z-index 30 ensures they are on top) */}
+        {/* Navigation Arrows & Indicators */}
         <button
           onClick={prevSlide}
           className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full transition-all duration-300 z-30 shadow-lg"
@@ -140,7 +193,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section - Elevated Cards */}
       <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -161,7 +213,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Welcome Section - Split Layout with Hover Effect */}
+      {/* Welcome Section (UI maintained) */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -169,14 +221,15 @@ const Home = () => {
               <div className="inline-block px-4 py-1 mb-4 text-sm font-semibold text-blue-800 bg-blue-100 rounded-full">
                 Our Foundation
               </div>
-              <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight border-b-4 border-amber-500/50 inline-block pb-2">
                 Welcome to the Department of Civil Engineering
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 The Department of Civil Engineering at IIT Indore is committed to **excellence in education, research, and service**. We offer comprehensive programs that prepare students for leadership roles in the rapidly evolving field of civil engineering.
               </p>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                Our focus is on **sustainable infrastructure development**, advanced construction technologies, and innovative solutions for modern engineering challenges. With state-of-the-art facilities and renowned faculty, we provide an environment that fosters learning, research, and innovation.
+                Our focus is on **sustainable infrastructure development**, advanced construction 
+                technologies, and innovative solutions for modern engineering challenges.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -207,8 +260,75 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
+      {/* NEW SECTION: Interactive Domains & Facilities Showcase */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Core Domains & Research Facilities</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Click a domain to see the dedicated laboratories and key facilities supporting that area.
+            </p>
+          </div>
+          
+          {/* Domain Tabs/Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            {domainData.map((domain) => (
+              <button 
+                key={domain.name}
+                onClick={() => setActiveDomain(domain.name)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-md transform hover:scale-[1.05] 
+                  ${domain.name === activeDomain
+                    ? 'bg-blue-800 text-white shadow-xl'
+                    : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200'
+                  }`}
+              >
+                <domain.icon className={`h-5 w-5 ${domain.name === activeDomain ? 'text-amber-300' : domain.color}`} />
+                <span>{domain.name}</span>
+              </button>
+            ))}
+          </div>
 
-      {/* News and Updates - Dynamic Card Hover */}
+          {/* Facilities Detail Area */}
+          <div className="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-blue-800">
+            
+            <div className="mb-6">
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-2">{activeDomain}</h3>
+                <p className="text-lg text-gray-700">
+                    {domainData.find(d => d.name === activeDomain)?.description}
+                </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 pt-4 border-t border-gray-100">
+                {getActiveLabs().map((lab, index) => (
+                    <div 
+                        key={index} 
+                        className="bg-gray-50 p-6 rounded-lg shadow-inner border-l-4 border-amber-500 transition-shadow duration-300"
+                    >
+                        <div className="flex items-center mb-3">
+                            <div className={`p-2 rounded-full mr-3 text-white bg-blue-700 shadow-md`}>
+                                <lab.icon className="h-5 w-5" />
+                            </div>
+                            <h4 className="text-xl font-bold text-gray-900">{lab.name}</h4>
+                        </div>
+                        <p className="text-gray-600 text-sm italic">{lab.details}</p>
+                    </div>
+                ))}
+            </div>
+            
+            {/* Contextual Link to All Facilities (since direct button was removed) */}
+            <p className="text-center mt-10 text-gray-700 font-medium">
+                For a complete list of all equipment and facility coordinators, please visit the 
+                <Link to="/facilities" className="text-blue-800 hover:text-amber-600 ml-1 underline transition-colors duration-300">
+                    Facilities page
+                </Link>.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* News and Updates (UI maintained) */}
       <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -253,7 +373,7 @@ const Home = () => {
           <div className="text-center mt-12">
             <Link
               to="/events"
-              className="inline-flex items-center space-x-2 bg-blue-800 hover:bg-blue-900 text-white px-10 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl"
+              className="inline-flex items-center space-x-2 bg-amber-500 hover:bg-amber-600 text-white px-10 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               <Zap className="h-5 w-5 mr-1"/>
               <span>View All Events</span>
@@ -263,7 +383,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Call to Action - Bold Footer CTA */}
+      {/* Call to Action (UI maintained) */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-6">

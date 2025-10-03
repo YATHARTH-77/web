@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Users, Calendar, Award, Wrench, Computer, FlaskConical, Building, Zap, Cpu, Target } from 'lucide-react';
+import { MapPin, Users, Calendar, Award, Wrench, Computer, FlaskConical, Building } from 'lucide-react';
 
 const Facilities = () => {
   const laboratories = [
@@ -106,22 +106,19 @@ const Facilities = () => {
       name: 'CAD Laboratory',
       software: ['AutoCAD', 'STAAD Pro', 'ETABS', 'SAP2000', 'Revit', 'ANSYS'],
       capacity: '40 workstations',
-      description: 'High-performance workstations for structural analysis and design',
-      icon: Computer
+      description: 'High-performance workstations for structural analysis and design'
     },
     {
       name: 'GIS Laboratory',
       software: ['ArcGIS', 'QGIS', 'Google Earth Pro', 'Remote Sensing Software'],
       capacity: '30 workstations',
-      description: 'Geographic Information Systems for transportation and water resources',
-      icon: MapPin
+      description: 'Geographic Information Systems for transportation and water resources'
     },
     {
       name: 'Numerical Modeling Lab',
       software: ['MATLAB', 'PLAXIS', 'FLAC', 'ABAQUS', 'COMSOL'],
       capacity: '25 workstations',
-      description: 'Advanced numerical analysis and finite element modeling',
-      icon: Cpu
+      description: 'Advanced numerical analysis and finite element modeling'
     }
   ];
 
@@ -170,84 +167,80 @@ const Facilities = () => {
   ];
 
   return (
-    <div className="bg-gray-50">
-      {/* Hero Section - Elevated Banner */}
-      <section className="relative py-32 bg-gradient-to-r from-blue-900 to-blue-700 overflow-hidden">
-        <div 
-            className="absolute inset-0 bg-cover bg-center opacity-10"
-            style={{
-                backgroundImage: `url('https://images.pexels.com/photos/3865263/pexels-photo-3865263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
-            }}
-        />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-r from-blue-800 to-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">Department Facilities</h1>
-            <p className="text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-              State-of-the-art infrastructure supporting excellence in education and research.
+            <h1 className="text-5xl font-bold mb-6">Department Facilities</h1>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+              State-of-the-art infrastructure supporting excellence in education and research
             </p>
           </div>
         </div>
       </section>
 
-      {/* Laboratories - Advanced Card Layout */}
+      {/* Laboratories */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Research Laboratories</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Cutting-edge laboratories equipped with modern instruments and advanced testing facilities.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Research Laboratories</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Cutting-edge laboratories equipped with modern instruments and testing facilities
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-10">
+          <div className="grid lg:grid-cols-2 gap-8">
             {laboratories.map((lab, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group transform hover:scale-[1.01]"
+                className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 <img
                   src={lab.image}
                   alt={lab.name}
-                  className="w-full h-56 object-cover transition-transform duration-500 transform group-hover:scale-[1.05]"
+                  className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-2xl font-extrabold text-gray-900 mb-3 border-b-2 border-amber-500/50 inline-block pb-1">{lab.name}</h3>
-                  <p className="text-gray-700 mb-4 leading-relaxed text-sm">{lab.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{lab.name}</h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">{lab.description}</p>
                   
-                  <div className="grid grid-cols-2 gap-4 mb-4 text-sm font-medium">
-                    <div className="flex items-center text-gray-700">
-                      <Target className="h-4 w-4 mr-2 text-blue-600" />
+                  <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
+                    <div className="flex items-center text-gray-600">
+                      <MapPin className="h-4 w-4 mr-2 text-blue-600" />
                       <span>Area: {lab.area}</span>
                     </div>
-                    <div className="flex items-center text-gray-700">
+                    <div className="flex items-center text-gray-600">
                       <Users className="h-4 w-4 mr-2 text-blue-600" />
                       <span>Capacity: {lab.capacity}</span>
                     </div>
                   </div>
 
-                  <div className="mb-4 bg-blue-50 p-4 rounded-lg">
-                    <h4 className="font-bold text-gray-900 mb-2 flex items-center text-sm">
-                      <FlaskConical className="h-5 w-5 mr-2 text-amber-500" />
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
+                      <FlaskConical className="h-4 w-4 mr-2 text-amber-500" />
                       Major Equipment
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="grid grid-cols-1 gap-1">
                       {lab.equipment.slice(0, 4).map((item, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-medium shadow-sm">
-                          {item}
-                        </span>
+                        <div key={idx} className="text-sm text-gray-600 flex items-start">
+                          <span className="w-2 h-2 bg-blue-600 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                          <span>{item}</span>
+                        </div>
                       ))}
                       {lab.equipment.length > 4 && (
-                        <span className="px-3 py-1 bg-gray-200 text-gray-700 text-xs rounded-full font-medium">
-                          +{lab.equipment.length - 4} more
-                        </span>
+                        <div className="text-sm text-blue-600 font-medium mt-1">
+                          +{lab.equipment.length - 4} more equipment
+                        </div>
                       )}
                     </div>
                   </div>
 
                   <div className="pt-3 border-t border-gray-100">
-                    <div className="flex items-center text-sm text-gray-700 font-medium">
+                    <div className="flex items-center text-sm text-gray-600">
                       <Award className="h-4 w-4 mr-2 text-green-600" />
-                      <span>Coordinator: {lab.coordinator}</span>
+                      <span className="font-medium">Coordinator:</span>
+                      <span className="ml-1">{lab.coordinator}</span>
                     </div>
                   </div>
                 </div>
@@ -257,13 +250,13 @@ const Facilities = () => {
         </div>
       </section>
 
-      {/* Computing Facilities - High-Tech Look */}
-      <section className="py-20 bg-gray-100">
+      {/* Computing Facilities */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Advanced Computing Facilities</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              High-performance computing infrastructure for complex analysis, design, and research.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Computing Facilities</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Advanced computing infrastructure for analysis, design, and research activities
             </p>
           </div>
 
@@ -271,27 +264,27 @@ const Facilities = () => {
             {computingFacilities.map((facility, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-xl transition-shadow duration-300 p-6 border-l-4 border-amber-500 hover:shadow-2xl transform hover:scale-[1.02]"
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6"
               >
                 <div className="flex items-center mb-4">
-                  <div className="bg-blue-800 text-white p-3 rounded-lg mr-4 shadow-lg">
-                    <facility.icon className="h-6 w-6" />
+                  <div className="bg-blue-800 text-white p-3 rounded-lg mr-4">
+                    <Computer className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">{facility.name}</h3>
-                    <p className="text-sm text-gray-600 font-medium">{facility.capacity}</p>
+                    <h3 className="text-lg font-bold text-gray-900">{facility.name}</h3>
+                    <p className="text-sm text-gray-600">{facility.capacity}</p>
                   </div>
                 </div>
                 
-                <p className="text-gray-700 mb-4 leading-relaxed text-sm">{facility.description}</p>
+                <p className="text-gray-600 mb-4 leading-relaxed">{facility.description}</p>
                 
-                <div className="pt-3 border-t border-gray-100">
-                  <h4 className="font-bold text-gray-900 mb-2 text-sm">Key Software</h4>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Software Available</h4>
                   <div className="flex flex-wrap gap-2">
                     {facility.software.map((software, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full"
+                        className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded"
                       >
                         {software}
                       </span>
@@ -304,25 +297,25 @@ const Facilities = () => {
         </div>
       </section>
 
-      {/* Infrastructure - Distinctive Icons */}
-      <section className="py-20 bg-white">
+      {/* Infrastructure */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Core Infrastructure</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Modern facilities designed to support academic excellence and community well-being.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Infrastructure</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Modern infrastructure designed to support academic excellence and research innovation
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {infrastructure.map((item, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-200 group transform hover:scale-[1.03]"
+                className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 hover:shadow-lg transition-all duration-300 border border-blue-200"
               >
                 <div className="text-center">
-                  <div className="bg-blue-800 text-white w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl group-hover:bg-amber-500 transition-colors">
-                    <item.icon className="h-7 w-7" />
+                  <div className="bg-blue-800 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{item.name}</h3>
                   <ul className="space-y-1">
@@ -339,13 +332,13 @@ const Facilities = () => {
         </div>
       </section>
 
-      {/* Field Stations - Data Focus */}
-      <section className="py-20 bg-gray-100">
+      {/* Field Stations */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Field Monitoring Stations</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Real-time monitoring systems providing valuable data for research and analysis.
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Field Monitoring Stations</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Real-time monitoring systems for research and data collection
             </p>
           </div>
 
@@ -353,25 +346,22 @@ const Facilities = () => {
             {fieldStations.map((station, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-xl transition-shadow duration-300 p-6 border-r-4 border-amber-500 hover:shadow-2xl"
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
-                    <Zap className="h-5 w-5 mr-2 text-blue-600"/>
-                    {station.name}
-                </h3>
-                <div className="flex items-center text-gray-600 mb-3 text-sm">
-                  <MapPin className="h-4 w-4 mr-2 text-amber-500" />
-                  <span className='font-medium'>{station.location}</span>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{station.name}</h3>
+                <div className="flex items-center text-gray-600 mb-3">
+                  <MapPin className="h-4 w-4 mr-2 text-blue-600" />
+                  <span className="text-sm">{station.location}</span>
                 </div>
-                <p className="text-gray-700 mb-4 leading-relaxed text-sm italic">{station.purpose}</p>
+                <p className="text-gray-600 mb-4 leading-relaxed text-sm">{station.purpose}</p>
                 
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-2 text-sm">Key Equipment</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="font-semibold text-gray-900 mb-2 text-sm">Equipment</h4>
+                  <div className="flex flex-wrap gap-1">
                     {station.equipment.map((item, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-medium"
+                        className="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded"
                       >
                         {item}
                       </span>
@@ -384,51 +374,51 @@ const Facilities = () => {
         </div>
       </section>
 
-      {/* Facilities Statistics - High Contrast */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-700">
+      {/* Facilities Statistics */}
+      <section className="py-20 bg-gradient-to-r from-blue-800 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold text-white mb-4">Facilities Overview</h2>
-            <p className="text-xl text-blue-200 max-w-4xl mx-auto">
-              Comprehensive infrastructure supporting education and research excellence.
+            <h2 className="text-4xl font-bold text-white mb-4">Facilities Overview</h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Comprehensive infrastructure supporting education and research excellence
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
-              <div className="text-5xl font-extrabold text-amber-400 mb-2">6</div>
-              <div className="text-blue-100 font-semibold">Research Labs</div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-amber-500 mb-2">6</div>
+              <div className="text-blue-100 font-medium">Research Labs</div>
             </div>
-            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
-              <div className="text-5xl font-extrabold text-amber-400 mb-2">95</div>
-              <div className="text-blue-100 font-semibold">Workstations</div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-amber-500 mb-2">95</div>
+              <div className="text-blue-100 font-medium">Workstations</div>
             </div>
-            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
-              <div className="text-5xl font-extrabold text-amber-400 mb-2">2400</div>
-              <div className="text-blue-100 font-semibold">sq.m Lab Space</div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-amber-500 mb-2">2400</div>
+              <div className="text-blue-100 font-medium">sq.m Lab Space</div>
             </div>
-            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
-              <div className="text-5xl font-extrabold text-amber-400 mb-2">15+</div>
-              <div className="text-blue-100 font-semibold">Software Licenses</div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-amber-500 mb-2">15+</div>
+              <div className="text-blue-100 font-medium">Software Licenses</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Visit Information - CTA */}
-      <section className="py-20 bg-white">
+      {/* Visit Information */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-6">Experience Our Labs Firsthand</h2>
-            <p className="text-xl text-gray-700 mb-8 max-w-4xl mx-auto">
-              Interested in seeing our facilities? Schedule a visit to explore our state-of-the-art laboratories 
-              and infrastructure.
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Visit Our Facilities</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Interested in seeing our facilities? Schedule a visit to explore our laboratories 
+              and infrastructure firsthand.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <button className="bg-blue-800 hover:bg-blue-900 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl">
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Schedule a Tour
               </button>
-              <button className="bg-amber-500 hover:bg-amber-600 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl">
+              <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Download Brochure
               </button>
             </div>

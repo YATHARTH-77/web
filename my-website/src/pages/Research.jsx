@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Filter, ExternalLink, Users, Calendar, Award, BookOpen, Target, Microscope, Zap, TrendingUp, Cpu } from 'lucide-react';
+import { Search, Filter, ExternalLink, Users, Calendar, Award, BookOpen, Target, Microscope } from 'lucide-react';
 
 const Research = () => {
   const [activeTab, setActiveTab] = useState('projects');
@@ -11,36 +11,31 @@ const Research = () => {
       description: 'Advanced research in seismic analysis, structural dynamics, and earthquake-resistant design',
       projects: 8,
       faculty: 4,
-      icon: Zap, // Changed icon for a more dynamic look
-      color: 'text-red-500' // Added color for visual flair
+      icon: Target
     },
     {
       title: 'Sustainable Construction',
       description: 'Green building technologies, sustainable materials, and environmentally conscious construction practices',
       projects: 6,
       faculty: 3,
-      icon: TrendingUp, // Changed icon
-      color: 'text-green-500'
+      icon: BookOpen
     },
     {
       title: 'Geotechnical Innovation',
       description: 'Soil mechanics, foundation engineering, and ground improvement techniques',
       projects: 7,
       faculty: 3,
-      icon: Microscope,
-      color: 'text-yellow-500'
+      icon: Microscope
     },
     {
       title: 'Smart Infrastructure',
       description: 'IoT integration, structural health monitoring, and intelligent transportation systems',
       projects: 5,
       faculty: 4,
-      icon: Cpu, // Changed icon
-      color: 'text-indigo-500'
+      icon: Award
     }
   ];
 
-  // ... (Keep the existing data for projects, publications, and labs)
   const projects = [
     {
       title: 'Seismic Retrofitting of Heritage Structures',
@@ -179,7 +174,6 @@ const Research = () => {
       image: 'https://images.pexels.com/photos/2280545/pexels-photo-2280545.jpeg?auto=compress&cs=tinysrgb&w=800'
     }
   ];
-  // ... (End of existing data)
 
   const filteredProjects = projects.filter(project =>
     project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -187,65 +181,49 @@ const Research = () => {
     project.pi.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Helper component for advanced card style (Glassmorphism)
-  const GlassCard = ({ children, className = '' }) => (
-    <div
-      className={`backdrop-blur-sm bg-white/50 border border-white/30 rounded-xl shadow-lg transition-all duration-300 ${className}`}
-    >
-      {children}
-    </div>
-  );
-
-
   return (
-    <div className="bg-gray-100 min-h-screen">
-      {/* Dynamic Hero Section */}
-      <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `linear-gradient(to right bottom, rgba(30, 64, 175, 0.95), rgba(59, 130, 246, 0.8)), url('https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
-            clipPath: 'polygon(0 0, 100% 0, 100% 75%, 0% 100%)' // Diagonal bottom cut
-          }}
-        >
-          {/* Animated background element */}
-          <div className="absolute inset-0 opacity-10 animate-pulse bg-white/20" />
-        </div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative h-full flex items-center">
-          <div className="text-white pt-20">
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-4 animate-fadeInUp">
-              Research & Innovation
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-200 max-w-4xl leading-relaxed animate-fadeInUp delay-200">
-              Advancing the frontiers of civil engineering through **innovative research** and **cutting-edge technology** across multiple domains.
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-r from-blue-800 to-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-white">
+            <h1 className="text-5xl font-bold mb-6">Research Excellence</h1>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+              Advancing the frontiers of civil engineering through innovative research and cutting-edge technology
             </p>
           </div>
         </div>
       </section>
 
-      {/* Research Areas - Advanced Card Layout */}
-      <section className="py-20 -mt-24 relative z-10">
+      {/* Research Areas */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Research Focus Areas</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our department is actively engaged in cutting-edge research across multiple domains
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {researchAreas.map((area, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-xl transition-all duration-500 hover:shadow-2xl hover:scale-[1.03] group transform hover:rotate-1" // 3D/Interactive Effect
+                className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="text-center">
-                  <div className={`bg-white shadow-xl ${area.color} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-gray-100 group-hover:border-amber-500 transition-colors duration-300`}>
-                    <area.icon className="h-8 w-8" />
+                  <div className="bg-gradient-to-br from-blue-800 to-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <area.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-800 transition-colors">{area.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">{area.description}</p>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{area.title}</h3>
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">{area.description}</p>
                   
-                  <div className="flex justify-between text-sm text-gray-500 border-t pt-3 mt-4">
-                    <div className="flex items-center font-medium text-blue-700">
+                  <div className="flex justify-between text-sm text-gray-500">
+                    <div className="flex items-center">
                       <Target className="h-4 w-4 mr-1" />
                       <span>{area.projects} Projects</span>
                     </div>
-                    <div className="flex items-center font-medium text-gray-700">
+                    <div className="flex items-center">
                       <Users className="h-4 w-4 mr-1" />
                       <span>{area.faculty} Faculty</span>
                     </div>
@@ -256,134 +234,136 @@ const Research = () => {
           </div>
         </div>
       </section>
-      
-      {/* Sticky Tab Navigation and Search Bar */}
-      <div className="sticky top-0 z-20 bg-white shadow-lg border-b border-gray-200">
+
+      {/* Tab Navigation */}
+      <section className="bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-center justify-between py-4 gap-4">
-                {/* Tab Navigation */}
-                <nav className="flex space-x-8 overflow-x-auto">
-                {['projects', 'publications', 'laboratories'].map((tab) => (
-                    <button
-                    key={tab}
-                    onClick={() => setActiveTab(tab)}
-                    className={`py-2 px-1 border-b-2 font-semibold text-lg capitalize transition-all duration-300 whitespace-nowrap ${
-                        activeTab === tab
-                        ? 'border-blue-800 text-blue-800 scale-105'
-                        : 'border-transparent text-gray-500 hover:text-blue-600 hover:border-blue-300'
-                    }`}
-                    >
-                    {tab}
-                    </button>
-                ))}
-                </nav>
-                
-                {/* Search Bar (Only visible for Projects tab) */}
-                {activeTab === 'projects' && (
-                    <div className="flex-none w-full md:w-96 relative">
-                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-                        <input
-                            type="text"
-                            placeholder="Search projects..."
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-4 focus:ring-amber-200 focus:border-amber-500 transition-all duration-300"
-                        />
-                    </div>
-                )}
-            </div>
+          <div className="border-b border-gray-200">
+            <nav className="flex space-x-8">
+              {['projects', 'publications', 'laboratories'].map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`py-4 px-1 border-b-2 font-medium text-sm capitalize transition-colors duration-200 ${
+                    activeTab === tab
+                      ? 'border-blue-800 text-blue-800'
+                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  }`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </nav>
+          </div>
         </div>
-      </div>
+      </section>
 
-
-      {/* Tab Content - Utilizing GlassCard for a modern look */}
-      <section className="py-20 bg-gray-100">
+      {/* Tab Content */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
           {/* Projects Tab */}
           {activeTab === 'projects' && (
-            <div className="grid gap-8">
-              {filteredProjects.map((project, index) => (
-                <GlassCard key={index} className="p-8 hover:shadow-2xl hover:bg-white/70">
+            <div>
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                  <input
+                    type="text"
+                    placeholder="Search projects by title, category, or principal investigator..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              <div className="grid gap-6">
+                {filteredProjects.map((project, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6"
+                  >
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
                       <div className="flex-1">
                         <div className="flex items-start justify-between mb-3">
-                          <h3 className="text-2xl font-extrabold text-gray-900 flex-1 hover:text-blue-700 transition-colors">{project.title}</h3>
-                          <span className={`px-4 py-1 rounded-full text-sm font-bold ml-4 whitespace-nowrap shadow-md ${
+                          <h3 className="text-xl font-bold text-gray-900 flex-1">{project.title}</h3>
+                          <span className={`px-3 py-1 rounded-full text-sm font-medium ml-4 ${
                             project.status === 'Ongoing' 
-                              ? 'bg-green-500 text-white' 
-                              : 'bg-blue-800 text-white'
+                              ? 'bg-green-100 text-green-800' 
+                              : 'bg-blue-100 text-blue-800'
                           }`}>
                             {project.status}
                           </span>
                         </div>
                         
-                        <div className="flex flex-wrap gap-6 text-sm text-gray-700 mb-3 font-medium">
+                        <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-3">
                           <div className="flex items-center">
-                            <Users className="h-4 w-4 mr-2 text-blue-800" />
-                            <span>PI: {project.pi}</span>
+                            <Users className="h-4 w-4 mr-1 text-blue-600" />
+                            <span className="font-medium">PI:</span> {project.pi}
                           </div>
                           <div className="flex items-center">
-                            <Calendar className="h-4 w-4 mr-2 text-blue-800" />
+                            <Calendar className="h-4 w-4 mr-1 text-blue-600" />
                             <span>{project.duration}</span>
                           </div>
-                          <div className="flex items-center text-amber-600 font-bold">
-                            <Award className="h-4 w-4 mr-2" />
-                            <span>{project.funding}</span>
-                            <span className="ml-1 text-gray-500 font-normal">({project.agency})</span>
+                          <div className="flex items-center">
+                            <Award className="h-4 w-4 mr-1 text-blue-600" />
+                            <span className="font-medium">{project.funding}</span> ({project.agency})
                           </div>
                         </div>
                         
-                        <p className="text-gray-700 leading-relaxed mb-4 border-l-4 border-blue-500 pl-3">{project.description}</p>
+                        <p className="text-gray-600 leading-relaxed mb-3">{project.description}</p>
                         
                         <div className="flex flex-wrap items-center gap-4">
-                          <span className="px-4 py-1 bg-amber-500 text-white rounded-full text-sm font-semibold shadow-md">
+                          <span className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm">
                             {project.category}
                           </span>
                           {project.collaborators && (
-                            <div className="flex items-center text-sm text-gray-600 font-medium">
-                              <span className="mr-2 text-gray-900">Partners:</span>
-                              <span className="text-blue-700">{project.collaborators.join(', ')}</span>
+                            <div className="flex items-center text-sm text-gray-600">
+                              <span className="font-medium mr-2">Collaborators:</span>
+                              <span>{project.collaborators.join(', ')}</span>
                             </div>
                           )}
                         </div>
                       </div>
                     </div>
-                </GlassCard>
-              ))}
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 
           {/* Publications Tab */}
           {activeTab === 'publications' && (
             <div>
-              <div className="mb-10 text-center">
-                <h3 className="text-3xl font-extrabold text-gray-900 mb-2">Recent Publications</h3>
-                <p className="text-lg text-gray-600">High-impact research showcased in top international journals</p>
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Recent Publications</h3>
+                <p className="text-gray-600">Showcase of our faculty's latest research contributions</p>
               </div>
 
-              <div className="grid gap-6">
+              <div className="grid gap-4">
                 {publications.map((pub, index) => (
-                  <GlassCard key={index} className="p-6 hover:shadow-xl hover:bg-white/70">
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">{pub.title}</h4>
-                    <p className="text-gray-600 mb-3 text-sm">
-                      <span className="font-semibold text-gray-900">Authors:</span> {pub.authors.join(', ')}
+                  <div
+                    key={index}
+                    className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6"
+                  >
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">{pub.title}</h4>
+                    <p className="text-gray-600 mb-2">
+                      <span className="font-medium">Authors:</span> {pub.authors.join(', ')}
                     </p>
-                    <div className="flex flex-wrap items-center gap-6 text-sm text-gray-700 border-t border-gray-200 pt-3">
-                      <div className="font-bold text-blue-800 flex items-center">
-                        <BookOpen className="h-4 w-4 mr-1" />
-                        {pub.journal} ({pub.year})
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+                      <div>
+                        <span className="font-medium text-blue-800">{pub.journal}</span> ({pub.year})
                       </div>
-                      <div className="flex items-center text-amber-600 font-semibold">
-                        <Award className="h-4 w-4 mr-1" />
+                      <div className="flex items-center">
+                        <Award className="h-4 w-4 mr-1 text-amber-500" />
                         <span>Impact Factor: {pub.impact}</span>
                       </div>
-                      <div className="flex items-center text-green-600 font-semibold">
-                        <ExternalLink className="h-4 w-4 mr-1" />
+                      <div className="flex items-center">
+                        <ExternalLink className="h-4 w-4 mr-1 text-green-600" />
                         <span>Citations: {pub.citations}</span>
                       </div>
                     </div>
-                  </GlassCard>
+                  </div>
                 ))}
               </div>
             </div>
@@ -392,42 +372,46 @@ const Research = () => {
           {/* Laboratories Tab */}
           {activeTab === 'laboratories' && (
             <div>
-              <div className="mb-10 text-center">
-                <h3 className="text-3xl font-extrabold text-gray-900 mb-2">Research Laboratories</h3>
-                <p className="text-lg text-gray-600">State-of-the-art facilities supporting cutting-edge research</p>
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Research Laboratories</h3>
+                <p className="text-gray-600">State-of-the-art facilities supporting cutting-edge research</p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-10">
+              <div className="grid md:grid-cols-2 gap-8">
                 {labs.map((lab, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-xl shadow-2xl transition-shadow duration-300 overflow-hidden transform hover:-translate-y-1"
+                    className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                   >
                     <img
                       src={lab.image}
                       alt={lab.name}
-                      className="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-48 object-cover"
                     />
-                    <div className="p-6 bg-white">
-                      <h4 className="text-2xl font-bold text-gray-900 mb-2 border-b-2 border-amber-500 inline-block pb-1">{lab.name}</h4>
-                      <div className="flex items-center text-gray-700 mb-3 text-sm">
+                    <div className="p-6">
+                      <h4 className="text-xl font-bold text-gray-900 mb-2">{lab.name}</h4>
+                      <div className="flex items-center text-gray-600 mb-3">
                         <Users className="h-4 w-4 mr-2 text-blue-600" />
-                        <span className='font-medium'>Head:</span> {lab.head}
+                        <span className="text-sm">Head: {lab.head}</span>
+                      </div>
+                      <div className="flex items-center text-gray-600 mb-4">
+                        <Target className="h-4 w-4 mr-2 text-blue-600" />
+                        <span className="text-sm">Area: {lab.area}</span>
                       </div>
                       
                       <div className="mb-4">
-                        <h5 className="font-bold text-gray-900 mb-2 text-sm">Key Equipment</h5>
+                        <h5 className="font-semibold text-gray-900 mb-2">Key Equipment</h5>
                         <div className="flex flex-wrap gap-2">
                           {lab.equipment.slice(0, 3).map((item, idx) => (
                             <span
                               key={idx}
-                              className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full font-medium"
+                              className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded"
                             >
                               {item}
                             </span>
                           ))}
                           {lab.equipment.length > 3 && (
-                            <span className="px-3 py-1 bg-gray-200 text-gray-600 text-xs rounded-full font-medium">
+                            <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
                               +{lab.equipment.length - 3} more
                             </span>
                           )}
@@ -435,12 +419,12 @@ const Research = () => {
                       </div>
                       
                       <div>
-                        <h5 className="font-bold text-gray-900 mb-2 text-sm">Research Areas</h5>
+                        <h5 className="font-semibold text-gray-900 mb-2">Research Areas</h5>
                         <div className="flex flex-wrap gap-2">
                           {lab.research.map((area, idx) => (
                             <span
                               key={idx}
-                              className="px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-medium"
+                              className="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded"
                             >
                               {area}
                             </span>
@@ -456,32 +440,32 @@ const Research = () => {
         </div>
       </section>
 
-      {/* Research Stats - Use better colors/contrast */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-700">
+      {/* Research Stats */}
+      <section className="py-20 bg-gradient-to-r from-blue-800 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold text-white mb-4">Research Impact</h2>
-            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-4">Research Impact</h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Our research achievements and contributions to the scientific community
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
-              <div className="text-5xl font-extrabold text-amber-400 mb-2 animate-bounceIn">50+</div>
-              <div className="text-blue-100 font-semibold text-lg">Active Projects</div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-amber-500 mb-2">50+</div>
+              <div className="text-blue-100 font-medium">Active Projects</div>
             </div>
-            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
-              <div className="text-5xl font-extrabold text-amber-400 mb-2">₹15 Cr</div>
-              <div className="text-blue-100 font-semibold text-lg">Research Funding</div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-amber-500 mb-2">₹15 Cr</div>
+              <div className="text-blue-100 font-medium">Research Funding</div>
             </div>
-            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
-              <div className="text-5xl font-extrabold text-amber-400 mb-2">200+</div>
-              <div className="text-blue-100 font-semibold text-lg">Publications</div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-amber-500 mb-2">200+</div>
+              <div className="text-blue-100 font-medium">Publications</div>
             </div>
-            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
-              <div className="text-5xl font-extrabold text-amber-400 mb-2">25+</div>
-              <div className="text-blue-100 font-semibold text-lg">Industry Partners</div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-amber-500 mb-2">25+</div>
+              <div className="text-blue-100 font-medium">Industry Partners</div>
             </div>
           </div>
         </div>
