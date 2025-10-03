@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Award, BookOpen, Users, Search } from 'lucide-react';
+import { Mail, Phone, Award, BookOpen, Users, Search, ChevronRight, Briefcase } from 'lucide-react';
 
 const Faculty = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedSpecialization, setSelectedSpecialization] = useState('All');
+  // Renamed from selectedSpecialization to activeDomain for clarity
+  const [activeDomain, setActiveDomain] = useState('All'); 
 
   const faculty = [
     {
@@ -113,180 +114,205 @@ const Faculty = () => {
   ];
 
   const specializations = ['All', 'Structural Engineering', 'Geotechnical Engineering', 'Transportation Engineering', 'Water Resources Engineering', 'Environmental Engineering', 'Construction Management'];
-
+  
+  // Filter faculty based on search term AND active domain
   const filteredFaculty = faculty.filter(member => {
     const matchesSearch = member.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          member.specialization.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          member.research.some(area => area.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesSpecialization = selectedSpecialization === 'All' || member.specialization === selectedSpecialization;
-    return matchesSearch && matchesSpecialization;
+    
+    const matchesDomain = activeDomain === 'All' || member.specialization === activeDomain;
+    
+    return matchesSearch && matchesDomain;
   });
 
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-800 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-50 min-h-screen">
+      {/* Hero Section - Dynamic and Enhanced */}
+      <section className="relative py-32 bg-gradient-to-r from-blue-900 to-blue-700 overflow-hidden">
+        <div 
+            className="absolute inset-0 bg-cover bg-center opacity-10"
+            style={{
+                backgroundImage: `url('https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
+            }}
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-6">Our Faculty</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Meet our distinguished faculty members who are leaders in their respective fields
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">Our Distinguished Faculty</h1>
+            <p className="text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+              Meet our experts who are leaders, researchers, and mentors shaping the future of Civil Engineering.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Search and Filter */}
-      <section className="py-8 bg-gray-50">
+      {/* Main Content: Sidebar and Faculty Grid */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row gap-4">
-            {/* Search */}
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-              <input
-                type="text"
-                placeholder="Search faculty by name, specialization, or research area..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+          <div className="grid lg:grid-cols-4 gap-10">
+            
+            {/* 1. Specialization Sidebar (Fixed on Scroll) */}
+            <div className="lg:col-span-1">
+              <div className="sticky top-28 space-y-4 p-6 bg-white rounded-xl shadow-2xl border-l-4 border-amber-500">
+                <h3 className="text-2xl font-extrabold text-gray-900 mb-4 border-b-2 pb-2">Specializations</h3>
+                
+                {specializations.map(spec => (
+                  <button
+                    key={spec}
+                    onClick={() => setActiveDomain(spec)}
+                    className={`w-full text-left flex items-center p-3 rounded-lg font-semibold transition-all duration-300 transform hover:translate-x-1 ${
+                      activeDomain === spec
+                        ? 'bg-blue-800 text-white shadow-lg'
+                        : 'text-gray-700 hover:bg-gray-100'
+                    }`}
+                  >
+                    <ChevronRight className={`h-5 w-5 mr-3 ${activeDomain === spec ? 'text-amber-300' : 'text-blue-600'}`} />
+                    <span>{spec}</span>
+                    {spec === 'All' && (<span className="ml-auto text-xs bg-white/30 text-white px-2 py-0.5 rounded-full">{faculty.length}</span>)}
+                  </button>
+                ))}
+                
+                {/* Search Bar integrated below the links */}
+                <div className="pt-4 border-t border-gray-200 mt-4">
+                    <div className="relative">
+                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                        <input
+                            type="text"
+                            placeholder="Search name/research..."
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-full bg-gray-50 text-sm focus:ring-2 focus:ring-blue-500"
+                        />
+                    </div>
+                </div>
+
+              </div>
             </div>
 
-            {/* Filter */}
-            <div className="md:w-64">
-              <select
-                value={selectedSpecialization}
-                onChange={(e) => setSelectedSpecialization(e.target.value)}
-                className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                {specializations.map(spec => (
-                  <option key={spec} value={spec}>{spec}</option>
-                ))}
-              </select>
+            {/* 2. Faculty Grid */}
+            <div className="lg:col-span-3">
+              <h2 className="text-3xl font-extrabold text-gray-900 mb-8">
+                {activeDomain === 'All' ? 'All Faculty Members' : activeDomain + ' Experts'}
+                <span className="ml-4 text-xl text-gray-500 font-medium">({filteredFaculty.length} Found)</span>
+              </h2>
+
+              {filteredFaculty.length === 0 ? (
+                <div className="text-center py-12 bg-white rounded-xl shadow-lg">
+                  <p className="text-gray-500 text-lg">No faculty members found in the selected domain or matching your search criteria.</p>
+                </div>
+              ) : (
+                <div className="grid md:grid-cols-2 gap-8">
+                  {filteredFaculty.map((member, index) => (
+                    <div
+                      key={index}
+                      className="bg-white rounded-xl shadow-xl transition-all duration-300 p-6 border-t-8 border-amber-500/0 hover:border-amber-500 transform hover:-translate-y-1 group"
+                    >
+                      <div className="flex items-start space-x-6">
+                        {/* Photo and Designation */}
+                        <div className="flex-shrink-0 text-center">
+                            <img
+                              src={member.image}
+                              alt={member.name}
+                              className="w-20 h-20 rounded-full object-cover border-4 border-blue-100 group-hover:border-blue-800 transition-colors duration-300 shadow-md"
+                            />
+                            <span className="inline-block px-2 py-0.5 mt-2 bg-blue-100 text-blue-800 text-xs rounded-full font-semibold">
+                                {member.specialization.split(' ')[0]}
+                            </span>
+                        </div>
+                        
+                        {/* Info */}
+                        <div className="flex-1">
+                          <h3 className="text-xl font-extrabold text-gray-900 mb-1">{member.name}</h3>
+                          <p className="text-amber-600 font-semibold mb-2 text-sm">{member.designation}</p>
+
+                          {/* Contact */}
+                          <div className="space-y-1 text-sm text-gray-700 mb-4 border-b pb-3 border-gray-100">
+                            <div className="flex items-center">
+                              <Mail className="h-4 w-4 mr-2 text-blue-600" />
+                              <a href={`mailto:${member.email}`} className="hover:text-blue-800 transition-colors">{member.email}</a>
+                            </div>
+                            <div className="flex items-center">
+                              <Phone className="h-4 w-4 mr-2 text-blue-600" />
+                              <span>{member.phone}</span>
+                            </div>
+                          </div>
+                          
+                          {/* Research Areas and Stats */}
+                          <div>
+                            <h4 className="font-bold text-gray-900 text-sm mb-2 flex items-center">
+                                <BookOpen className='h-4 w-4 mr-2 text-amber-500'/>
+                                Key Research Areas
+                            </h4>
+                            <div className="flex flex-wrap gap-1">
+                              {member.research.slice(0, 2).map((area, idx) => (
+                                <span
+                                  key={idx}
+                                  className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                                >
+                                  {area}
+                                </span>
+                              ))}
+                              {member.research.length > 2 && (
+                                <span className="px-3 py-1 bg-gray-200 text-gray-500 text-xs rounded-full">
+                                  +{member.research.length - 2} more
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Stats Block */}
+                      <div className="flex justify-between text-center mt-6 pt-4 border-t border-gray-100">
+                        <div className='flex items-center text-sm font-medium text-gray-600'>
+                            <Briefcase className='h-4 w-4 mr-2 text-green-600'/>
+                            <span>{member.experience} Exp.</span>
+                        </div>
+                        <div className='flex items-center text-sm font-medium text-gray-600'>
+                            <Award className='h-4 w-4 mr-2 text-blue-600'/>
+                            <span>{member.publications} Pubs.</span>
+                        </div>
+                        <div className='flex items-center text-sm font-medium text-gray-600'>
+                            <Users className='h-4 w-4 mr-2 text-amber-600'/>
+                            <span>{member.projects} Projects</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* Faculty Grid */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {filteredFaculty.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">No faculty members found matching your criteria.</p>
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredFaculty.map((member, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group"
-                >
-                  <div className="p-6">
-                    {/* Photo and Basic Info */}
-                    <div className="text-center mb-6">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-blue-100 group-hover:border-amber-200 transition-colors duration-300"
-                      />
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                      <p className="text-blue-800 font-medium mb-2">{member.designation}</p>
-                      <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-sm rounded-full">
-                        {member.specialization}
-                      </span>
-                    </div>
-
-                    {/* Education */}
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                        <BookOpen className="h-4 w-4 mr-2 text-blue-600" />
-                        Education
-                      </h4>
-                      <p className="text-sm text-gray-600 leading-relaxed">{member.education}</p>
-                    </div>
-
-                    {/* Research Areas */}
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900 mb-2">Research Areas</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {member.research.map((area, idx) => (
-                          <span
-                            key={idx}
-                            className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded"
-                          >
-                            {area}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Stats */}
-                    <div className="flex justify-between text-center mb-4 py-3 bg-gray-50 rounded-lg">
-                      <div>
-                        <div className="text-lg font-bold text-blue-800">{member.publications}</div>
-                        <div className="text-xs text-gray-600">Publications</div>
-                      </div>
-                      <div>
-                        <div className="text-lg font-bold text-amber-600">{member.projects}</div>
-                        <div className="text-xs text-gray-600">Projects</div>
-                      </div>
-                      <div>
-                        <div className="text-lg font-bold text-green-600">{member.experience}</div>
-                        <div className="text-xs text-gray-600">Experience</div>
-                      </div>
-                    </div>
-
-                    {/* Contact */}
-                    <div className="space-y-2 text-sm">
-                      <div className="flex items-center text-gray-600">
-                        <Mail className="h-4 w-4 mr-2 text-blue-600" />
-                        <a 
-                          href={`mailto:${member.email}`}
-                          className="hover:text-blue-800 transition-colors"
-                        >
-                          {member.email}
-                        </a>
-                      </div>
-                      <div className="flex items-center text-gray-600">
-                        <Phone className="h-4 w-4 mr-2 text-blue-600" />
-                        <span>{member.phone}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Department Stats */}
-      <section className="py-20 bg-gradient-to-r from-blue-800 to-blue-600">
+      {/* Department Stats - High Contrast (UI maintained) */}
+      <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Faculty Excellence</h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-extrabold text-white mb-4">Faculty Excellence</h2>
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
               Our faculty's collective achievements and contributions to the field
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-amber-500 mb-2">25+</div>
-              <div className="text-blue-100 font-medium">Faculty Members</div>
+            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
+              <div className="text-5xl font-extrabold text-amber-400 mb-2">25+</div>
+              <div className="text-blue-100 font-semibold">Faculty Members</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-amber-500 mb-2">500+</div>
-              <div className="text-blue-100 font-medium">Research Papers</div>
+            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
+              <div className="text-5xl font-extrabold text-amber-400 mb-2">500+</div>
+              <div className="text-blue-100 font-semibold">Research Papers</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-amber-500 mb-2">50+</div>
-              <div className="text-blue-100 font-medium">Active Projects</div>
+            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
+              <div className="text-5xl font-extrabold text-amber-400 mb-2">50+</div>
+              <div className="text-blue-100 font-semibold">Active Projects</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-amber-500 mb-2">15+</div>
-              <div className="text-blue-100 font-medium">Years Average Experience</div>
+            <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm shadow-xl">
+              <div className="text-5xl font-extrabold text-amber-400 mb-2">15+</div>
+              <div className="text-blue-100 font-semibold">Years Average Experience</div>
             </div>
           </div>
         </div>
