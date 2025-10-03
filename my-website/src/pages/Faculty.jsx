@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Award, BookOpen, Users, Search, ChevronRight, Briefcase } from 'lucide-react';
+import { Mail, Phone, Award, BookOpen, Users, Search, ChevronRight, Briefcase, Menu, X } from 'lucide-react';
 
 const Faculty = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  // Renamed from selectedSpecialization to activeDomain for clarity
   const [activeDomain, setActiveDomain] = useState('All'); 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // New state for mobile menu
 
   const faculty = [
     {
@@ -115,6 +115,12 @@ const Faculty = () => {
 
   const specializations = ['All', 'Structural Engineering', 'Geotechnical Engineering', 'Transportation Engineering', 'Water Resources Engineering', 'Environmental Engineering', 'Construction Management'];
   
+  // Function to handle domain click on mobile
+  const handleDomainClick = (spec) => {
+    setActiveDomain(spec);
+    setIsMobileMenuOpen(false); // Close menu after selection
+  };
+  
   // Filter faculty based on search term AND active domain
   const filteredFaculty = faculty.filter(member => {
     const matchesSearch = member.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -147,12 +153,61 @@ const Faculty = () => {
       </section>
 
       {/* Main Content: Sidebar and Faculty Grid */}
-      <section className="py-20">
+      <section className="py-20 pt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Mobile Filter Header & Search */}
+          <div className="lg:hidden mb-6 sticky top-20 z-10 bg-white p-4 rounded-xl shadow-lg border-b border-gray-200">
+            <div className="flex justify-between items-center mb-4">
+                <h3 className="text-xl font-extrabold text-gray-900">
+                    <span className="text-amber-600">{activeDomain}</span> Faculty
+                </h3>
+                <button
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    className="p-2 bg-blue-800 text-white rounded-lg shadow-md hover:bg-amber-500 transition-colors"
+                >
+                    {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                </button>
+            </div>
+            
+            {/* Mobile Search Bar */}
+            <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                <input
+                    type="text"
+                    placeholder="Search name or research area..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-full bg-gray-50 text-sm focus:ring-2 focus:ring-blue-500"
+                />
+            </div>
+            
+            {/* Mobile Specialization Menu (Collapsible) */}
+            <div className={`mt-4 overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <h4 className="text-sm font-bold text-gray-700 mb-2 mt-2 border-t pt-2">Filter by Specialization:</h4>
+                <div className="grid grid-cols-2 gap-2">
+                    {specializations.map(spec => (
+                        <button
+                            key={spec}
+                            onClick={() => handleDomainClick(spec)}
+                            className={`w-full text-center text-sm p-2 rounded-lg font-semibold transition-all duration-200 ${
+                                activeDomain === spec
+                                    ? 'bg-blue-600 text-white shadow-md'
+                                    : 'bg-gray-100 text-gray-700 hover:bg-blue-100'
+                            }`}
+                        >
+                            {spec}
+                        </button>
+                    ))}
+                </div>
+            </div>
+          </div>
+
+
           <div className="grid lg:grid-cols-4 gap-10">
             
-            {/* 1. Specialization Sidebar (Fixed on Scroll) */}
-            <div className="lg:col-span-1">
+            {/* 1. Desktop Specialization Sidebar (Sticky) */}
+            <div className="hidden lg:block lg:col-span-1">
               <div className="sticky top-28 space-y-4 p-6 bg-white rounded-xl shadow-2xl border-l-4 border-amber-500">
                 <h3 className="text-2xl font-extrabold text-gray-900 mb-4 border-b-2 pb-2">Specializations</h3>
                 
@@ -172,7 +227,7 @@ const Faculty = () => {
                   </button>
                 ))}
                 
-                {/* Search Bar integrated below the links */}
+                {/* Desktop Search Bar integrated below the links */}
                 <div className="pt-4 border-t border-gray-200 mt-4">
                     <div className="relative">
                         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
@@ -191,7 +246,7 @@ const Faculty = () => {
 
             {/* 2. Faculty Grid */}
             <div className="lg:col-span-3">
-              <h2 className="text-3xl font-extrabold text-gray-900 mb-8">
+              <h2 className="hidden lg:block text-3xl font-extrabold text-gray-900 mb-8">
                 {activeDomain === 'All' ? 'All Faculty Members' : activeDomain + ' Experts'}
                 <span className="ml-4 text-xl text-gray-500 font-medium">({filteredFaculty.length} Found)</span>
               </h2>
