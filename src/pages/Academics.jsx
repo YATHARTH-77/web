@@ -190,7 +190,7 @@ const Academics = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(curriculum.btech).map(([semester, courses], index) => (
+            {Object.entries(curriculum.btech).map(([semester, courses]) => (
               <div
                 key={semester}
                 className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6"
