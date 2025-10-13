@@ -22,10 +22,10 @@ const Home = () => {
     },
     {
       image: 'https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      title: 'World-Class Faculty',
-      subtitle: 'Learn from industry experts and renowned academicians',
-      cta: 'Meet Faculty',
-      link: '/faculty'
+      title: 'Our Academic Community',
+      subtitle: 'Meet our faculty, staff, and students who make up our vibrant community',
+      cta: 'Meet Our People',
+      link: '/people'
     }
   ];
 
