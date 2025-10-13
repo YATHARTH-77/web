@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Academics from './pages/Academics';
 import Faculty from './pages/Faculty';
-import Research from './pages/Research';
+import Specializations from './pages/Specializations';
 import Events from './pages/Events';
 import Contact from './pages/Contacts';
 import ScrollToTop from './components/ScrollToTop';
@@ -23,7 +23,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/academics" element={<Academics />} />
             <Route path="/faculty" element={<Faculty />} />
-            <Route path="/research" element={<Research />} />
+            <Route path="/specializations" element={<Specializations />} />
             <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

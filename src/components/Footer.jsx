@@ -7,7 +7,7 @@ const Footer = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Academic Programs', href: '/academics' },
     { name: 'Faculty', href: '/faculty' },
-    { name: 'Research', href: '/research' },
+    { name: 'Specializations', href: '/specializations' },
     { name: 'Events', href: '/events' },
     { name: 'Contact', href: '/contact' },
   ];
