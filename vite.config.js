@@ -7,5 +7,4 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/web/', // Replace with your actual repository name
 });
