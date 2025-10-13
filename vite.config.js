@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react'; // If using React (from your Vite template)
+import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [
-    react(), // Keep this if your project uses React
+    react(),
     tailwindcss(),
   ],
+  base: '/web/', // Replace with your actual repository name
 });
