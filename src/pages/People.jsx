@@ -7,189 +7,1176 @@ const People = () => {
 
   const faculty = [
     {
-      name: 'Dr. Rajesh Kumar Sharma',
+      name: 'Abhishek Rajput',
       designation: 'Professor & Head of Department',
       specialization: 'Structural Engineering',
       education: 'Ph.D. (IIT Delhi), M.Tech (IIT Bombay), B.Tech (NIT Kurukshetra)',
       experience: '25 years',
       email: 'rajesh.sharma@iiti.ac.in',
       phone: '+91-731-2438-701',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+      image: '../src/assets/faculty_pics/abhishekrajput.jpg',
       research: ['Earthquake Engineering', 'Structural Dynamics', 'Reinforced Concrete Structures'],
       publications: 85,
       projects: 12
     },
     {
-      name: 'Dr. Priya Menon',
+      name: 'Ashutosh',
       designation: 'Professor',
       specialization: 'Geotechnical Engineering',
       education: 'Ph.D. (IISc Bangalore), M.Tech (IIT Madras), B.Tech (NIT Calicut)',
       experience: '22 years',
       email: 'priya.menon@iiti.ac.in',
       phone: '+91-731-2438-702',
-      image: 'https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+      image: '../src/assets/faculty_pics/Ashootosh Passport_Dark Background.JPG',
       research: ['Soil Dynamics', 'Foundation Engineering', 'Ground Improvement'],
       publications: 72,
       projects: 8
     },
     {
-      name: 'Dr. Amit Singh',
+      name: 'Biswajeet',
       designation: 'Associate Professor',
       specialization: 'Transportation Engineering',
       education: 'Ph.D. (IIT Kharagpur), M.Tech (IIT Delhi), B.Tech (MNIT Jaipur)',
       experience: '18 years',
       email: 'amit.singh@iiti.ac.in',
       phone: '+91-731-2438-703',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+      image: '../src/assets/faculty_pics/Biswajeet.jpg',
       research: ['Traffic Engineering', 'Pavement Design', 'Intelligent Transportation Systems'],
       publications: 64,
       projects: 10
     },
     {
-      name: 'Dr. Sneha Patel',
+      name: 'chaubfwt',
       designation: 'Associate Professor',
       specialization: 'Water Resources Engineering',
       education: 'Ph.D. (IIT Roorkee), M.Tech (IIT Bombay), B.Tech (SVNIT Surat)',
       experience: '16 years',
       email: 'sneha.patel@iiti.ac.in',
       phone: '+91-731-2438-704',
-      image: 'https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+      image: '../src/assets/faculty_pics/chaubfwt.jpg',
       research: ['Hydrology', 'Water Quality Management', 'Groundwater Modeling'],
       publications: 56,
       projects: 7
     },
     {
-      name: 'Dr. Vikram Agarwal',
+      name: 'Dr Baadiga Ramu',
       designation: 'Associate Professor',
       specialization: 'Environmental Engineering',
       education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
       experience: '14 years',
       email: 'vikram.agarwal@iiti.ac.in',
       phone: '+91-731-2438-705',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+      image: '../src/assets/faculty_pics/Dr Baadiga Ramu.jpg',
       research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
       publications: 48,
       projects: 6
     },
     {
-      name: 'Dr. Meera Joshi',
+      name: 'Dr Rao Y Surampalli',
       designation: 'Assistant Professor',
       specialization: 'Construction Management',
       education: 'Ph.D. (IIT Bombay), M.Tech (VNIT Nagpur), B.Tech (COEP Pune)',
       experience: '12 years',
       email: 'meera.joshi@iiti.ac.in',
       phone: '+91-731-2438-706',
-      image: 'https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+      image: '../src/assets/faculty_pics/dr_Rao_Y_Surampalli.jpg',
       research: ['Project Management', 'Sustainable Construction', 'Building Information Modeling'],
       publications: 42,
       projects: 5
+    },
+    {
+      name: 'Dr. Akshay',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Dr. Akshay Photo.JPG',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Dr. Priyank J Sharma',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Dr. Priyank J Sharma.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Gourab',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Gourab.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Guru',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/GuruFinal.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Kaustav',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Kaustav.png',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Krishna R. Reddy',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Krishna R. Reddy.png',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Lalit Borana',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Lalit_Borana.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'M S JAIN',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/M S JAIN.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'MK Goyal',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/mkgoyal.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Munir Ahmad Nayak',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Munir Ahmad Nayak.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Neelima',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/neelime.jpeg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Novak',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/novak.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Sandeep',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Photo_Sandeep.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Farooq',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Photo-Farooq.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Priyansh',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Priyansh.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Professor Sandeep',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Professor Sandeep.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    {
+      name: 'Puneet Kumar Patra',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Puneet Kumar Patra.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    
+    {
+      name: 'Pushpa',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Pushpa.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    
+    {
+      name: 'Ravinder',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/ravinder.png',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    
+    {
+      name: 'Saikat',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/saikat.jpg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    
+    {
+      name: 'Sandeep Choudhary',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Sandeep Choudhary.png',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    
+    {
+      name: 'Santanu',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Santanu.png',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
+    },
+    
+    {
+      name: 'Sridhar',
+      designation: 'Associate Professor',
+      specialization: 'Environmental Engineering',
+      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
+      experience: '14 years',
+      email: 'vikram.agarwal@iiti.ac.in',
+      phone: '+91-731-2438-705',
+      image: '../src/assets/faculty_pics/Sridhar.jpeg',
+      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
+      publications: 48,
+      projects: 6
     }
+    
   ];
 
   const staff = [
     {
-      name: 'Ms. Sunita Sharma',
+      name: 'Ajay',
       designation: 'Administrative Officer',
       department: 'Administration',
       experience: '15 years',
       email: 'sunita.sharma@iiti.ac.in',
       phone: '+91-731-2438-710',
-      image: 'https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+      image: '../src/assets/staff pics/Ajay.jpg',
       responsibilities: ['Student Affairs', 'Academic Administration', 'Event Coordination']
     },
     {
-      name: 'Mr. Ramesh Kumar',
+      name: 'Amit',
       designation: 'Technical Officer',
       department: 'Laboratory Management',
       experience: '20 years',
       email: 'ramesh.kumar@iiti.ac.in',
       phone: '+91-731-2438-711',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+      image: '../src/assets/staff pics/Amit.jpg',
       responsibilities: ['Equipment Maintenance', 'Lab Safety', 'Technical Support']
     },
     {
-      name: 'Ms. Kavita Rao',
+      name: 'Awadhesh Verma',
       designation: 'Lab Assistant',
       department: 'Structural Engineering Lab',
       experience: '8 years',
       email: 'kavita.rao@iiti.ac.in',
       phone: '+91-731-2438-712',
-      image: 'https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+      image: '../src/assets/staff pics/Awadhesh Verma.jpg',
       responsibilities: ['Lab Assistance', 'Student Support', 'Equipment Operation']
     },
     {
-      name: 'Mr. Suresh Patel',
+      name: 'Ghanshyam',
       designation: 'Lab Technician',
       department: 'Geotechnical Engineering Lab',
       experience: '12 years',
       email: 'suresh.patel@iiti.ac.in',
       phone: '+91-731-2438-713',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+      image: '../src/assets/staff pics/Ghanshyam.jpg',
       responsibilities: ['Soil Testing', 'Equipment Calibration', 'Data Collection']
-    }
+    },
+    {
+      name: 'Pankaj Sankhla',
+      designation: 'Lab Technician',
+      department: 'Geotechnical Engineering Lab',
+      experience: '12 years',
+      email: 'suresh.patel@iiti.ac.in',
+      phone: '+91-731-2438-713',
+      image: '../src/assets/staff pics/Pankaj Sankhla.jpg',
+      responsibilities: ['Soil Testing', 'Equipment Calibration', 'Data Collection']
+    },
+    {
+      name: 'Rinki',
+      designation: 'Lab Technician',
+      department: 'Geotechnical Engineering Lab',
+      experience: '12 years',
+      email: 'suresh.patel@iiti.ac.in',
+      phone: '+91-731-2438-713',
+      image: '../src/assets/staff pics/Rinki.jpg',
+      responsibilities: ['Soil Testing', 'Equipment Calibration', 'Data Collection']
+    },
   ];
 
   const phdStudents = [
     {
-      name: 'Arjun Mehta',
+      name: 'Aadarsh Singh',
       year: '4th Year',
       supervisor: 'Dr. Rajesh Kumar Sharma',
       specialization: 'Earthquake Engineering',
       thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
       email: 'arjun.mehta@iiti.ac.in',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
+      image: '../src/assets/stu_images/phd/Aadarsh Singh.jpg',
       publications: 8,
       conferences: 12
     },
     {
-      name: 'Priyanka Singh',
-      year: '3rd Year',
-      supervisor: 'Dr. Priya Menon',
-      specialization: 'Geotechnical Engineering',
-      thesis: 'Ground Improvement Techniques for Soft Clay Deposits',
-      email: 'priyanka.singh@iiti.ac.in',
-      image: 'https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
-      publications: 5,
-      conferences: 8
+      name: 'Achala Singh',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Achala Singh (PhD).jpg',
+      publications: 8,
+      conferences: 12
     },
     {
-      name: 'Rohit Sharma',
-      year: '2nd Year',
-      supervisor: 'Dr. Amit Singh',
-      specialization: 'Transportation Engineering',
-      thesis: 'Smart Traffic Management Systems for Urban Areas',
-      email: 'rohit.sharma@iiti.ac.in',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
-      publications: 3,
-      conferences: 5
+      name: 'Akash Paradkar',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Akash Paradkar(PhD).jpg',
+      publications: 8,
+      conferences: 12
     },
     {
-      name: 'Anita Gupta',
-      year: '3rd Year',
-      supervisor: 'Dr. Sneha Patel',
-      specialization: 'Water Resources Engineering',
-      thesis: 'Climate Change Impact on Water Resources Management',
-      email: 'anita.gupta@iiti.ac.in',
-      image: 'https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
-      publications: 6,
-      conferences: 9
+      name: 'Akshay',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Akshay.jpg',
+      publications: 8,
+      conferences: 12
     },
     {
-      name: 'Vikash Kumar',
-      year: '1st Year',
-      supervisor: 'Dr. Vikram Agarwal',
-      specialization: 'Environmental Engineering',
-      thesis: 'Advanced Wastewater Treatment Technologies',
-      email: 'vikash.kumar@iiti.ac.in',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1',
-      publications: 2,
-      conferences: 3
-    }
+      name: 'Alok Sharma',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Alok Sharma (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Anshul',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Anshul.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Arpita',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Arpita.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'ASTHA SHARMA',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/ASTHA SHARMA (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'astha',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/astha.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Bodhanam',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Bodhanam.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Deepak Mishra',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Deepak Mishra (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Gaurav Sharma',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Gaurav Sharma(PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Ghulam Hussain',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Ghulam Hussain (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Gourav Agrawal',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Gourav Agrawal (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Gyanesh',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Gyanesh.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Harshvardhan Solanki',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Harshvardhan Solanki (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Himanshu',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Himanshu.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Hussain',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Hussain.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Jatin Garhekar',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Jatin Garhekar (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Jitendra Mathankar',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Jitendra Mathankar (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Kajol Kankane',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Kajol Kankane (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Karnati',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Karnati.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Kuldeep',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Kuldeep.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Kunal',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Kunal.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Kushal Patil',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Kushal Patil.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Mahaveer Singh Dangi ',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Mahaveer Singh Dangi (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Manish Yadav ',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Manish Yadav (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Mayank Upadhyay',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Mayank Upadhyay.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Meghna',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Meghna.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Minu',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Minu.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Mohd',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Mohd.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Moirangthem',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Moirangthem.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'KMonika',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Monika.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'MUKUL',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/MUKUL.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Naveen Kumar',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Naveen Kumar (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Nikhil Pandey',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Nikhil Pandey (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Nikhil',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Nikhil.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Nitin',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Nitin.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Parul',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Parul.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Revanth',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Revanth.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Rohit Vyas',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Rohit Vyas(PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Rosa',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Rosa.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Sachin',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Sachin.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Saket',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/SAKET.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Sanchit',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Sanchit.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Sarvjeet Singh',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Sarvjeet Singh (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Sayak Chakravorty',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Sayak Chakravorty (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Shivam',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Shivam.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Shivukumar',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Shivukumar.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Shubham More',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Shubham More (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Shuddhashil',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Shuddhashil.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Smriti',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Smriti.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Srinidhi',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Srinidhi.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Sugato Panda',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Sugato Panda (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Sumedh Kishor Limaye',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Sumedh Kishor Limaye (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Utkarsh Baranwal',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Utkarsh Baranwal (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Veena N Bhajantri',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Veena N Bhajantri (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Venkatesh',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Venkatesh.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Vijay',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Vijay.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Vikas Rawat',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Vikas Rawat(PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Vikas Sudam Gore',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Vikas Sudam Gore (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Vikas',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Vikas.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'VINAY SHARMA',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/VINAY SHARMA (PhD).jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Vivek',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Vivek.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    {
+      name: 'Waqar',
+      year: '4th Year',
+      supervisor: 'Dr. Rajesh Kumar Sharma',
+      specialization: 'Earthquake Engineering',
+      thesis: 'Seismic Performance of High-Rise Buildings with Base Isolation Systems',
+      email: 'arjun.mehta@iiti.ac.in',
+      image: '../src/assets/stu_images/phd/Waqar.jpg',
+      publications: 8,
+      conferences: 12
+    },
+    
   ];
 
   const mtechStudents = [
     {
-      name: 'Rahul Verma',
+      name: 'Karnati.jpg',
       year: '2nd Year',
       specialization: 'Structural Engineering',
       project: 'Design of Steel-Concrete Composite Structures',
@@ -316,70 +1303,13 @@ const People = () => {
       className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group"
     >
       <div className="p-6">
-        <div className="text-center mb-6">
+        <div className="text-center">
           <img
             src={member.image}
             alt={member.name}
-            className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-blue-100 group-hover:border-amber-200 transition-colors duration-300"
+            className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-100 group-hover:border-amber-200 transition-colors duration-300"
           />
-          <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-          <p className="text-blue-800 font-medium mb-2">{member.designation}</p>
-          <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-sm rounded-full">
-            {member.specialization}
-          </span>
-        </div>
-
-        <div className="mb-4">
-          <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-            <BookOpen className="h-4 w-4 mr-2 text-blue-600" />
-            Education
-          </h4>
-          <p className="text-sm text-gray-600 leading-relaxed">{member.education}</p>
-        </div>
-
-        <div className="mb-4">
-          <h4 className="font-semibold text-gray-900 mb-2">Research Areas</h4>
-          <div className="flex flex-wrap gap-1">
-            {member.research.map((area, idx) => (
-              <span
-                key={idx}
-                className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded"
-              >
-                {area}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        <div className="flex justify-between text-center mb-4 py-3 bg-gray-50 rounded-lg">
-          <div>
-            <div className="text-lg font-bold text-blue-800">{member.publications}</div>
-            <div className="text-xs text-gray-600">Publications</div>
-          </div>
-          <div>
-            <div className="text-lg font-bold text-amber-600">{member.projects}</div>
-            <div className="text-xs text-gray-600">Projects</div>
-          </div>
-          <div>
-            <div className="text-lg font-bold text-green-600">{member.experience}</div>
-            <div className="text-xs text-gray-600">Experience</div>
-          </div>
-        </div>
-
-        <div className="space-y-2 text-sm">
-          <div className="flex items-center text-gray-600">
-            <Mail className="h-4 w-4 mr-2 text-blue-600" />
-            <a 
-              href={`mailto:${member.email}`}
-              className="hover:text-blue-800 transition-colors"
-            >
-              {member.email}
-            </a>
-          </div>
-          <div className="flex items-center text-gray-600">
-            <Phone className="h-4 w-4 mr-2 text-blue-600" />
-            <span>{member.phone}</span>
-          </div>
+          <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
         </div>
       </div>
     </div>
@@ -391,141 +1321,99 @@ const People = () => {
       className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
     >
       <div className="p-6">
-        <div className="text-center mb-6">
+        <div className="text-center">
           <img
             src={member.image}
             alt={member.name}
-            className="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-4 border-green-100"
+            className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-green-100"
           />
-          <h3 className="text-lg font-bold text-gray-900 mb-1">{member.name}</h3>
-          <p className="text-green-700 font-medium mb-1">{member.designation}</p>
-          <p className="text-gray-600 text-sm">{member.department}</p>
-        </div>
-
-        <div className="mb-4">
-          <h4 className="font-semibold text-gray-900 mb-2">Responsibilities</h4>
-          <div className="space-y-1">
-            {member.responsibilities.map((resp, idx) => (
-              <div key={idx} className="text-sm text-gray-600 flex items-start">
-                <span className="w-2 h-2 bg-green-500 rounded-full mt-1.5 mr-3 flex-shrink-0"></span>
-                <span>{resp}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="space-y-2 text-sm">
-          <div className="flex items-center text-gray-600">
-            <Mail className="h-4 w-4 mr-2 text-green-600" />
-            <a 
-              href={`mailto:${member.email}`}
-              className="hover:text-green-800 transition-colors"
-            >
-              {member.email}
-            </a>
-          </div>
-          <div className="flex items-center text-gray-600">
-            <Phone className="h-4 w-4 mr-2 text-green-600" />
-            <span>{member.phone}</span>
-          </div>
-          <div className="flex items-center text-gray-600">
-            <Award className="h-4 w-4 mr-2 text-green-600" />
-            <span>{member.experience} Experience</span>
-          </div>
+          <h3 className="text-lg font-bold text-gray-900">{member.name}</h3>
         </div>
       </div>
     </div>
   );
 
-  const renderStudentCard = (student, index, type) => (
-    <div
-      key={index}
-      className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
-    >
-      <div className="p-6">
-        <div className="text-center mb-4">
-          <img
-            src={student.image}
-            alt={student.name}
-            className="w-16 h-16 rounded-full mx-auto mb-3 object-cover border-4 border-purple-100"
-          />
-          <h3 className="text-lg font-bold text-gray-900 mb-1">{student.name}</h3>
-          <p className="text-purple-700 font-medium text-sm">{student.year}</p>
-          {student.rollNo && (
-            <p className="text-gray-500 text-xs">{student.rollNo}</p>
-          )}
-        </div>
-
-        <div className="space-y-3 text-sm">
-          <div className="flex items-center text-gray-600">
-            <BookOpen className="h-4 w-4 mr-2 text-purple-600" />
-            <span className="font-medium">Specialization:</span>
-            <span className="ml-1">{student.specialization}</span>
+  const renderStudentCard = (student, index, type) => {
+    if (type === 'phd') {
+      return (
+        <div
+          key={index}
+          className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
+        >
+          <div className="p-6">
+            <div className="text-center">
+              <img
+                src={student.image}
+                alt={student.name}
+                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-purple-100"
+              />
+              <h3 className="text-lg font-bold text-gray-900">{student.name}</h3>
+            </div>
           </div>
-          
-          {type === 'phd' && (
-            <>
-              <div className="flex items-start text-gray-600">
-                <Award className="h-4 w-4 mr-2 text-purple-600 mt-0.5" />
-                <div>
-                  <span className="font-medium">Thesis:</span>
-                  <p className="text-xs mt-1">{student.thesis}</p>
-                </div>
+        </div>
+      );
+    }
+
+    // For M.Tech and B.Tech students, keep the full card
+    return (
+      <div
+        key={index}
+        className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
+      >
+        <div className="p-6">
+          <div className="text-center mb-4">
+            <img
+              src={student.image}
+              alt={student.name}
+              className="w-16 h-16 rounded-full mx-auto mb-3 object-cover border-4 border-purple-100"
+            />
+            <h3 className="text-lg font-bold text-gray-900 mb-1">{student.name}</h3>
+            <p className="text-purple-700 font-medium text-sm">{student.year}</p>
+            {student.rollNo && (
+              <p className="text-gray-500 text-xs">{student.rollNo}</p>
+            )}
+          </div>
+
+          <div className="space-y-3 text-sm">
+            <div className="flex items-center text-gray-600">
+              <BookOpen className="h-4 w-4 mr-2 text-purple-600" />
+              <span className="font-medium">Specialization:</span>
+              <span className="ml-1">{student.specialization}</span>
+            </div>
+            
+            <div className="flex items-start text-gray-600">
+              <Award className="h-4 w-4 mr-2 text-purple-600 mt-0.5" />
+              <div>
+                <span className="font-medium">Project:</span>
+                <p className="text-xs mt-1">{student.project}</p>
               </div>
+            </div>
+            {student.supervisor && (
               <div className="flex items-center text-gray-600">
                 <Users className="h-4 w-4 mr-2 text-purple-600" />
                 <span className="font-medium">Supervisor:</span>
                 <span className="ml-1 text-xs">{student.supervisor}</span>
               </div>
-              <div className="flex justify-between text-center py-2 bg-purple-50 rounded">
-                <div>
-                  <div className="font-bold text-purple-800">{student.publications}</div>
-                  <div className="text-xs text-gray-600">Publications</div>
-                </div>
-                <div>
-                  <div className="font-bold text-purple-800">{student.conferences}</div>
-                  <div className="text-xs text-gray-600">Conferences</div>
-                </div>
-              </div>
-            </>
-          )}
+            )}
+            <div className="text-center py-2 bg-purple-50 rounded">
+              <div className="font-bold text-purple-800">{student.cgpa}</div>
+              <div className="text-xs text-gray-600">CGPA</div>
+            </div>
 
-          {(type === 'mtech' || type === 'btech') && (
-            <>
-              <div className="flex items-start text-gray-600">
-                <Award className="h-4 w-4 mr-2 text-purple-600 mt-0.5" />
-                <div>
-                  <span className="font-medium">Project:</span>
-                  <p className="text-xs mt-1">{student.project}</p>
-                </div>
-              </div>
-              {student.supervisor && (
-                <div className="flex items-center text-gray-600">
-                  <Users className="h-4 w-4 mr-2 text-purple-600" />
-                  <span className="font-medium">Supervisor:</span>
-                  <span className="ml-1 text-xs">{student.supervisor}</span>
-                </div>
-              )}
-              <div className="text-center py-2 bg-purple-50 rounded">
-                <div className="font-bold text-purple-800">{student.cgpa}</div>
-                <div className="text-xs text-gray-600">CGPA</div>
-              </div>
-            </>
-          )}
-
-          <div className="flex items-center text-gray-600">
-            <Mail className="h-4 w-4 mr-2 text-purple-600" />
-            <a 
-              href={`mailto:${student.email}`}
-              className="hover:text-purple-800 transition-colors text-xs"
-            >
-              {student.email}
-            </a>
+            <div className="flex items-center text-gray-600">
+              <Mail className="h-4 w-4 mr-2 text-purple-600" />
+              <a 
+                href={`mailto:${student.email}`}
+                className="hover:text-purple-800 transition-colors text-xs"
+              >
+                {student.email}
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const currentData = getCurrentData();
   const filteredData = filterData(currentData);
@@ -600,6 +1488,7 @@ const People = () => {
             <div className={`grid gap-6 ${
               activeTab === 'faculty' ? 'md:grid-cols-2 lg:grid-cols-3' :
               activeTab === 'staff' ? 'md:grid-cols-2 lg:grid-cols-3' :
+              activeTab === 'phd' ? 'md:grid-cols-2 lg:grid-cols-3' :
               'md:grid-cols-2 lg:grid-cols-4'
             }`}>
               {filteredData.map((person, index) => {
