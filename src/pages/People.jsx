@@ -334,19 +334,7 @@ const People = () => {
       publications: 48,
       projects: 6
     },
-    {
-      name: 'Santanu',
-      designation: 'Associate Professor',
-      specialization: 'Environmental Engineering',
-      education: 'Ph.D. (IIT Kanpur), M.Tech (IIT Delhi), B.Tech (DTU Delhi)',
-      experience: '14 years',
-      email: 'vikram.agarwal@iiti.ac.in',
-      phone: '+91-731-2438-705',
-      image: '../src/assets/faculty_pics/Santanu.png',
-      research: ['Wastewater Treatment', 'Air Pollution Control', 'Solid Waste Management'],
-      publications: 48,
-      projects: 6
-    },
+   
     
     {
       name: 'Sridhar',
