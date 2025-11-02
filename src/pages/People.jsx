@@ -105,25 +105,6 @@ const People = () => {
       projects: 0,
     },
     {
-      name: 'Dr. Mohd. Farooq AZAM',
-      designation: 'Associate Professor',
-      specialization: 'Water Resources Engineering',
-      education: '',
-      experience: '',
-      email: 'farooqazam@iiti.ac.in',
-      phone: '0731-660 3289',
-      image: '../src/assets/faculty_pics/farooq_azam.jpg', // Placeholder image path
-      research: [
-        'Hydro-Meteorological monitoring',
-        'Glacier Mass and Dynamic studies',
-        'Energy Balance of Glacier and Snow Cover',
-        'Hydrological modelling of Himalayan Watersheds',
-        'Climate Change impacts on Himalayan Water Resources',
-      ],
-      publications: 0,
-      projects: 0,
-    },
-    {
       name: 'Dr. Abhishek Rajput',
       designation: 'Associate Professor',
       specialization: 'Structural Engineering',
@@ -349,7 +330,7 @@ const People = () => {
       experience: '', // Data not available on site
       email: 'rinki@iiti.ac.in',
       phone: '+91-731-660 (Ext. No. 3477)',
-      image: '../src/assets/staff_pics/rinki_seth.jpg', // Placeholder image path
+      image: '../src/assets/staff pics/Rinki.jpg', // Placeholder image path
       responsibilities: [], // Data not available on site
     },
     {
@@ -359,7 +340,7 @@ const People = () => {
       experience: '',
       email: 'jadhavamit@iiti.ac.in',
       phone: '+91-731-660 (Ext. No. 3411)',
-      image: '../src/assets/staff_pics/amit_jadhav.jpg', // Placeholder image path
+      image: '../src/assets/staff pics/Amit.jpg', // Placeholder image path
       responsibilities: [],
     },
     {
@@ -369,7 +350,7 @@ const People = () => {
       experience: '',
       email: 'amalviya@iiti.ac.in',
       phone: '+91-731-660 (Ext. No. 3412)',
-      image: '../src/assets/staff_pics/ajay_malviya.jpg', // Placeholder image path
+      image: '../src/assets/staff pics/Ajay.jpg', // Placeholder image path
       responsibilities: [],
     },
     {
@@ -379,7 +360,7 @@ const People = () => {
       experience: '',
       email: 'sankhlapankaj@iiti.ac.in',
       phone: '', // Data not available on site
-      image: '../src/assets/staff_pics/pankaj_sankhla.jpg', // Placeholder image path
+      image: '../src/assets/staff pics/Pankaj.jpg', // Placeholder image path
       responsibilities: [],
     },
     {
@@ -389,7 +370,7 @@ const People = () => {
       experience: '',
       email: 'gkachneriya@iiti.ac.in',
       phone: '+91-731-660 (Ext. No. 5591)',
-      image: '../src/assets/staff_pics/ghanshyam_kachneriya.jpg', // Placeholder image path
+      image: '../src/assets/staff pics/Ghanshyam.jpg', // Placeholder image path
       responsibilities: [],
     },
     {
@@ -399,7 +380,7 @@ const People = () => {
       experience: '',
       email: 'avadeshv@iiti.ac.in',
       phone: '', // Data not available on site
-      image: '../src/assets/staff_pics/awadhesh_verma.jpg', // Placeholder image path
+      image: '../src/assets/staff pics/Awadhesh.jpg', // Placeholder image path
       responsibilities: [],
     },
   ];
@@ -474,19 +455,16 @@ const People = () => {
   ];
   
   const mtechStudents = [
-    { year: '2025 Batch', link: '../src/assets/student_lists/mtech_2025.pdf' },
-    { year: '2024 Batch', link: '../src/assets/student_lists/mtech_2024.pdf' },
-    { year: '2023 Batch', link: '../src/assets/student_lists/mtech_2023.pdf' },
-    { year: '2022 Batch', link: '../src/assets/student_lists/mtech_2022.pdf' },
-    { year: '2021 Batch', link: '../src/assets/student_lists/mtech_2021.pdf' },
+    { year: '2025 Batch', link: '../src/assets/student_lists/M.tech Student List 2025.pdf' },
+    { year: '2024 Batch', link: '../src/assets/student_lists/M.tech Student List 2024.pdf' },
   ];
   
   const btechStudents = [
-    { year: '2025 Batch', link: '../src/assets/student_lists/btech_2025.pdf' },
-    { year: '2024 Batch', link: '../src/assets/student_lists/btech_2024.pdf' },
-    { year: '2023 Batch', link: '../src/assets/student_lists/btech_2023.pdf' },
-    { year: '2022 Batch', link: '../src/assets/student_lists/btech_2022.pdf' },
-    { year: '2021 Batch', link: '../src/assets/student_lists/btech_2021.pdf' },
+    { year: '2025 Batch', link: '../src/assets/student_lists/B.tech Student List 2025.pdf' },
+    { year: '2024 Batch', link: '../src/assets/student_lists/B.tech Student List 2024.pdf' },
+    { year: '2023 Batch', link: '../src/assets/student_lists/B.tech Student List 2023.pdf' },
+    { year: '2022 Batch', link: '../src/assets/student_lists/B.tech Student List 2022.pdf' },
+    { year: '2021 Batch', link: '../src/assets/student_lists/B.tech Student List 2021.pdf' },
   ];
 
   const tabs = [
