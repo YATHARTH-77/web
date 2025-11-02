@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Award, BookOpen, Users, Search, GraduationCap, Building, User, Link as LinkIcon, Download } from 'lucide-react';
+import { Mail, Phone, Award, BookOpen, Users, Search, GraduationCap, Building, User, Link as LinkIcon, Download, MapPin } from 'lucide-react'; // Added MapPin
 
 const People = () => {
   const [activeTab, setActiveTab] = useState('regularFaculty');
   const [searchTerm, setSearchTerm] = useState('');
 
-  // --- Faculty Data ---
+  // --- Faculty Data (with Room Numbers Added) ---
   const regularFaculty = [
     {
       name: 'Dr. Gourab Sil',
@@ -15,6 +15,7 @@ const People = () => {
       experience: '', // Data not available on site
       email: 'hodce@iiti.ac.in',
       phone: '0731-660 3360',
+      room: '405, POD 1D, Chromium', // Added
       image: '../src/assets/faculty_pics/Gourab.jpg', // Placeholder image path
       research: [
         'Performance Based Geometric Design of Highways',
@@ -34,6 +35,7 @@ const People = () => {
       experience: '',
       email: 'schaudhary@iiti.ac.in',
       phone: '0731-660 3256/3469',
+      room: '403, Chromium Building', // Added
       image: '../src/assets/faculty_pics/Sandeep Choudhary.png', // Placeholder image path
       research: [
         'Structural Engineering',
@@ -54,6 +56,7 @@ const People = () => {
       experience: '',
       email: 'neelima.satyam@iiti.ac.in',
       phone: '0731-660 3290',
+      room: '418, Chromium Building', // Added
       image: '../src/assets/faculty_pics/neelima_satyam_orig.jpg', // Placeholder image path
       research: [
         'Geotechnical Earthquake Engineering',
@@ -74,6 +77,7 @@ const People = () => {
       experience: '',
       email: 'mkgoyal@iiti.ac.in',
       phone: '0731-660 3288',
+      room: '209, Pod 1A', // Added
       image: '../src/assets/faculty_pics/mkgoyal.jpg', // Placeholder image path
       research: [
         'Resilience of River Basins and Hydrological Modeling',
@@ -92,6 +96,7 @@ const People = () => {
       experience: '',
       email: 'lalitborana@iiti.ac.in',
       phone: '0731-660 3332',
+      room: '407, Pod 1D', // Added
       image: '../src/assets/faculty_pics/Lalit_Borana.jpg', // Placeholder image path
       research: [
         'Unsaturated Soil Mechanics',
@@ -112,6 +117,7 @@ const People = () => {
       experience: '',
       email: 'abhishekrajput@iiti.ac.in',
       phone: '0731-660 3310',
+      room: '616, POD 1D', // Added
       image: '../src/assets/faculty_pics/abhishekrajput.jpg', // Placeholder image path
       research: [
         'Behavior of concrete and metals under projectile impact and blast loading',
@@ -131,6 +137,7 @@ const People = () => {
       experience: '',
       email: 'kaustav.bakshi@iiti.ac.in',
       phone: '0731-660 3233',
+      room: '102, Pod 1C', // Added
       image: '../src/assets/faculty_pics/Kaustav.png', // Placeholder image path
       research: [
         'Static and dynamic studies on laminated composite shell roofs',
@@ -151,6 +158,7 @@ const People = () => {
       experience: '',
       email: 'guruprakash@iiti.ac.in',
       phone: '0731-660 3215',
+      room: '', // Added (Not specified on site)
       image: '../src/assets/faculty_pics/GuruFinal.jpg', // Placeholder image path
       research: [
         'Stochastic degradation modeling using condition monitoring data',
@@ -169,6 +177,7 @@ const People = () => {
       experience: '',
       email: 'priyansh@iiti.ac.in',
       phone: '0731-660 3362',
+      room: '311, POD 1D, Chromium', // Added
       image: '../src/assets/faculty_pics/Priyansh.jpg', // Placeholder image path
       research: [
         'Pavement Materials Characterization and Modeling',
@@ -189,6 +198,7 @@ const People = () => {
       experience: '',
       email: 'as_mandpe@iiti.ac.in',
       phone: '0731-660 3257',
+      room: '316, POD 1D, Chromium', // Added
       image: '../src/assets/faculty_pics/Ashootosh Passport_Dark Background.JPG', // Placeholder image path
       research: [
         'Bio-valorization of solid wastes',
@@ -210,6 +220,7 @@ const People = () => {
       experience: '',
       email: 'priyanksharma@iiti.ac.in',
       phone: '0731-660 3382',
+      room: '422, Pod-1D, Chromium', // Added
       image: '../src/assets/faculty_pics/Dr. Priyank J Sharma.jpg', // Placeholder image path
       research: [
         'Hydroclimatology and Climate Extremes',
@@ -229,6 +240,7 @@ const People = () => {
       experience: '',
       email: 'mayur.jain@iiti.ac.in',
       phone: '0731-660 3384',
+      room: '605, POD 1A, Silicon', // Added
       image: '../src/assets/faculty_pics/M S JAIN.jpg', // Placeholder image path
       research: [
         'Rapid Composting Techniques',
@@ -249,6 +261,7 @@ const People = () => {
       experience: '',
       email: 'apsingh@iiti.ac.in',
       phone: '+91-9454208610',
+      room: '402, POD-1C', // Added
       image: '../src/assets/faculty_pics/Dr. Akshay Photo.JPG', // Placeholder image path
       research: [
         'Numerical Modeling in Geomechanics',
@@ -268,6 +281,7 @@ const People = () => {
       experience: '',
       email: 'baadigaramu@iiti.ac.in',
       phone: '+91-7675015763',
+      room: '', // Added (Not specified on site)
       image: '../src/assets/faculty_pics/Dr Baadiga Ramu.jpg', // Placeholder image path
       research: [
         'Geosynthetic Engineering',
@@ -288,6 +302,7 @@ const People = () => {
       experience: '',
       email: 'ravinder@iiti.ac.in',
       phone: '', // Data not available on site
+      room: '403, POD-1C', // Added
       image: '../src/assets/faculty_pics/ravinder.png', // Placeholder image path
       research: [
         'Structural Health Monitoring',
@@ -308,6 +323,7 @@ const People = () => {
       experience: '',
       email: 'pushpa@iiti.ac.in',
       phone: '', // Data not available on site
+      room: 'POD-1C', // Added
       image: '../src/assets/faculty_pics/Pushpa.jpg', // Placeholder image path
       research: [
         'Human factors in road safety',
@@ -540,6 +556,14 @@ const People = () => {
               <span>{member.phone}</span>
             </div>
           )}
+          {/* --- ADDED ROOM NUMBER DISPLAY --- */}
+          {member.room && (
+            <div className="flex items-center text-gray-600">
+              <MapPin className="h-4 w-4 mr-2 text-blue-600" />
+              <span>{member.room}</span>
+            </div>
+          )}
+          {/* --- END OF ADDED CODE --- */}
           <div className="pt-2">
             <h4 className="text-xs font-semibold text-gray-800 mb-1">Research Interests:</h4>
             <ul className="list-disc list-inside space-y-1">
