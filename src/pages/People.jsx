@@ -15,7 +15,7 @@ const People = () => {
       experience: '', // Data not available on site
       email: 'hodce@iiti.ac.in',
       phone: '0731-660 3360',
-      image: '../src/assets/faculty_pics/gourab_sil.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/Gourab.jpg', // Placeholder image path
       research: [
         'Performance Based Geometric Design of Highways',
         'Safety of Roadway Infrastructure',
@@ -34,7 +34,7 @@ const People = () => {
       experience: '',
       email: 'schaudhary@iiti.ac.in',
       phone: '0731-660 3256/3469',
-      image: '../src/assets/faculty_pics/sandeep_chaudhary.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/Sandeep Choudhary.png', // Placeholder image path
       research: [
         'Structural Engineering',
         'Sustainable Construction Practices',
@@ -54,7 +54,7 @@ const People = () => {
       experience: '',
       email: 'neelima.satyam@iiti.ac.in',
       phone: '0731-660 3290',
-      image: '../src/assets/faculty_pics/neelima_satyam.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/neelima_satyam_orig.jpg', // Placeholder image path
       research: [
         'Geotechnical Earthquake Engineering',
         'Dynamic Soil Structure Interaction Analysis',
@@ -74,7 +74,7 @@ const People = () => {
       experience: '',
       email: 'mkgoyal@iiti.ac.in',
       phone: '0731-660 3288',
-      image: '../src/assets/faculty_pics/manish_goyal.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/mkgoyal.jpg', // Placeholder image path
       research: [
         'Resilience of River Basins and Hydrological Modeling',
         'Hydro-climatology and Statistical Downscaling',
@@ -92,7 +92,7 @@ const People = () => {
       experience: '',
       email: 'lalitborana@iiti.ac.in',
       phone: '0731-660 3332',
-      image: '../src/assets/faculty_pics/lalit_borana.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/Lalit_Borana.jpg', // Placeholder image path
       research: [
         'Unsaturated Soil Mechanics',
         'Geotechnical health monitoring',
@@ -112,7 +112,7 @@ const People = () => {
       experience: '',
       email: 'abhishekrajput@iiti.ac.in',
       phone: '0731-660 3310',
-      image: '../src/assets/faculty_pics/abhishek_rajput.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/abhishekrajput.jpg', // Placeholder image path
       research: [
         'Behavior of concrete and metals under projectile impact and blast loading',
         'Finite element modelling and simulations',
@@ -131,7 +131,7 @@ const People = () => {
       experience: '',
       email: 'kaustav.bakshi@iiti.ac.in',
       phone: '0731-660 3233',
-      image: '../src/assets/faculty_pics/kaustav_bakshi.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/Kaustav.png', // Placeholder image path
       research: [
         'Static and dynamic studies on laminated composite shell roofs',
         'First and progressive ply failure studies',
@@ -151,7 +151,7 @@ const People = () => {
       experience: '',
       email: 'guruprakash@iiti.ac.in',
       phone: '0731-660 3215',
-      image: '../src/assets/faculty_pics/guru_prakash.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/GuruFinal.jpg', // Placeholder image path
       research: [
         'Stochastic degradation modeling using condition monitoring data',
         'Bayesian reliability assessment',
@@ -169,7 +169,7 @@ const People = () => {
       experience: '',
       email: 'priyansh@iiti.ac.in',
       phone: '0731-660 3362',
-      image: '../src/assets/faculty_pics/priyansh_singh.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/Priyansh.jpg', // Placeholder image path
       research: [
         'Pavement Materials Characterization and Modeling',
         'Pavement Design, Construction and Evaluation',
@@ -189,7 +189,7 @@ const People = () => {
       experience: '',
       email: 'as_mandpe@iiti.ac.in',
       phone: '0731-660 3257',
-      image: '../src/assets/faculty_pics/ashootosh_mandpe.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/Ashootosh Passport_Dark Background.JPG', // Placeholder image path
       research: [
         'Bio-valorization of solid wastes',
         'Municipal landfill remediation through biomining approaches',
@@ -210,7 +210,7 @@ const People = () => {
       experience: '',
       email: 'priyanksharma@iiti.ac.in',
       phone: '0731-660 3382',
-      image: '../src/assets/faculty_pics/priyank_sharma.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/Dr. Priyank J Sharma.jpg', // Placeholder image path
       research: [
         'Hydroclimatology and Climate Extremes',
         'Climate Change Impact on Water Resources',
@@ -229,7 +229,7 @@ const People = () => {
       experience: '',
       email: 'mayur.jain@iiti.ac.in',
       phone: '0731-660 3384',
-      image: '../src/assets/faculty_pics/mayur_jain.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/M S JAIN.jpg', // Placeholder image path
       research: [
         'Rapid Composting Techniques',
         'Kinetic modelling of Bio-waste degradation',
@@ -249,7 +249,7 @@ const People = () => {
       experience: '',
       email: 'apsingh@iiti.ac.in',
       phone: '+91-9454208610',
-      image: '../src/assets/faculty_pics/akshay_pratap_singh.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/Dr. Akshay Photo.JPG', // Placeholder image path
       research: [
         'Numerical Modeling in Geomechanics',
         'Analysis of Slopes, Retaining walls, Sheet Piles, Shallow Foundations, Pile Foundations',
@@ -268,7 +268,7 @@ const People = () => {
       experience: '',
       email: 'baadigaramu@iiti.ac.in',
       phone: '+91-7675015763',
-      image: '../src/assets/faculty_pics/baadiga_ramu.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/Dr Baadiga Ramu.jpg', // Placeholder image path
       research: [
         'Geosynthetic Engineering',
         'Pavement Geotechnics',
@@ -288,7 +288,7 @@ const People = () => {
       experience: '',
       email: 'ravinder@iiti.ac.in',
       phone: '', // Data not available on site
-      image: '../src/assets/faculty_pics/ravinder.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/ravinder.png', // Placeholder image path
       research: [
         'Structural Health Monitoring',
         'Ballistic Impact and Fracture Simulations',
@@ -308,7 +308,7 @@ const People = () => {
       experience: '',
       email: 'pushpa@iiti.ac.in',
       phone: '', // Data not available on site
-      image: '../src/assets/faculty_pics/pushpa_choudhary.jpg', // Placeholder image path
+      image: '../src/assets/faculty_pics/Pushpa.jpg', // Placeholder image path
       research: [
         'Human factors in road safety',
         'Vulnerable road users\' behaviour and safety',
