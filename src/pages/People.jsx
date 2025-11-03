@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Award, BookOpen, Users, Search, GraduationCap, Building, User, Link as LinkIcon, Download, MapPin } from 'lucide-react'; // Added MapPin
+import { Mail, Phone, Award, BookOpen, Users, Search, GraduationCap, Building, User, Link as LinkIcon, Download, MapPin, ExternalLink } from 'lucide-react'; // Added ExternalLink
 
 const People = () => {
   const [activeTab, setActiveTab] = useState('regularFaculty');
   const [searchTerm, setSearchTerm] = useState('');
+  // --- NEW: State for faculty specialization filter ---
+  const [specializationFilter, setSpecializationFilter] = useState('All');
 
   // --- Faculty Data (with Room Numbers Added) ---
   const regularFaculty = [
@@ -337,6 +339,9 @@ const People = () => {
     },
   ];
 
+  // --- NEW: Get unique specializations for filter buttons ---
+  const specializations = ['All', ...new Set(regularFaculty.map(f => f.specialization))];
+
   // --- Staff Data ---
   const staff = [
     {
@@ -502,6 +507,7 @@ const People = () => {
     }
   };
 
+  // --- UPDATED: filterData function ---
   const filterData = (data) => {
     // M.Tech and B.Tech tabs just show links, no filtering needed
     if (activeTab === 'mtech' || activeTab === 'btech') {
@@ -515,12 +521,28 @@ const People = () => {
       );
     }
 
-    // Default for faculty and staff
-    return data.filter(person =>
-      person.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      (person.specialization && person.specialization.toLowerCase().includes(searchTerm.toLowerCase())) ||
-      (person.designation && person.designation.toLowerCase().includes(searchTerm.toLowerCase()))
-    );
+    // Staff tab filters by name or designation
+    if (activeTab === 'staff') {
+      return data.filter(person =>
+        person.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (person.designation && person.designation.toLowerCase().includes(searchTerm.toLowerCase()))
+      );
+    }
+
+    // Faculty tab filters by specialization AND search term
+    if (activeTab === 'regularFaculty') {
+      const specializationFiltered = data.filter(person =>
+        specializationFilter === 'All' || person.specialization === specializationFilter
+      );
+      
+      return specializationFiltered.filter(person =>
+        person.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (person.specialization && person.specialization.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (person.designation && person.designation.toLowerCase().includes(searchTerm.toLowerCase()))
+      );
+    }
+
+    return data; // Fallback
   };
 
   // --- Render Functions ---
@@ -556,14 +578,12 @@ const People = () => {
               <span>{member.phone}</span>
             </div>
           )}
-          {/* --- ADDED ROOM NUMBER DISPLAY --- */}
           {member.room && (
             <div className="flex items-center text-gray-600">
               <MapPin className="h-4 w-4 mr-2 text-blue-600" />
               <span>{member.room}</span>
             </div>
           )}
-          {/* --- END OF ADDED CODE --- */}
           <div className="pt-2">
             <h4 className="text-xs font-semibold text-gray-800 mb-1">Research Interests:</h4>
             <ul className="list-disc list-inside space-y-1">
@@ -621,6 +641,7 @@ const People = () => {
     </div>
   );
 
+  // --- UPDATED: renderStudentYearCard function ---
   const renderStudentYearCard = (studentYear, index) => {
     let IconComponent;
     let colorClass;
@@ -654,8 +675,9 @@ const People = () => {
               rel="noopener noreferrer"
               className={`inline-flex items-center px-4 py-2 bg-${colorClass}-600 text-white text-sm font-medium rounded-lg hover:bg-${colorClass}-700 transition-colors`}
             >
-              Download PDF
-              <Download className="h-4 w-4 ml-2" />
+              {/* --- UPDATED: Text and Icon --- */}
+              View PDF
+              <ExternalLink className="h-4 w-4 ml-2" />
             </a>
           </div>
         </div>
@@ -709,6 +731,20 @@ const People = () => {
     );
   };
 
+  // --- NEW: Dynamic placeholder text ---
+  const getPlaceholderText = () => {
+    switch (activeTab) {
+      case 'regularFaculty':
+        return 'Search faculty by name, specialization...';
+      case 'staff':
+        return 'Search staff by name or designation...';
+      case 'phd':
+        return 'Search Ph.D. students by name...';
+      default:
+        return 'Search...';
+    }
+  };
+
 
   return (
     <div className="bg-white">
@@ -732,7 +768,8 @@ const People = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
               <input
                 type="text"
-                placeholder="Search people by name, specialization, or designation..."
+                // --- UPDATED: Placeholder ---
+                placeholder={getPlaceholderText()}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -753,6 +790,7 @@ const People = () => {
                 onClick={() => {
                   setActiveTab(tab.id);
                   setSearchTerm(''); // Clear search on tab change
+                  setSpecializationFilter('All'); // --- NEW: Reset filter on tab change ---
                 }}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
                   activeTab === tab.id
@@ -776,6 +814,27 @@ const People = () => {
       {/* Content */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* --- NEW: Specialization Filter Buttons --- */}
+          {activeTab === 'regularFaculty' && (
+            <div className="flex flex-wrap justify-center gap-2 mb-12">
+              {specializations.map((spec) => (
+                <button
+                  key={spec}
+                  onClick={() => setSpecializationFilter(spec)}
+                  className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 ${
+                    specializationFilter === spec
+                      ? 'bg-blue-800 text-white shadow-md'
+                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                  }`}
+                >
+                  {spec}
+                </button>
+              ))}
+            </div>
+          )}
+          {/* --- End of Filter Buttons --- */}
+
           {renderGrid()}
         </div>
       </section>
