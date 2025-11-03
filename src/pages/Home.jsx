@@ -230,65 +230,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Welcome Section */}
-      <section className="py-20 bg-white overflow-hidden" ref={welcomeRef}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={welcomeInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-            >
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Welcome to Civil Engineering Department
-              </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                The Department of Civil Engineering at IIT Indore is committed to excellence in education, 
-                research, and service. We offer comprehensive programs that prepare students for leadership 
-                roles in the rapidly evolving field of civil engineering.
-              </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Our department focuses on sustainable infrastructure development, advanced construction 
-                technologies, and innovative solutions for modern engineering challenges. With state-of-the-art 
-                facilities and renowned faculty, we provide an environment that fosters learning, research, and innovation.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link
-                    to="/about"
-                    className="block bg-blue-800 hover:bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md"
-                  >
-                    Learn More About Us
-                  </Link>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link
-                    to="/specializations"
-                    className="block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md"
-                  >
-                    View Specializations
-                  </Link>
-                </motion.div>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="relative"
-              initial={{ opacity: 0, x: 50 }}
-              animate={welcomeInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-            >
-              <img
-                src="https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Civil Engineering"
-                className="rounded-lg shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-lg"></div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
+      {/* --- SECTION MOVED --- */}
       {/* News and Updates */}
       <section className="py-20 bg-gray-50 overflow-hidden"> {/* NEW: Added overflow-hidden */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -366,6 +308,67 @@ const Home = () => {
                 <span>View All Events</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      {/* --- END OF MOVED SECTION --- */}
+
+
+      {/* Welcome Section */}
+      <section className="py-20 bg-white overflow-hidden" ref={welcomeRef}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={welcomeInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Welcome to Civil Engineering Department
+              </h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                The Department of Civil Engineering at IIT Indore is committed to excellence in education, 
+                research, and service. We offer comprehensive programs that prepare students for leadership 
+                roles in the rapidly evolving field of civil engineering.
+              </p>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Our department focuses on sustainable infrastructure development, advanced construction 
+                technologies, and innovative solutions for modern engineering challenges. With state-of-the-art 
+                facilities and renowned faculty, we provide an environment that fosters learning, research, and innovation.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    to="/about"
+                    className="block bg-blue-800 hover:bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md"
+                  >
+                    Learn More About Us
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    to="/specializations"
+                    className="block bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md"
+                  >
+                    View Specializations
+                  </Link>
+                </motion.div>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="relative"
+              initial={{ opacity: 0, x: 50 }}
+              animate={welcomeInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+            >
+              <img
+                src="https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Civil Engineering"
+                className="rounded-lg shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-lg"></div>
             </motion.div>
           </div>
         </div>
