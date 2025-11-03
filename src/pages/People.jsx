@@ -675,8 +675,8 @@ const People = () => {
               rel="noopener noreferrer"
               className={`inline-flex items-center px-4 py-2 bg-${colorClass}-600 text-white text-sm font-medium rounded-lg hover:bg-${colorClass}-700 transition-colors`}
             >
-              {/* --- UPDATED: Text and Icon --- */}
-              View PDF
+              {/* --- UPDATED: Text Changed --- */}
+              View
               <ExternalLink className="h-4 w-4 ml-2" />
             </a>
           </div>
@@ -735,7 +735,7 @@ const People = () => {
   const getPlaceholderText = () => {
     switch (activeTab) {
       case 'regularFaculty':
-        return 'Search faculty by name, specialization...';
+        return 'Search faculty by name...';
       case 'staff':
         return 'Search staff by name or designation...';
       case 'phd':
@@ -795,7 +795,7 @@ const People = () => {
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
                   activeTab === tab.id
                     ? 'bg-blue-800 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 hover:text-blue-800 border border-gray-200'
+                    : 'bg-white text-gray-700 hover:bg-gray-100 hover:text-blue-800 border border-gray-20E'
                 }`}
               >
                 <tab.icon className="h-4 w-4" />
