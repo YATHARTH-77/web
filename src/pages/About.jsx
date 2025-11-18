@@ -3,14 +3,14 @@ import { Target, Eye, Award, Users, Calendar, BookOpen } from 'lucide-react';
 
 const About = () => {
   const milestones = [
-    { year: '2009', event: 'Department established with the founding of IIT Indore' },
-    { year: '2011', event: 'First batch of B.Tech students admitted' },
-    { year: '2013', event: 'M.Tech programs launched' },
-    { year: '2015', event: 'Ph.D. program initiated' },
+    // CHANGED: Specific text for IIT Indore foundation
+    { year: '2009', event: 'Foundation of IIT Indore' },
+    // CHANGED: Added specific entry for Civil Engineering start in 2016
+    { year: '2016', event: 'Department of Civil Engineering established & First B.Tech batch admitted' },
     { year: '2017', event: 'New research laboratories established' },
     { year: '2020', event: 'Reached milestone of 500+ alumni' },
     { year: '2023', event: 'Department ranked among top 20 in India' },
-    { year: '2025', event: 'Celebrating 15+ years of excellence' }
+    { year: '2025', event: 'Celebrating 10+ years of excellence' }
   ];
 
   const values = [
@@ -44,7 +44,7 @@ const About = () => {
           <div className="text-center text-white">
             <h1 className="text-5xl font-bold mb-6">About Our Department</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Excellence in civil engineering education, research, and innovation since 2009
+              Excellence in civil engineering education, research, and innovation
             </p>
           </div>
         </div>
@@ -57,12 +57,12 @@ const About = () => {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                The Department of Civil Engineering at IIT Indore was established in 2009 with the vision 
-                of creating world-class engineers and researchers who would contribute to the sustainable 
-                development of India's infrastructure.
+                The Department of Civil Engineering at IIT Indore has grown rapidly to become a center for 
+                academic and research excellence. We are dedicated to creating world-class engineers 
+                who contribute to the sustainable development of global infrastructure.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Over the years, we have grown from a small department to a thriving academic community 
+                Since our inception, we have evolved into a thriving academic community 
                 with distinguished faculty, state-of-the-art facilities, and a strong network of alumni 
                 working in leading organizations worldwide.
               </p>
@@ -196,7 +196,8 @@ const About = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-amber-500 mb-2">25+</div>
+              {/* CHANGED: Faculty count from 25+ to 17 */}
+              <div className="text-4xl font-bold text-amber-500 mb-2">17</div>
               <div className="text-blue-100 font-medium">Faculty Members</div>
             </div>
             <div className="text-center">
