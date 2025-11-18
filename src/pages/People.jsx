@@ -1,24 +1,23 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Award, BookOpen, Users, Search, GraduationCap, Building, User, Link as LinkIcon, Download, MapPin, ExternalLink } from 'lucide-react'; // Added ExternalLink
+import { Mail, Phone, Award, BookOpen, Users, Search, GraduationCap, Building, User, Link as LinkIcon, Download, MapPin, ExternalLink } from 'lucide-react';
 
 const People = () => {
   const [activeTab, setActiveTab] = useState('regularFaculty');
   const [searchTerm, setSearchTerm] = useState('');
-  // --- NEW: State for faculty specialization filter ---
   const [specializationFilter, setSpecializationFilter] = useState('All');
 
-  // --- Faculty Data (with Room Numbers Added) ---
+  // --- Faculty Data ---
   const regularFaculty = [
     {
       name: 'Dr. Gourab Sil',
       designation: 'Assistant Professor & Head of Department',
       specialization: 'Transportation Engineering',
-      education: '', // Data not available on site
-      experience: '', // Data not available on site
+      education: '',
+      experience: '',
       email: 'hodce@iiti.ac.in',
       phone: '0731-660 3360',
-      room: '405, POD 1D, Chromium', // Added
-      image: '../src/assets/faculty_pics/Gourab.jpg', // Placeholder image path
+      room: '405, POD 1D, Chromium',
+      image: '../src/assets/faculty_pics/Gourab.jpg',
       research: [
         'Performance Based Geometric Design of Highways',
         'Safety of Roadway Infrastructure',
@@ -26,8 +25,8 @@ const People = () => {
         'Applications of Statistical Analysis in Transportation Engineering',
         'Traffic Engineering',
       ],
-      publications: 0, // Data not available on site
-      projects: 0, // Data not available on site
+      publications: 0,
+      projects: 0,
     },
     {
       name: 'Dr. Sandeep Chaudhary',
@@ -37,8 +36,8 @@ const People = () => {
       experience: '',
       email: 'schaudhary@iiti.ac.in',
       phone: '0731-660 3256/3469',
-      room: '403, Chromium Building', // Added
-      image: '../src/assets/faculty_pics/Sandeep Choudhary.png', // Placeholder image path
+      room: '403, Chromium Building',
+      image: '../src/assets/faculty_pics/Sandeep Choudhary.png',
       research: [
         'Structural Engineering',
         'Sustainable Construction Practices',
@@ -58,8 +57,8 @@ const People = () => {
       experience: '',
       email: 'neelima.satyam@iiti.ac.in',
       phone: '0731-660 3290',
-      room: '418, Chromium Building', // Added
-      image: '../src/assets/faculty_pics/neelima_satyam_orig.jpg', // Placeholder image path
+      room: '418, Chromium Building',
+      image: '../src/assets/faculty_pics/neelima_satyam_orig.jpg',
       research: [
         'Geotechnical Earthquake Engineering',
         'Dynamic Soil Structure Interaction Analysis',
@@ -79,8 +78,8 @@ const People = () => {
       experience: '',
       email: 'mkgoyal@iiti.ac.in',
       phone: '0731-660 3288',
-      room: '209, Pod 1A', // Added
-      image: '../src/assets/faculty_pics/mkgoyal.jpg', // Placeholder image path
+      room: '209, Pod 1A',
+      image: '../src/assets/faculty_pics/mkgoyal.jpg',
       research: [
         'Resilience of River Basins and Hydrological Modeling',
         'Hydro-climatology and Statistical Downscaling',
@@ -90,6 +89,28 @@ const People = () => {
       publications: 0,
       projects: 0,
     },
+    // --- ADDED NEW FACULTY MEMBER ---
+    {
+      name: 'Dr. Mohd. Farooq Azam',
+      designation: 'Associate Professor',
+      specialization: 'Water Resources Engineering',
+      education: 'Ph.D. (University of Grenoble, France)',
+      experience: '',
+      email: 'farooqazam@iiti.ac.in',
+      phone: '0731-660 3289',
+      room: '310, POD 1D',
+      image: '../src/assets/faculty_pics/Photo-Farooq.jpg', // Placeholder path
+      research: [
+        'Hydro-Meteorological monitoring',
+        'Glacier Mass and Dynamic studies',
+        'Energy Balance of Glacier and Snow Cover',
+        'Hydrological modelling of Himalayan Watersheds',
+        'Climate Change impacts on Himalayan Water Resources',
+      ],
+      publications: 0,
+      projects: 0,
+    },
+    // --------------------------------
     {
       name: 'Dr. Lalit Borana',
       designation: 'Associate Professor',
@@ -98,8 +119,8 @@ const People = () => {
       experience: '',
       email: 'lalitborana@iiti.ac.in',
       phone: '0731-660 3332',
-      room: '407, Pod 1D', // Added
-      image: '../src/assets/faculty_pics/Lalit_Borana.jpg', // Placeholder image path
+      room: '407, Pod 1D',
+      image: '../src/assets/faculty_pics/Lalit_Borana.jpg',
       research: [
         'Unsaturated Soil Mechanics',
         'Geotechnical health monitoring',
@@ -119,8 +140,8 @@ const People = () => {
       experience: '',
       email: 'abhishekrajput@iiti.ac.in',
       phone: '0731-660 3310',
-      room: '616, POD 1D', // Added
-      image: '../src/assets/faculty_pics/abhishekrajput.jpg', // Placeholder image path
+      room: '616, POD 1D',
+      image: '../src/assets/faculty_pics/abhishekrajput.jpg',
       research: [
         'Behavior of concrete and metals under projectile impact and blast loading',
         'Finite element modelling and simulations',
@@ -139,8 +160,8 @@ const People = () => {
       experience: '',
       email: 'kaustav.bakshi@iiti.ac.in',
       phone: '0731-660 3233',
-      room: '102, Pod 1C', // Added
-      image: '../src/assets/faculty_pics/Kaustav.png', // Placeholder image path
+      room: '102, Pod 1C',
+      image: '../src/assets/faculty_pics/Kaustav.png',
       research: [
         'Static and dynamic studies on laminated composite shell roofs',
         'First and progressive ply failure studies',
@@ -160,8 +181,8 @@ const People = () => {
       experience: '',
       email: 'guruprakash@iiti.ac.in',
       phone: '0731-660 3215',
-      room: '', // Added (Not specified on site)
-      image: '../src/assets/faculty_pics/GuruFinal.jpg', // Placeholder image path
+      room: '',
+      image: '../src/assets/faculty_pics/GuruFinal.jpg',
       research: [
         'Stochastic degradation modeling using condition monitoring data',
         'Bayesian reliability assessment',
@@ -179,8 +200,8 @@ const People = () => {
       experience: '',
       email: 'priyansh@iiti.ac.in',
       phone: '0731-660 3362',
-      room: '311, POD 1D, Chromium', // Added
-      image: '../src/assets/faculty_pics/Priyansh.jpg', // Placeholder image path
+      room: '311, POD 1D, Chromium',
+      image: '../src/assets/faculty_pics/Priyansh.jpg',
       research: [
         'Pavement Materials Characterization and Modeling',
         'Pavement Design, Construction and Evaluation',
@@ -200,8 +221,8 @@ const People = () => {
       experience: '',
       email: 'as_mandpe@iiti.ac.in',
       phone: '0731-660 3257',
-      room: '316, POD 1D, Chromium', // Added
-      image: '../src/assets/faculty_pics/Ashootosh Passport_Dark Background.JPG', // Placeholder image path
+      room: '316, POD 1D, Chromium',
+      image: '../src/assets/faculty_pics/Ashootosh Passport_Dark Background.JPG',
       research: [
         'Bio-valorization of solid wastes',
         'Municipal landfill remediation through biomining approaches',
@@ -222,8 +243,8 @@ const People = () => {
       experience: '',
       email: 'priyanksharma@iiti.ac.in',
       phone: '0731-660 3382',
-      room: '422, Pod-1D, Chromium', // Added
-      image: '../src/assets/faculty_pics/Dr. Priyank J Sharma.jpg', // Placeholder image path
+      room: '422, Pod-1D, Chromium',
+      image: '../src/assets/faculty_pics/Dr. Priyank J Sharma.jpg',
       research: [
         'Hydroclimatology and Climate Extremes',
         'Climate Change Impact on Water Resources',
@@ -242,8 +263,8 @@ const People = () => {
       experience: '',
       email: 'mayur.jain@iiti.ac.in',
       phone: '0731-660 3384',
-      room: '605, POD 1A, Silicon', // Added
-      image: '../src/assets/faculty_pics/M S JAIN.jpg', // Placeholder image path
+      room: '605, POD 1A, Silicon',
+      image: '../src/assets/faculty_pics/M S JAIN.jpg',
       research: [
         'Rapid Composting Techniques',
         'Kinetic modelling of Bio-waste degradation',
@@ -263,8 +284,8 @@ const People = () => {
       experience: '',
       email: 'apsingh@iiti.ac.in',
       phone: '+91-9454208610',
-      room: '402, POD-1C', // Added
-      image: '../src/assets/faculty_pics/Dr. Akshay Photo.JPG', // Placeholder image path
+      room: '402, POD-1C',
+      image: '../src/assets/faculty_pics/Dr. Akshay Photo.JPG',
       research: [
         'Numerical Modeling in Geomechanics',
         'Analysis of Slopes, Retaining walls, Sheet Piles, Shallow Foundations, Pile Foundations',
@@ -283,8 +304,8 @@ const People = () => {
       experience: '',
       email: 'baadigaramu@iiti.ac.in',
       phone: '+91-7675015763',
-      room: '', // Added (Not specified on site)
-      image: '../src/assets/faculty_pics/Dr Baadiga Ramu.jpg', // Placeholder image path
+      room: '',
+      image: '../src/assets/faculty_pics/Dr Baadiga Ramu.jpg',
       research: [
         'Geosynthetic Engineering',
         'Pavement Geotechnics',
@@ -303,9 +324,9 @@ const People = () => {
       education: '',
       experience: '',
       email: 'ravinder@iiti.ac.in',
-      phone: '', // Data not available on site
-      room: '403, POD-1C', // Added
-      image: '../src/assets/faculty_pics/ravinder.png', // Placeholder image path
+      phone: '',
+      room: '403, POD-1C',
+      image: '../src/assets/faculty_pics/ravinder.png',
       research: [
         'Structural Health Monitoring',
         'Ballistic Impact and Fracture Simulations',
@@ -324,9 +345,9 @@ const People = () => {
       education: '',
       experience: '',
       email: 'pushpa@iiti.ac.in',
-      phone: '', // Data not available on site
-      room: 'POD-1C', // Added
-      image: '../src/assets/faculty_pics/Pushpa.jpg', // Placeholder image path
+      phone: '',
+      room: 'POD-1C',
+      image: '../src/assets/faculty_pics/Pushpa.jpg',
       research: [
         'Human factors in road safety',
         'Vulnerable road users\' behaviour and safety',
@@ -339,7 +360,6 @@ const People = () => {
     },
   ];
 
-  // --- NEW: Get unique specializations for filter buttons ---
   const specializations = ['All', ...new Set(regularFaculty.map(f => f.specialization))];
 
   // --- Staff Data ---
@@ -348,11 +368,11 @@ const People = () => {
       name: 'Ms. Rinki Seth',
       designation: 'Senior Assistant',
       department: 'Administration',
-      experience: '', // Data not available on site
+      experience: '',
       email: 'rinki@iiti.ac.in',
       phone: '+91-731-660 (Ext. No. 3477)',
-      image: '../src/assets/staff pics/Rinki.jpg', // Placeholder image path
-      responsibilities: [], // Data not available on site
+      image: '../src/assets/staff pics/Rinki.jpg',
+      responsibilities: [],
     },
     {
       name: 'Mr. Amit Jadhav',
@@ -361,7 +381,7 @@ const People = () => {
       experience: '',
       email: 'jadhavamit@iiti.ac.in',
       phone: '+91-731-660 (Ext. No. 3411)',
-      image: '../src/assets/staff pics/Amit.jpg', // Placeholder image path
+      image: '../src/assets/staff pics/Amit.jpg',
       responsibilities: [],
     },
     {
@@ -371,7 +391,7 @@ const People = () => {
       experience: '',
       email: 'amalviya@iiti.ac.in',
       phone: '+91-731-660 (Ext. No. 3412)',
-      image: '../src/assets/staff pics/Ajay.jpg', // Placeholder image path
+      image: '../src/assets/staff pics/Ajay.jpg',
       responsibilities: [],
     },
     {
@@ -380,8 +400,8 @@ const People = () => {
       department: 'Laboratory Management',
       experience: '',
       email: 'sankhlapankaj@iiti.ac.in',
-      phone: '', // Data not available on site
-      image: '../src/assets/staff pics/Pankaj.jpg', // Placeholder image path
+      phone: '',
+      image: '../src/assets/staff pics/Pankaj.jpg',
       responsibilities: [],
     },
     {
@@ -391,7 +411,7 @@ const People = () => {
       experience: '',
       email: 'gkachneriya@iiti.ac.in',
       phone: '+91-731-660 (Ext. No. 5591)',
-      image: '../src/assets/staff pics/Ghanshyam.jpg', // Placeholder image path
+      image: '../src/assets/staff pics/Ghanshyam.jpg',
       responsibilities: [],
     },
     {
@@ -400,8 +420,8 @@ const People = () => {
       department: 'Administration',
       experience: '',
       email: 'avadeshv@iiti.ac.in',
-      phone: '', // Data not available on site
-      image: '../src/assets/staff pics/Awadhesh.jpg', // Placeholder image path
+      phone: '',
+      image: '../src/assets/staff pics/Awadhesh.jpg',
       responsibilities: [],
     },
   ];
@@ -507,21 +527,17 @@ const People = () => {
     }
   };
 
-  // --- UPDATED: filterData function ---
   const filterData = (data) => {
-    // M.Tech and B.Tech tabs just show links, no filtering needed
     if (activeTab === 'mtech' || activeTab === 'btech') {
       return data;
     }
 
-    // Ph.D. tab filters by name
     if (activeTab === 'phd') {
       return data.filter(person =>
         person.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
-    // Staff tab filters by name or designation
     if (activeTab === 'staff') {
       return data.filter(person =>
         person.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -529,7 +545,6 @@ const People = () => {
       );
     }
 
-    // Faculty tab filters by specialization AND search term
     if (activeTab === 'regularFaculty') {
       const specializationFiltered = data.filter(person =>
         specializationFilter === 'All' || person.specialization === specializationFilter
@@ -542,10 +557,8 @@ const People = () => {
       );
     }
 
-    return data; // Fallback
+    return data;
   };
-
-  // --- Render Functions ---
 
   const renderFacultyCard = (member, index) => (
     <div
@@ -555,7 +568,7 @@ const People = () => {
       <div className="p-6">
         <div className="flex items-start space-x-5">
           <img
-            src={member.image} // Note: This path is a placeholder
+            src={member.image}
             alt={member.name}
             className="w-24 h-24 rounded-full object-cover border-4 border-blue-100 group-hover:border-amber-200 transition-colors duration-300"
           />
@@ -587,7 +600,7 @@ const People = () => {
           <div className="pt-2">
             <h4 className="text-xs font-semibold text-gray-800 mb-1">Research Interests:</h4>
             <ul className="list-disc list-inside space-y-1">
-              {member.research.slice(0, 3).map((item, i) => ( // Show top 3 interests
+              {member.research.slice(0, 3).map((item, i) => (
                 <li key={i} className="text-xs text-gray-600 truncate">{item}</li>
               ))}
             </ul>
@@ -605,7 +618,7 @@ const People = () => {
       <div className="p-6">
         <div className="text-center">
           <img
-            src={member.image} // Note: This path is a placeholder
+            src={member.image}
             alt={member.name}
             className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-green-100"
           />
@@ -641,7 +654,6 @@ const People = () => {
     </div>
   );
 
-  // --- UPDATED: renderStudentYearCard function ---
   const renderStudentYearCard = (studentYear, index) => {
     let IconComponent;
     let colorClass;
@@ -675,7 +687,6 @@ const People = () => {
               rel="noopener noreferrer"
               className={`inline-flex items-center px-4 py-2 bg-${colorClass}-600 text-white text-sm font-medium rounded-lg hover:bg-${colorClass}-700 transition-colors`}
             >
-              {/* --- UPDATED: Text Changed --- */}
               View
               <ExternalLink className="h-4 w-4 ml-2" />
             </a>
@@ -698,7 +709,6 @@ const People = () => {
       );
     }
 
-    // Ph.D. Student grid
     if (activeTab === 'phd') {
       return (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -707,7 +717,6 @@ const People = () => {
       );
     }
 
-    // M.Tech and B.Tech PDF links grid
     if (activeTab === 'mtech' || activeTab === 'btech') {
       return (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -716,7 +725,6 @@ const People = () => {
       );
     }
     
-    // Faculty/Staff grid
     return (
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredData.map((person, index) => {
@@ -731,7 +739,6 @@ const People = () => {
     );
   };
 
-  // --- NEW: Dynamic placeholder text ---
   const getPlaceholderText = () => {
     switch (activeTab) {
       case 'regularFaculty':
@@ -768,12 +775,11 @@ const People = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
               <input
                 type="text"
-                // --- UPDATED: Placeholder ---
                 placeholder={getPlaceholderText()}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                disabled={activeTab === 'mtech' || activeTab === 'btech'} // Search disabled only for M.Tech/B.Tech
+                disabled={activeTab === 'mtech' || activeTab === 'btech'}
               />
             </div>
           </div>
@@ -789,8 +795,8 @@ const People = () => {
                 key={tab.id}
                 onClick={() => {
                   setActiveTab(tab.id);
-                  setSearchTerm(''); // Clear search on tab change
-                  setSpecializationFilter('All'); // --- NEW: Reset filter on tab change ---
+                  setSearchTerm('');
+                  setSpecializationFilter('All');
                 }}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
                   activeTab === tab.id
@@ -815,7 +821,6 @@ const People = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* --- NEW: Specialization Filter Buttons --- */}
           {activeTab === 'regularFaculty' && (
             <div className="flex flex-wrap justify-center gap-2 mb-12">
               {specializations.map((spec) => (
@@ -833,7 +838,6 @@ const People = () => {
               ))}
             </div>
           )}
-          {/* --- End of Filter Buttons --- */}
 
           {renderGrid()}
         </div>
