@@ -318,7 +318,7 @@ const Home = () => {
               animate={{ x: ["0%", "-50%"] }}
               transition={{
                 ease: "linear",
-                duration: 60, // Slowed down duration for better readability
+                duration: 5, // INCREASED SPEED (lower duration = faster speed)
                 repeat: Infinity,
               }}
               whileHover={{ animationPlayState: "paused" }}
