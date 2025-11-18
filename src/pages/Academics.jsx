@@ -6,7 +6,8 @@ const Academics = () => {
     {
       title: 'B.Tech in Civil Engineering',
       duration: '4 Years',
-      intake: '60 Students',
+      // CHANGED: Intake updated to 53 Students
+      intake: '53 Students',
       description: 'Comprehensive undergraduate program covering all major areas of civil engineering with strong emphasis on practical learning and industry exposure.',
       highlights: [
         'Strong foundation in mathematics, physics, and engineering sciences',
@@ -45,7 +46,7 @@ const Academics = () => {
     {
       title: 'Ph.D. in Civil Engineering',
       duration: '3-6 Years',
-      intake: '15 Students',
+      // CHANGED: Intake removed
       description: 'Research-intensive doctoral program aimed at producing independent researchers and academics in various specializations of civil engineering.',
       highlights: [
         'Independent research under expert supervision',
@@ -70,7 +71,6 @@ const Academics = () => {
     }
   };
 
-  // --- UPDATED LABORATORY LIST ---
   const facilities = [
     'Computational Laboratory',
     'Engineering Geology Laboratory',
@@ -89,7 +89,6 @@ const Academics = () => {
     'NDS Laboratory',
     'Glacier Laboratory'
   ];
-  // --- END OF UPDATE ---
 
   return (
     <div className="bg-white">
@@ -135,10 +134,13 @@ const Academics = () => {
                               <Clock className="h-4 w-4 mr-1" />
                               <span className="text-sm">{program.duration}</span>
                             </div>
-                            <div className="flex items-center">
-                              <Users className="h-4 w-4 mr-1" />
-                              <span className="text-sm">{program.intake}</span>
-                            </div>
+                            {/* CHANGED: Conditional rendering for intake */}
+                            {program.intake && (
+                              <div className="flex items-center">
+                                <Users className="h-4 w-4 mr-1" />
+                                <span className="text-sm">{program.intake}</span>
+                              </div>
+                            )}
                           </div>
                         </div>
                       </div>
