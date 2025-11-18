@@ -1,32 +1,59 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Calendar, Users, BookOpen, Award, ArrowRight } from 'lucide-react';
-// NEW: Import framer-motion for animations
-import { motion, useInView } from 'framer-motion';
-// NEW: Import CountUp for animated statistics
-import CountUp from 'react-countup';
+import { motion, useInView, useSpring, useMotionValue, useTransform } from 'framer-motion';
+
+// --- Custom Animated Counter Component ---
+// Replaces react-countup to avoid dependency issues
+const AnimatedCounter = ({ value, suffix = '', duration = 2.5 }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-50px" });
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, { duration: duration * 1000, bounce: 0 });
+  const rounded = useTransform(springValue, (latest) => Math.floor(latest));
+  
+  useEffect(() => {
+    if (inView) {
+      motionValue.set(value);
+    }
+  }, [inView, value, motionValue]);
+
+  // Render the motion value manually to avoid React re-render overhead on every frame
+  useEffect(() => {
+    return rounded.on("change", (latest) => {
+      if (ref.current) {
+        ref.current.textContent = latest + suffix;
+      }
+    });
+  }, [rounded, suffix]);
+
+  return <span ref={ref} />;
+};
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // --- Data (Unchanged) ---
+  // --- Data Updates ---
   const slides = [
     {
-      image: 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      // CHANGED: Updated to local path
+      image: './assets/slide1.jpg', 
       title: 'Excellence in Civil Engineering Education',
       subtitle: 'Shaping the future of infrastructure and sustainable development',
       cta: 'Explore Programs',
       link: '/academics'
     },
     {
-      image: 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      // CHANGED: Updated to local path
+      image: './assets/slide2.jpg',
       title: 'Specialized Engineering Areas',
       subtitle: 'Five core specializations with advanced facilities and research',
       cta: 'View Specializations',
       link: '/specializations'
     },
     {
-      image: 'https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      // CHANGED: Updated to local path
+      image: './assets/slide3.jpg',
       title: 'Our Academic Community',
       subtitle: 'Meet our faculty, staff, and students who make up our vibrant community',
       cta: 'Meet Our People',
@@ -35,38 +62,80 @@ const Home = () => {
   ];
 
   const stats = [
-    { icon: Users, label: 'Faculty Members', value: 25, suffix: '+' },
+    // CHANGED: Faculty to 17, Years to 10+
+    { icon: Users, label: 'Faculty Members', value: 17, suffix: '' },
     { icon: BookOpen, label: 'Research Projects', value: 50, suffix: '+' },
     { icon: Award, label: 'Publications', value: 200, suffix: '+' },
-    { icon: Calendar, label: 'Years of Excellence', value: 15, suffix: '+' }
+    { icon: Calendar, label: 'Years of Excellence', value: 10, suffix: '+' }
   ];
 
+  // CHANGED: Real data from IIT Indore Civil Engineering News
   const news = [
     {
-      date: '2025-01-15',
-      title: 'New Structural Engineering Lab Inaugurated',
-      excerpt: 'State-of-the-art equipment for advanced structural analysis and testing.'
+      date: '2025-11-26',
+      title: 'ANRF Financial Assistance for International Symposium',
+      excerpt: 'Mr. Vikas Rawat receives financial assistance from ANRF for participating in the International Symposium on Land Reclamation in Singapore.'
     },
     {
-      date: '2025-01-10',
-      title: 'Research Grant Awarded for Smart Cities Project',
-      excerpt: 'Department receives ₹2 Crore funding for sustainable urban infrastructure research.'
+      date: '2025-02-10',
+      title: 'Prestigious Humboldt Fellowship Awarded',
+      excerpt: 'Ms. Minu Treesa Abraham, PhD Student under Prof. Neelima Satyam, selected for the prestigious Humboldt fellowship for Postdocs.'
     },
     {
-      date: '2025-01-05',
-      title: 'International Conference on Sustainable Construction',
-      excerpt: 'Department to host premier conference on green building technologies.'
+      date: '2024-03-15', 
+      title: 'Himalayan Glaciology Research Featured in Mongabay',
+      excerpt: 'Research on western Himalayan glaciers reacting to climate change by Dr. Mohd Farooq Azam\'s team featured in Mongabay magazine.'
+    },
+     {
+      date: '2024-02-20',
+      title: 'Research Featured in Media: Soil and Rocks of MP',
+      excerpt: 'Research work of Dr. Lalit Borana and his group on "Soil and Rocks of Madhyapradesh" has been featured in Hindi and English Media.'
+    },
+    {
+      date: '2023-11-15',
+      title: 'Prof. Biswajeet Pradhan Listed as Highly Cited Researcher',
+      excerpt: 'Adjunct Professor Prof. Biswajeet Pradhan listed as one of the highly Cited Researchers announced by Clarivate Analytics.'
+    },
+    {
+      date: '2023-10-24',
+      title: 'PhD Admission Advertisement',
+      excerpt: 'Last Date of Online Application: October 24, 2023.'
+    },
+     {
+      date: '2023-09-01',
+      title: 'Appointment to NEAT Expert Committee',
+      excerpt: 'Prof. Sandeep Chaudhary appointed as an Independent Expert Committee member for the National Educational Alliance for Technology (NEAT).'
+    },
+    {
+      date: '2020-12-15',
+      title: 'Editor’s Choice Papers Award-2020',
+      excerpt: 'Mr. M. Johnson Singh received the prestigious Editor’s Choice Papers Award from the International Journal of Geosynthetics and Ground Engineering.'
+    },
+    {
+      date: '2020-07-10',
+      title: 'Ph.D. Openings in Transportation Engineering',
+      excerpt: 'Immediate openings for Ph.D. in Transportation Engineering Specialization. Application Deadline: 10 July 2020.'
+    },
+    {
+      date: '2020-01-20',
+      title: 'Executive Member of Indian Society of Engineering Geology',
+      excerpt: 'Dr. Neelima Satyam elected as Executive member of Indian Society of Engineering Geology (ISEG) for the term 2020-2021.'
+    },
+    {
+      date: '2019-12-15',
+      title: 'Best Poster Award at International Conference',
+      excerpt: 'Mr. Vikas Poonia awarded the best poster award in International Conference of "Recent Advance in Life Science" held at Indore.'
     }
   ];
 
-  // --- NEW: Duplicated news array for the infinite scroll marquee ---
+  // --- Duplicated news array for the infinite scroll marquee ---
   const duplicatedNews = [...news, ...news];
 
-  // --- Carousel Logic (Unchanged) ---
+  // --- Carousel Logic ---
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // Increased time to 5s to allow for animations
+    }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
 
@@ -78,9 +147,7 @@ const Home = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  // --- NEW: Animation Variants ---
-
-  // Variants for staggering text animations in the hero
+  // --- Animation Variants ---
   const heroTextContainerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -105,14 +172,12 @@ const Home = () => {
     },
   };
 
-  // --- NEW: Refs for scroll-triggered animations ---
+  // --- Refs for scroll-triggered animations ---
   const statsRef = useRef(null);
   const welcomeRef = useRef(null);
-  const newsHeaderRef = useRef(null); // Ref for the "Latest News" header
+  const newsHeaderRef = useRef(null);
   const ctaRef = useRef(null);
 
-  // `useInView` hook tracks when the element is in the viewport
-  // `once: true` means the animation only runs once
   const statsInView = useInView(statsRef, { once: true, amount: 0.3 });
   const welcomeInView = useInView(welcomeRef, { once: true, amount: 0.3 });
   const newsHeaderInView = useInView(newsHeaderRef, { once: true, amount: 0.3 });
@@ -133,6 +198,7 @@ const Home = () => {
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
+                // Note: Ensure these images exist in your public/assets folder
                 backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.7), rgba(59, 130, 246, 0.7)), url(${slide.image})`
               }}
             />
@@ -171,7 +237,7 @@ const Home = () => {
           </div>
         ))}
 
-        {/* Navigation Arrows (Unchanged) */}
+        {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 z-10"
@@ -185,7 +251,7 @@ const Home = () => {
           <ChevronRight className="h-6 w-6" />
         </button>
 
-        {/* Slide Indicators (Unchanged) */}
+        {/* Slide Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
           {slides.map((_, index) => (
             <button
@@ -215,13 +281,8 @@ const Home = () => {
                   <stat.icon className="h-8 w-8" />
                 </div>
                 <div className="text-3xl font-bold text-blue-800 mb-2">
-                  <CountUp 
-                    end={stat.value} 
-                    suffix={stat.suffix} 
-                    duration={2.5} 
-                    enableScrollSpy
-                    scrollSpyOnce
-                  />
+                  {/* Replaced external CountUp with local AnimatedCounter */}
+                  <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                 </div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </motion.div>
@@ -230,9 +291,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* --- SECTION MOVED --- */}
       {/* News and Updates */}
-      <section className="py-20 bg-gray-50 overflow-hidden"> {/* NEW: Added overflow-hidden */}
+      <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-12"
@@ -247,29 +307,25 @@ const Home = () => {
             </p>
           </motion.div>
 
-          {/* --- NEW: Marquee/Slider Implementation --- */}
+          {/* Marquee/Slider Implementation */}
           <div className="w-full overflow-hidden relative">
-            {/* Gradient Fades for seamless edges */}
+            {/* Gradient Fades */}
             <div className="absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-gray-50 to-transparent z-10" />
             <div className="absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-gray-50 to-transparent z-10" />
             
             <motion.div
               className="flex gap-8"
-              // Animate x from 0% to -50%. Since the track is 200% wide (due to duplicated content),
-              // this moves it by exactly one "set" of news items.
-              animate={{ x: ["0%", "-30%"] }}
+              animate={{ x: ["0%", "-50%"] }}
               transition={{
                 ease: "linear",
-                duration: 10, // Adjust duration for speed (higher = slower)
+                duration: 60, // Slowed down duration for better readability
                 repeat: Infinity,
               }}
-              // Pause the animation on hover
               whileHover={{ animationPlayState: "paused" }}
             >
               {duplicatedNews.map((item, index) => (
                 <div
                   key={index}
-                  // NEW: Set a fixed width and no-shrink for each card
                   className="bg-white rounded-lg shadow-md overflow-hidden w-96 flex-shrink-0"
                 >
                   <div className="p-6">
@@ -295,7 +351,6 @@ const Home = () => {
               ))}
             </motion.div>
           </div>
-          {/* --- End of Marquee --- */}
 
           <div className="text-center mt-12">
             <motion.div
@@ -312,7 +367,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* --- END OF MOVED SECTION --- */}
 
 
       {/* Welcome Section */}
@@ -363,6 +417,7 @@ const Home = () => {
               animate={welcomeInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, ease: 'easeOut' }}
             >
+              {/* Ensure this image path is also correct or use a local placeholder if needed */}
               <img
                 src="https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Civil Engineering"
