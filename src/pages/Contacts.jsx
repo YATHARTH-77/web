@@ -34,6 +34,7 @@ const Contact = () => {
       icon: MapPin,
       title: 'Address',
       details: [
+        'Pod 1C-403', // Added Pod 1C-403
         'Department of Civil Engineering',
         'Indian Institute of Technology Indore',
         'Khandwa Road, Simrol',
@@ -44,18 +45,16 @@ const Contact = () => {
       icon: Phone,
       title: 'Phone',
       details: [
-        'Department Office: +91-731-2438-700',
-        'HOD Office: +91-731-2438-701',
-        'Fax: +91-731-2438-702'
+        'Department Office: 0731-660 3477',
+        'HOD Office: 0731-660 3188'
       ]
     },
     {
       icon: Mail,
       title: 'Email',
       details: [
-        'General: civil@iiti.ac.in',
-        'HOD: hod.civil@iiti.ac.in',
-        'Admissions: admissions.civil@iiti.ac.in'
+        'Department: ceoffice@iiti.ac.in',
+        'HOD: hodce@iiti.ac.in'
       ]
     },
     {
@@ -71,25 +70,18 @@ const Contact = () => {
 
   const facultyContacts = [
     {
-      name: 'Dr. Rajesh Kumar Sharma',
+      name: 'Dr. Gourab Sil',
       designation: 'Head of Department',
-      email: 'hod.civil@iiti.ac.in',
-      phone: '+91-731-2438-701',
-      office: 'Room 201, Civil Engineering Building'
+      email: 'hodce@iiti.ac.in',
+      phone: '0731-660 3188',
+      office: 'Pod 1C-403, IIT Indore' // Location same as department
     },
     {
-      name: 'Dr. Priya Menon',
-      designation: 'Professor & Academic Coordinator',
-      email: 'academic.civil@iiti.ac.in',
-      phone: '+91-731-2438-703',
-      office: 'Room 205, Civil Engineering Building'
-    },
-    {
-      name: 'Ms. Sunita Sharma',
-      designation: 'Administrative Officer',
-      email: 'admin.civil@iiti.ac.in',
-      phone: '+91-731-2438-704',
-      office: 'Room 101, Civil Engineering Building'
+      name: 'Ms. Rinki Seth',
+      designation: 'Senior Assistant',
+      email: 'ceoffice@iiti.ac.in',
+      phone: '0731-660 3477',
+      office: 'Pod 1C-403, IIT Indore' // Location same as department
     }
   ];
 
@@ -274,7 +266,8 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* CHANGED: Grid adjusted for 2 contacts centered */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {facultyContacts.map((contact, index) => (
               <div
                 key={index}
