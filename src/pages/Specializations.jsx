@@ -14,46 +14,16 @@ const Specializations = () => {
       icon: Building,
       image: 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       facilities: {
-        name: 'Advanced Structural Engineering Laboratory',
-        area: '500 sq.m',
-        capacity: '30 students',
-        coordinator: 'Dr. Rajesh Kumar Sharma',
-        equipment: [
-          'Universal Testing Machine (2000 kN capacity)',
-          'Compression Testing Machine (3000 kN)',
-          'Shake Table for Seismic Testing',
-          'Non-destructive Testing Equipment',
-          'Data Acquisition Systems',
-          'Loading Frames and Actuators'
-        ]
+        name: 'Advanced Structural Engineering Laboratory'
       },
-      research: {
-        projects: [
-          {
-            title: 'Seismic Retrofitting of Heritage Structures',
-            pi: 'Dr. Rajesh Kumar Sharma',
-            funding: '₹85 Lakhs',
-            agency: 'DST',
-            duration: '2023-2026',
-            status: 'Ongoing'
-          },
-          {
-            title: 'Advanced Steel Structure Design',
-            pi: 'Dr. Rahul Verma',
-            funding: '₹65 Lakhs',
-            agency: 'CSIR',
-            duration: '2022-2025',
-            status: 'Ongoing'
-          }
-        ],
-        publications: [
-          'Seismic Performance Assessment of RC Buildings with Masonry Infill Walls',
-          'Advanced Composite Materials in Structural Applications',
-          'Earthquake-Resistant Design of High-Rise Buildings'
-        ]
-      },
-      faculty: ['Dr. Rajesh Kumar Sharma', 'Dr. Rahul Verma'],
-      software: ['STAAD Pro', 'ETABS', 'SAP2000', 'ANSYS Structural']
+      // CHANGED: Updated with real faculty list
+      faculty: [
+        'Dr. Sandeep Chaudhary', 
+        'Dr. Abhishek Rajput', 
+        'Dr. Kaustav Bakshi', 
+        'Dr. Guru Prakash', 
+        'Dr. Ravinder'
+      ]
     },
     geotechnical: {
       title: 'Geotechnical Engineering',
@@ -62,46 +32,15 @@ const Specializations = () => {
       icon: Microscope,
       image: 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       facilities: {
-        name: 'Geotechnical Engineering Laboratory',
-        area: '400 sq.m',
-        capacity: '25 students',
-        coordinator: 'Dr. Priya Menon',
-        equipment: [
-          'Triaxial Testing System',
-          'Direct Shear Testing Apparatus',
-          'Consolidation Testing Equipment',
-          'Standard Penetration Test Equipment',
-          'Permeability Testing Setup',
-          'Compaction Testing Equipment'
-        ]
+        name: 'Geotechnical Engineering Laboratory'
       },
-      research: {
-        projects: [
-          {
-            title: 'Advanced Ground Improvement Techniques',
-            pi: 'Dr. Priya Menon',
-            funding: '₹65 Lakhs',
-            agency: 'CSIR',
-            duration: '2020-2023',
-            status: 'Completed'
-          },
-          {
-            title: 'Slope Stability Analysis Using AI',
-            pi: 'Dr. Kavita Rao',
-            funding: '₹45 Lakhs',
-            agency: 'UGC',
-            duration: '2023-2025',
-            status: 'Ongoing'
-          }
-        ],
-        publications: [
-          'Machine Learning Applications in Geotechnical Site Characterization',
-          'Bio-mediated Ground Improvement Methods',
-          'Advanced Foundation Design for Complex Structures'
-        ]
-      },
-      faculty: ['Dr. Priya Menon', 'Dr. Kavita Rao'],
-      software: ['PLAXIS', 'GeoStudio', 'FLAC', 'SLOPE/W']
+      // CHANGED: Updated with real faculty list
+      faculty: [
+        'Dr. Neelima Satyam D', 
+        'Dr. Lalit Borana', 
+        'Dr. Akshay Pratap Singh', 
+        'Dr. Baadiga Ramu'
+      ]
     },
     transportation: {
       title: 'Transportation Engineering',
@@ -110,46 +49,14 @@ const Specializations = () => {
       icon: Target,
       image: 'https://images.pexels.com/photos/210126/pexels-photo-210126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       facilities: {
-        name: 'Transportation Engineering Laboratory',
-        area: '350 sq.m',
-        capacity: '25 students',
-        coordinator: 'Dr. Amit Singh',
-        equipment: [
-          'Marshall Stability Testing Apparatus',
-          'Los Angeles Abrasion Testing Machine',
-          'Aggregate Impact Testing Equipment',
-          'Bitumen Testing Equipment',
-          'Pavement Core Drilling Machine',
-          'Traffic Simulation Software'
-        ]
+        name: 'Transportation Engineering Laboratory'
       },
-      research: {
-        projects: [
-          {
-            title: 'Highway Pavement Performance Modeling',
-            pi: 'Dr. Amit Singh',
-            funding: '₹75 Lakhs',
-            agency: 'MoRTH',
-            duration: '2023-2025',
-            status: 'Ongoing'
-          },
-          {
-            title: 'Smart Traffic Management Systems',
-            pi: 'Dr. Amit Singh',
-            funding: '₹55 Lakhs',
-            agency: 'DST',
-            duration: '2022-2024',
-            status: 'Ongoing'
-          }
-        ],
-        publications: [
-          'Traffic Flow Optimization Using AI-Based Signal Control',
-          'Sustainable Pavement Materials for Indian Highways',
-          'Intelligent Transportation Systems Implementation'
-        ]
-      },
-      faculty: ['Dr. Amit Singh'],
-      software: ['VISSIM', 'SUMO', 'HCS', 'Synchro']
+      // CHANGED: Updated with real faculty list
+      faculty: [
+        'Dr. Gourab Sil', 
+        'Dr. Priyansh Singh', 
+        'Dr. Pushpa Choudhary'
+      ]
     },
     water: {
       title: 'Water Resources Engineering',
@@ -158,46 +65,14 @@ const Specializations = () => {
       icon: FlaskConical,
       image: 'https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       facilities: {
-        name: 'Water Resources Engineering Laboratory',
-        area: '400 sq.m',
-        capacity: '30 students',
-        coordinator: 'Dr. Sneha Patel',
-        equipment: [
-          'Hydraulic Bench',
-          'Flume Systems',
-          'Pipe Flow Apparatus',
-          'Pumps and Flow Measurement Devices',
-          'Water Level Recorders',
-          'Rainfall Simulators'
-        ]
+        name: 'Water Resources Engineering Laboratory'
       },
-      research: {
-        projects: [
-          {
-            title: 'Water Quality Assessment in Urban Rivers',
-            pi: 'Dr. Sneha Patel',
-            funding: '₹45 Lakhs',
-            agency: 'UGC',
-            duration: '2022-2024',
-            status: 'Ongoing'
-          },
-          {
-            title: 'Groundwater Modeling and Management',
-            pi: 'Dr. Sneha Patel',
-            funding: '₹60 Lakhs',
-            agency: 'CGWB',
-            duration: '2023-2025',
-            status: 'Ongoing'
-          }
-        ],
-        publications: [
-          'Urban Water Quality Management Strategies',
-          'Groundwater Contamination Assessment Techniques',
-          'Sustainable Water Resource Development'
-        ]
-      },
-      faculty: ['Dr. Sneha Patel'],
-      software: ['HEC-RAS', 'MODFLOW', 'SWMM', 'EPANET']
+      // CHANGED: Updated with real faculty list
+      faculty: [
+        'Dr. Manish Kumar Goyal', 
+        'Dr. Priyank J. Sharma', 
+        'Dr. Mohd. Farooq Azam'
+      ]
     },
     environmental: {
       title: 'Environmental Engineering',
@@ -206,51 +81,18 @@ const Specializations = () => {
       icon: Award,
       image: 'https://images.pexels.com/photos/2280545/pexels-photo-2280545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       facilities: {
-        name: 'Environmental Engineering Laboratory',
-        area: '300 sq.m',
-        capacity: '20 students',
-        coordinator: 'Dr. Vikram Agarwal',
-        equipment: [
-          'UV-Visible Spectrophotometer',
-          'BOD Incubator',
-          'pH Meters and Conductivity Meters',
-          'Turbidity Meters',
-          'Dissolved Oxygen Meters',
-          'Air Quality Monitoring Equipment'
-        ]
+        name: 'Environmental Engineering Laboratory'
       },
-      research: {
-        projects: [
-          {
-            title: 'Smart Waste Management Systems for Smart Cities',
-            pi: 'Dr. Vikram Agarwal',
-            funding: '₹1.2 Crores',
-            agency: 'MHRD',
-            duration: '2022-2025',
-            status: 'Ongoing'
-          },
-          {
-            title: 'Air Pollution Control in Urban Areas',
-            pi: 'Dr. Vikram Agarwal',
-            funding: '₹40 Lakhs',
-            agency: 'CPCB',
-            duration: '2023-2024',
-            status: 'Ongoing'
-          }
-        ],
-        publications: [
-          'Sustainable Concrete Production Using Industrial Waste',
-          'IoT-Based Environmental Monitoring Systems',
-          'Green Building Technologies and Assessment'
-        ]
-      },
-      faculty: ['Dr. Vikram Agarwal', 'Dr. Meera Joshi'],
-      software: ['AERMOD', 'CALPUFF', 'WASP', 'QUAL2K']
+      // CHANGED: Updated with real faculty list
+      faculty: [
+        'Dr. Ashootosh Mandpe', 
+        'Dr. Mayur Shirish Jain'
+      ]
     }
   };
 
   // Data transcribed from the provided image
-  const laboratoryData = [
+  const rawLaboratoryData = [
     { name: 'Computational Laboratory', location: '1C-404' },
     { name: 'Engineering Geology Laboratory', location: '1C-404' },
     { name: 'Environmental Engineering Laboratory', location: '1C-402' },
@@ -258,7 +100,7 @@ const Specializations = () => {
     { name: 'Geotechnical Engineering Laboratory- 01', location: '1C-102(A)' },
     { name: 'Geotechnical Engineering Laboratory- 02', location: '1C-102(B)' },
     { name: 'Geodesy & Surveying Laboratory', location: '1E- 101' },
-    { name: 'Hydraulics ad Hydrology Laboratory', location: '1C-403' }, // Kept "ad" as per image
+    { name: 'Hydraulics ad Hydrology Laboratory', location: '1C-403' }, 
     { name: 'Materials Engineering Laboratory', location: '1C-101(A)' },
     { name: 'Solid Mechanics Laboratory', location: '1C-101(B)' },
     { name: 'Transportation Engineering Laboratory', location: '1A-103' },
@@ -268,6 +110,18 @@ const Specializations = () => {
     { name: 'NDS Laboratory', location: '1C-' },
     { name: 'Glacier Laboratory', location: '1C-401' },
   ];
+
+  // CHANGED: Sorting Logic (1C locations first)
+  const laboratoryData = [...rawLaboratoryData].sort((a, b) => {
+    const isA1C = a.location.trim().startsWith('1C');
+    const isB1C = b.location.trim().startsWith('1C');
+
+    if (isA1C && !isB1C) return -1; // a comes first
+    if (!isA1C && isB1C) return 1;  // b comes first
+    
+    // If both are 1C or both are NOT 1C, sort alphabetically by location
+    return a.location.localeCompare(b.location);
+  });
 
   const specializationKeys = Object.keys(specializations);
   const currentSpec = specializations[activeSpecialization];
@@ -297,7 +151,7 @@ const Specializations = () => {
         </div>
       </section>
 
-      {/* --- Main Tab Navigation (New) --- */}
+      {/* --- Main Tab Navigation --- */}
       <section className="py-6 bg-gray-100 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center gap-4">
@@ -381,7 +235,7 @@ const Specializations = () => {
 
               {/* Content Grid */}
               <div className="grid lg:grid-cols-2 gap-12">
-                {/* Laboratory Facilities */}
+                {/* Laboratory Facilities - Simplified */}
                 <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
                   <div className="flex items-center mb-6">
                     <div className={`${getColorClasses(currentSpec.color, 'bg')} text-white p-3 rounded-lg mr-4`}>
@@ -391,131 +245,28 @@ const Specializations = () => {
                   </div>
 
                   <div className="mb-6">
+                    {/* CHANGED: Only showing name, removed details */}
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">{currentSpec.facilities.name}</h4>
-                    <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
-                      <div className="flex items-center text-gray-600">
-                        <MapPin className="h-4 w-4 mr-2 text-blue-600" />
-                        <span>Area: {currentSpec.facilities.area}</span>
-                      </div>
-                      <div className="flex items-center text-gray-600">
-                        <Users className="h-4 w-4 mr-2 text-blue-600" />
-                        <span>Capacity: {currentSpec.facilities.capacity}</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mb-6">
-                    <h5 className="font-semibold text-gray-900 mb-3 flex items-center">
-                      <FlaskConical className="h-4 w-4 mr-2 text-amber-500" />
-                      Major Equipment
-                    </h5>
-                    <div className="space-y-2">
-                      {currentSpec.facilities.equipment.map((item, idx) => (
-                        <div key={idx} className="text-sm text-gray-600 flex items-start">
-                          <span className={`w-2 h-2 ${getColorClasses(currentSpec.color, 'bg')} rounded-full mt-1.5 mr-3 flex-shrink-0`}></span>
-                          <span>{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="pt-4 border-t border-gray-100">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Award className="h-4 w-4 mr-2 text-green-600" />
-                      <span className="font-medium">Coordinator:</span>
-                      <span className="ml-1">{currentSpec.facilities.coordinator}</span>
-                    </div>
                   </div>
                 </div>
 
-                {/* Research Projects */}
+                {/* Faculty Members - Expanded List */}
                 <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
                   <div className="flex items-center mb-6">
                     <div className={`${getColorClasses(currentSpec.color, 'bg')} text-white p-3 rounded-lg mr-4`}>
-                      <BookOpen className="h-6 w-6" />
+                      <Users className="h-6 w-6" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Research Projects</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Faculty Members</h3>
                   </div>
 
-                  <div className="space-y-6">
-                    {currentSpec.research.projects.map((project, idx) => (
-                      <div key={idx} className="border border-gray-200 rounded-lg p-4">
-                        <div className="flex items-start justify-between mb-2">
-                          <h4 className="font-semibold text-gray-900 flex-1">{project.title}</h4>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ml-2 ${
-                            project.status === 'Ongoing' 
-                              ? 'bg-green-100 text-green-800' 
-                              : 'bg-blue-100 text-blue-800'
-                          }`}>
-                            {project.status}
-                          </span>
-                        </div>
-                        <div className="text-sm text-gray-600 space-y-1">
-                          <div className="flex items-center">
-                            <Users className="h-3 w-3 mr-2" />
-                            <span className="font-medium">PI:</span> {project.pi}
-                          </div>
-                          <div className="flex items-center">
-                            <Award className="h-3 w-3 mr-2" />
-                            <span className="font-medium">{project.funding}</span> ({project.agency})
-                          </div>
-                          <div className="flex items-center">
-                            <Calendar className="h-3 w-3 mr-2" />
-                            <span>{project.duration}</span>
-                          </div>
-                        </div>
+                  <div className="space-y-3">
+                    {currentSpec.faculty.map((faculty, idx) => (
+                      <div key={idx} className="flex items-center p-3 bg-gray-50 rounded-lg border border-gray-100">
+                         <ChevronRight className={`h-4 w-4 mr-2 ${getColorClasses(currentSpec.color, 'text')}`} />
+                        <span className="text-gray-800 font-medium">{faculty}</span>
                       </div>
                     ))}
                   </div>
-                </div>
-              </div>
-
-              {/* Additional Information */}
-              <div className="grid md:grid-cols-3 gap-8 mt-12">
-                {/* Faculty */}
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
-                    <Users className={`h-5 w-5 mr-2 ${getColorClasses(currentSpec.color, 'text')}`} />
-                    Faculty Members
-                  </h4>
-                  <div className="space-y-2">
-                    {currentSpec.faculty.map((faculty, idx) => (
-                      <div key={idx} className="text-sm text-gray-600">{faculty}</div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Software */}
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
-                    <Computer className={`h-5 w-5 mr-2 ${getColorClasses(currentSpec.color, 'text')}`} />
-                    Software & Tools
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {currentSpec.software.map((software, idx) => (
-                      <span
-                        key={idx}
-                        className={`px-2 py-1 bg-white ${getColorClasses(currentSpec.color, 'text')} text-xs rounded border`}
-                      >
-                        {software}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Publications */}
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
-                    <BookOpen className={`h-5 w-5 mr-2 ${getColorClasses(currentSpec.color, 'text')}`} />
-                    Recent Publications
-                  </h4>
-                  <div className="text-sm text-gray-600">
-                    <span className="font-medium">{currentSpec.research.publications.length}</span> recent publications
-                  </div>
-                  <button className={`mt-2 text-sm ${getColorClasses(currentSpec.color, 'text')} hover:underline flex items-center`}>
-                    <span>View All</span>
-                    <ExternalLink className="h-3 w-3 ml-1" />
-                  </button>
                 </div>
               </div>
             </div>
@@ -545,7 +296,7 @@ const Specializations = () => {
         </>
       ) : (
         <>
-          {/* --- Laboratories Content (New) --- */}
+          {/* --- Laboratories Content --- */}
           <section className="py-20 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
