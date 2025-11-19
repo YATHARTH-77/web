@@ -14,9 +14,15 @@ const Specializations = () => {
       icon: Building,
       image: 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       facilities: {
-        name: 'Advanced Structural Engineering Laboratory'
+        // CHANGED: Converted to array of labs
+        labs: [
+          'Materials Engineering Laboratory',
+          'Solid Mechanics Laboratory',
+          'Structure Engineering Laboratory',
+          'Impact Loading Laboratory',
+          'Brick Manufacturing Laboratory'
+        ]
       },
-      // CHANGED: Updated with real faculty list
       faculty: [
         'Dr. Sandeep Chaudhary', 
         'Dr. Abhishek Rajput', 
@@ -32,9 +38,14 @@ const Specializations = () => {
       icon: Microscope,
       image: 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       facilities: {
-        name: 'Geotechnical Engineering Laboratory'
+        // CHANGED: Updated labs list
+        labs: [
+          'Geotechnical Engineering Laboratory- 01',
+          'Geotechnical Engineering Laboratory- 02',
+          'Computational Laboratory',
+          'Engineering Geology Laboratory'
+        ]
       },
-      // CHANGED: Updated with real faculty list
       faculty: [
         'Dr. Neelima Satyam D', 
         'Dr. Lalit Borana', 
@@ -49,9 +60,13 @@ const Specializations = () => {
       icon: Target,
       image: 'https://images.pexels.com/photos/210126/pexels-photo-210126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       facilities: {
-        name: 'Transportation Engineering Laboratory'
+        // CHANGED: Updated labs list
+        labs: [
+          'Geodesy and Surveying Laboratory',
+          'Transportation Engineering Laboratory',
+          'NDS Laboratory'
+        ]
       },
-      // CHANGED: Updated with real faculty list
       faculty: [
         'Dr. Gourab Sil', 
         'Dr. Priyansh Singh', 
@@ -65,9 +80,13 @@ const Specializations = () => {
       icon: FlaskConical,
       image: 'https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       facilities: {
-        name: 'Water Resources Engineering Laboratory'
+        // CHANGED: Updated labs list
+        labs: [
+          'Glacier Laboratory',
+          'Fluid Mechanics Laboratory',
+          'Hydraulics and Hydrology Laboratory'
+        ]
       },
-      // CHANGED: Updated with real faculty list
       faculty: [
         'Dr. Manish Kumar Goyal', 
         'Dr. Priyank J. Sharma', 
@@ -81,9 +100,11 @@ const Specializations = () => {
       icon: Award,
       image: 'https://images.pexels.com/photos/2280545/pexels-photo-2280545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       facilities: {
-        name: 'Environmental Engineering Laboratory'
+        // CHANGED: Updated labs list
+        labs: [
+          'Environmental Engineering Laboratory'
+        ]
       },
-      // CHANGED: Updated with real faculty list
       faculty: [
         'Dr. Ashootosh Mandpe', 
         'Dr. Mayur Shirish Jain'
@@ -107,11 +128,12 @@ const Specializations = () => {
     { name: 'Structure Engineering Laboratory', location: '1E- 101' },
     { name: 'Brick Manufacturing Laboratory', location: 'Near VSB Hostel' },
     { name: 'Impact Loading Laboratory', location: 'Near Balda' },
-    { name: 'NDS Laboratory', location: '1C-' },
+    // CHANGED: Updated location for NDS Laboratory
+    { name: 'NDS Laboratory', location: 'LG-01 Carbon building' },
     { name: 'Glacier Laboratory', location: '1C-401' },
   ];
 
-  // CHANGED: Sorting Logic (1C locations first)
+  // Sorting Logic (1C locations first)
   const laboratoryData = [...rawLaboratoryData].sort((a, b) => {
     const isA1C = a.location.trim().startsWith('1C');
     const isB1C = b.location.trim().startsWith('1C');
@@ -235,7 +257,7 @@ const Specializations = () => {
 
               {/* Content Grid */}
               <div className="grid lg:grid-cols-2 gap-12">
-                {/* Laboratory Facilities - Simplified */}
+                {/* Laboratory Facilities - Simplified List */}
                 <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
                   <div className="flex items-center mb-6">
                     <div className={`${getColorClasses(currentSpec.color, 'bg')} text-white p-3 rounded-lg mr-4`}>
@@ -245,8 +267,15 @@ const Specializations = () => {
                   </div>
 
                   <div className="mb-6">
-                    {/* CHANGED: Only showing name, removed details */}
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">{currentSpec.facilities.name}</h4>
+                    {/* CHANGED: Rendering list of labs */}
+                    <ul className="space-y-3">
+                      {currentSpec.facilities.labs.map((lab, idx) => (
+                        <li key={idx} className="flex items-start text-gray-700">
+                           <span className={`mt-2 mr-2 h-2 w-2 rounded-full ${getColorClasses(currentSpec.color, 'bg')}`} />
+                           <span className="text-lg font-medium">{lab}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
 
