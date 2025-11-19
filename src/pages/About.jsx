@@ -8,8 +8,7 @@ const About = () => {
     // CHANGED: Added specific entry for Civil Engineering start in 2016
     { year: '2016', event: 'Department of Civil Engineering established & First B.Tech batch admitted' },
     { year: '2017', event: 'New research laboratories established' },
-    { year: '2020', event: 'Reached milestone of 500+ alumni' },
-    { year: '2023', event: 'Department ranked among top 20 in India' },
+    { year: '2020', event: 'Reached milestone of 250+ alumni' },
     { year: '2025', event: 'Celebrating 10+ years of excellence' }
   ];
 
