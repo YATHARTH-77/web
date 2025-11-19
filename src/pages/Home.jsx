@@ -37,7 +37,7 @@ const Home = () => {
   const slides = [
     {
       // CHANGED: Updated to local path
-      image: './assets/slide1.jpg', 
+      image: '../assets/ce/Civil_Engineering_19feb2022.jpeg', 
       title: 'Excellence in Civil Engineering Education',
       subtitle: 'Shaping the future of infrastructure and sustainable development',
       cta: 'Explore Programs',
@@ -45,7 +45,7 @@ const Home = () => {
     },
     {
       // CHANGED: Updated to local path
-      image: './assets/slide2.jpg',
+      image: '../assets/ce/Expert_Lecture.jpg',
       title: 'Specialized Engineering Areas',
       subtitle: 'Five core specializations with advanced facilities and research',
       cta: 'View Specializations',
