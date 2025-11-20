@@ -27,6 +27,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://gourabsil.profiles.iiti.ac.in/",
     },
     {
       name: 'Dr. Sandeep Chaudhary',
@@ -48,6 +49,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://sustainableconstructionlab.com/",
     },
     {
       name: 'Dr. Neelima Satyam D',
@@ -69,6 +71,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://people.iiti.ac.in/~neelima.satyam/"
     },
     {
       name: 'Dr. Manish Kumar Goyal',
@@ -88,6 +91,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://sites.google.com/view/mkg1/home"
     },
     // --- ADDED NEW FACULTY MEMBER ---
     {
@@ -109,6 +113,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://sites.google.com/view/mohdfarooqazam/home"
     },
     // --------------------------------
     {
@@ -131,6 +136,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://sites.google.com/site/lalitborana/"
     },
     {
       name: 'Dr. Abhishek Rajput',
@@ -151,6 +157,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://people.iiti.ac.in/~abhishekrajput/"
     },
     {
       name: 'Dr. Kaustav Bakshi',
@@ -172,6 +179,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://sites.google.com/view/kaustavbakshi/home"
     },
     {
       name: 'Dr. Guru Prakash',
@@ -191,6 +199,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://sites.google.com/view/guruprakash/home?authuser=0"
     },
     {
       name: 'Dr. Priyansh Singh',
@@ -212,6 +221,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://priyanshsingh.com/"
     },
     {
       name: 'Dr. Ashootosh Mandpe',
@@ -234,6 +244,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://ashootoshmandpe.profiles.iiti.ac.in/"
     },
     {
       name: 'Dr. Priyank J. Sharma',
@@ -254,6 +265,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://sites.google.com/view/priyank2306"
     },
     {
       name: 'Dr. Mayur Shirish Jain',
@@ -275,6 +287,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://sites.google.com/view/mayur-shirish-jain"
     },
     {
       name: 'Dr. Akshay Pratap Singh',
@@ -295,6 +308,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://sites.google.com/view/apsingh/bio?authuser=0"
     },
     {
       name: 'Dr. Baadiga Ramu',
@@ -316,6 +330,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://sites.google.com/view/ramubaadiga/"
     },
     {
       name: 'Dr. Ravinder',
@@ -337,6 +352,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://ravinderbhattoo.github.io/"
     },
     {
       name: 'Dr. Pushpa Choudhary',
@@ -357,6 +373,7 @@ const People = () => {
       ],
       publications: 0,
       projects: 0,
+      url: "https://choudharypushpa.github.io/HumanFRSTLab/pages/team/faculty/pushpa.html"
     },
   ];
 
@@ -494,12 +511,12 @@ const People = () => {
     { name: 'Vivek', image: '/assets/stu_images/phd/Vivek.jpg' },
     { name: 'Waqar', image: '/assets/stu_images/phd/Waqar.jpg' },
   ];
-  
+
   const mtechStudents = [
     { year: '2025 Batch', link: '/assets/student_lists/M.tech Student List 2025.pdf' },
     { year: '2024 Batch', link: '/assets/student_lists/M.tech Student List 2024.pdf' },
   ];
-  
+
   const btechStudents = [
     { year: '2025 Batch', link: '/assets/student_lists/B.tech Student List 2025.pdf' },
     { year: '2024 Batch', link: '/assets/student_lists/B.tech Student List 2024.pdf' },
@@ -549,7 +566,7 @@ const People = () => {
       const specializationFiltered = data.filter(person =>
         specializationFilter === 'All' || person.specialization === specializationFilter
       );
-      
+
       return specializationFiltered.filter(person =>
         person.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         (person.specialization && person.specialization.toLowerCase().includes(searchTerm.toLowerCase())) ||
@@ -573,7 +590,7 @@ const People = () => {
             className="w-24 h-24 rounded-full object-cover border-4 border-blue-100 group-hover:border-amber-200 transition-colors duration-300"
           />
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+            <a href={member.url} target='__blank'><h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3></a>
             <p className="text-blue-800 font-semibold text-sm mb-3">{member.designation}</p>
             <p className="text-gray-600 text-xs font-medium mb-1">
               <span className="font-bold">Specialization:</span> {member.specialization}
@@ -622,7 +639,13 @@ const People = () => {
             alt={member.name}
             className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-green-100"
           />
-          <h3 className="text-lg font-bold text-gray-900">{member.name}</h3>
+          <a href={member.url} target="_blank" rel="noopener noreferrer">
+
+            <h3 className="text-lg font-semibold text-gray-800 hover:underline">
+              {member.name}
+            </h3>
+
+          </a>
           <p className="text-green-800 font-semibold text-sm mb-3">{member.designation}</p>
         </div>
         <div className="space-y-3 text-sm">
@@ -724,7 +747,7 @@ const People = () => {
         </div>
       );
     }
-    
+
     return (
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredData.map((person, index) => {
@@ -798,17 +821,15 @@ const People = () => {
                   setSearchTerm('');
                   setSpecializationFilter('All');
                 }}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
-                  activeTab === tab.id
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${activeTab === tab.id
                     ? 'bg-blue-800 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-100 hover:text-blue-800 border border-gray-20E'
-                }`}
+                  }`}
               >
                 <tab.icon className="h-4 w-4" />
                 <span>{tab.label}</span>
-                <span className={`px-2 py-0.5 rounded-full text-xs ${
-                  activeTab === tab.id ? 'bg-white text-blue-800' : 'bg-gray-200 text-gray-600'
-                }`}>
+                <span className={`px-2 py-0.5 rounded-full text-xs ${activeTab === tab.id ? 'bg-white text-blue-800' : 'bg-gray-200 text-gray-600'
+                  }`}>
                   {tab.count}
                 </span>
               </button>
@@ -820,22 +841,22 @@ const People = () => {
       {/* Content */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {activeTab === 'regularFaculty' && (
             <div className="flex flex-wrap justify-center gap-2 mb-12">
               {specializations.map((spec) => (
                 <button
                   key={spec}
                   onClick={() => setSpecializationFilter(spec)}
-                  className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 ${
-                    specializationFilter === spec
+                  className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 ${specializationFilter === spec
                       ? 'bg-blue-800 text-white shadow-md'
                       : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                  }`}
+                    }`}
                 >
                   {spec}
                 </button>
               ))}
+
             </div>
           )}
 
