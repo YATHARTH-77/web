@@ -20,7 +20,7 @@ const Academics = () => {
     {
       title: 'M.Tech in Structural Engineering',
       duration: '2 Years',
-      intake: '25 Students',
+      intake: '11 Students',
       description: 'Advanced program focusing on design, analysis, and behavior of structures with emphasis on modern computational methods and sustainable construction.',
       highlights: [
         'Advanced structural analysis and design',
@@ -31,7 +31,33 @@ const Academics = () => {
       courses: ['Advanced Structural Analysis', 'Earthquake Engineering', 'Bridge Engineering', 'High-rise Building Design', 'Finite Element Methods', 'Steel and Concrete Structures']
     },
     {
-      title: 'M.Tech in Geotechnical Engineering',
+      title: 'M.Tech in Water, Climate & Sustainability',
+      duration: '2 Years',
+      intake: '7 Students',
+      description: 'Interdisciplinary program focusing on water resources, climate resilience, and sustainable environmental systems to address emerging global challenges.',
+      highlights: [
+        'Advanced hydrology and climate modelling',
+        'Sustainable water resource management',
+        'Hands-on training with environmental simulation tools',
+        'Research and field-based projects in climate resilience'
+      ],
+      courses: [ 'Advanced Hydrology','Water Resources Systems Engineering','Climate Change Impact Assessment','Environmental Data Analytics','Sustainable Water Infrastructure','Hydraulic Modelling & Simulation']
+    },
+    {
+      title: 'M.Tech in Transportation Systems (Upcoming)',
+      duration: '2 Years',
+      intake: '10 Students',
+      description: 'Program dedicated to planning, design, and optimization of modern transportation networks with a focus on smart mobility and sustainable infrastructure.',
+      highlights: [
+      'Advanced traffic engineering and transport planning',
+      'Exposure to intelligent transportation systems (ITS)',
+      'Laboratory and software training in transport simulation',
+      'Industry-linked projects on mobility and infrastructure'
+      ],
+      courses: [ 'Traffic Engineering & Management','Transportation Planning','Pavement Design & Materials','Public Transport Systems','Intelligent Transportation Systems (ITS)','Transport Modelling & Simulation']
+    },
+    {
+      title: 'M.Tech in Geotechnical Engineering (Upcoming)',
       duration: '2 Years',
       intake: '20 Students',
       description: 'Specialized program in soil mechanics, foundation engineering, and geoenvironmental engineering with modern testing and analysis techniques.',
