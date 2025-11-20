@@ -17,7 +17,7 @@ const People = () => {
       email: 'hodce@iiti.ac.in , gourabsil@iiti.ac.in',
       phone: '0731-660 3360',
       room: '405, POD 1D',
-      image: '/src/assets/faculty_pics/Gourab.jpg',
+      image: '/try/a.png',
       research: [
         'Performance Based Geometric Design of Highways',
         'Safety of Roadway Infrastructure',
