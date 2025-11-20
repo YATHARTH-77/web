@@ -12,7 +12,7 @@ const Specializations = () => {
       description: 'Advanced research in structural analysis, design, and earthquake engineering with state-of-the-art testing facilities.',
       color: 'blue',
       icon: Building,
-      image: 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: '/assets/Specialization banners/Structural_specialization_banner.jpg',
       facilities: {
         // CHANGED: Converted to array of labs
         labs: [
@@ -36,7 +36,7 @@ const Specializations = () => {
       description: 'Comprehensive soil mechanics, foundation engineering, and ground improvement research with modern testing equipment.',
       color: 'amber',
       icon: Microscope,
-      image: 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: '/assets/Specialization banners/Geotechnical_specialization_banner.jpg',
       facilities: {
         // CHANGED: Updated labs list
         labs: [
@@ -58,7 +58,7 @@ const Specializations = () => {
       description: 'Highway engineering, traffic management, and intelligent transportation systems with advanced simulation capabilities.',
       color: 'green',
       icon: Target,
-      image: 'https://images.pexels.com/photos/210126/pexels-photo-210126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: '/assets/Specialization banners/Transport_specialization_banner.jpg',
       facilities: {
         // CHANGED: Updated labs list
         labs: [
@@ -78,7 +78,7 @@ const Specializations = () => {
       description: 'Hydrology, hydraulics, and water quality management with comprehensive testing and modeling facilities.',
       color: 'cyan',
       icon: FlaskConical,
-      image: 'https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: '/assets/Specialization banners/Water_specialization_banner.jpg',
       facilities: {
         // CHANGED: Updated labs list
         labs: [
@@ -98,7 +98,7 @@ const Specializations = () => {
       description: 'Environmental monitoring, waste management, and sustainable construction with advanced analytical equipment.',
       color: 'emerald',
       icon: Award,
-      image: 'https://images.pexels.com/photos/2280545/pexels-photo-2280545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: '/assets/Specialization banners/Environmental_specialization_banner.jpg',
       facilities: {
         // CHANGED: Updated labs list
         labs: [

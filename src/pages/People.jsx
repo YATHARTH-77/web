@@ -154,7 +154,7 @@ const People = () => {
     },
     {
       name: 'Dr. Kaustav Bakshi',
-      designation: 'Assistant Professor',
+      designation: 'Assistant Professor , DUGC',
       specialization: 'Structural Engineering',
       education: '',
       experience: '',
@@ -237,7 +237,7 @@ const People = () => {
     },
     {
       name: 'Dr. Priyank J. Sharma',
-      designation: 'Assistant Professor',
+      designation: 'Assistant Professor , DPGC',
       specialization: 'Water Resources Engineering',
       education: '',
       experience: '',
@@ -600,7 +600,7 @@ const People = () => {
           <div className="pt-2">
             <h4 className="text-xs font-semibold text-gray-800 mb-1">Research Interests:</h4>
             <ul className="list-disc list-inside space-y-1">
-              {member.research.slice(0, 3).map((item, i) => (
+              {member.research.slice(0, 10).map((item, i) => (
                 <li key={i} className="text-xs text-gray-600 truncate">{item}</li>
               ))}
             </ul>
