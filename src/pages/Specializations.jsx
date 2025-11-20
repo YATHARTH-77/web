@@ -40,8 +40,8 @@ const Specializations = () => {
       facilities: {
         // CHANGED: Updated labs list
         labs: [
-          'Geotechnical Engineering Laboratory- 01',
-          'Geotechnical Engineering Laboratory- 02',
+          'Geotechnical Engineering Laboratory- I',
+          'Geotechnical Engineering Laboratory- II',
           'Computational Laboratory',
           'Engineering Geology Laboratory'
         ]
@@ -118,8 +118,8 @@ const Specializations = () => {
     { name: 'Engineering Geology Laboratory', location: '1C-404' },
     { name: 'Environmental Engineering Laboratory', location: '1C-402' },
     { name: 'Fluid Mechanics Laboratory', location: '1C-403' },
-    { name: 'Geotechnical Engineering Laboratory- 01', location: '1C-102(A)' },
-    { name: 'Geotechnical Engineering Laboratory- 02', location: '1C-102(B)' },
+    { name: 'Geotechnical Engineering Laboratory- I', location: '1C-102(A)' },
+    { name: 'Geotechnical Engineering Laboratory- II', location: '1C-102(B)' },
     { name: 'Geodesy & Surveying Laboratory', location: '1E- 101' },
     { name: 'Hydraulics ad Hydrology Laboratory', location: '1C-403' }, 
     { name: 'Materials Engineering Laboratory', location: '1C-101(A)' },
