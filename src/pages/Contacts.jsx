@@ -61,9 +61,8 @@ const Contact = () => {
       icon: Clock,
       title: 'Office Hours',
       details: [
-        'Monday - Friday: 9:00 AM - 5:00 PM',
-        'Saturday: 9:00 AM - 1:00 PM',
-        'Sunday: Closed'
+        //changed: office hours
+        'Monday - Friday: 10:00 AM - 6:00 PM',
       ]
     }
   ];

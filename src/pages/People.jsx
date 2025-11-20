@@ -35,7 +35,11 @@ const People = () => {
       education: '',
       experience: '',
       email: 'schaudhary@iiti.ac.in',
-      phone: '0731-660 3256/3469, +91 9414475375, +91 9549654195',
+      phone: [
+        '0731-660 3256/3469',
+        '+91 9414475375', 
+        '+91 9549654195',
+      ],
       room: '403, Chromium Building',
       image: '../src/assets/faculty_pics/Sandeep Choudhary.png',
       research: [
@@ -56,7 +60,10 @@ const People = () => {
       education: '',
       experience: '',
       email: 'neelima.satyam@iiti.ac.in',
-      phone: '0731-660 3290',
+      phone: [
+        '0731-660 3290',
+        '+91 9440480034'
+      ],
       room: '418, Chromium Building',
       image: '../src/assets/faculty_pics/neelima_satyam_orig.jpg',
       research: [
@@ -97,7 +104,10 @@ const People = () => {
       education: 'Ph.D. (University of Grenoble, France)',
       experience: '',
       email: 'farooqazam@iiti.ac.in',
-      phone: '0731-660 3289',
+      phone: [
+        '0731-660 3289',
+        '+91 84760 85786',
+    ] ,
       room: '310, POD 1D',
       image: '../src/assets/faculty_pics/Photo-Farooq.jpg', // Placeholder path
       research: [
