@@ -4,7 +4,7 @@ import { GraduationCap, BookOpen, Clock, Users, Award, ChevronRight } from 'luci
 const Academics = () => {
   const programs = [
     {
-      title: 'B.Tech in Civil Engineering',
+      title: <a href="https://academic.iiti.ac.in/app/storage/app/coursecurriculum/9NVdg9JRdMxVbWQmnp0vHGM10r2lwjBN8Oy4aSP6.pdf" target="_blank">B.Tech in Civil Engineering</a>,
       duration: '4 Years',
       // CHANGED: Intake updated to 53 Students
       intake: '53 Students',
@@ -15,10 +15,10 @@ const Academics = () => {
         'Industry internships and live projects',
         'Professional development and communication skills'
       ],
-      courses: ['Engineering Mechanics', 'Structural Analysis', 'Concrete Technology', 'Geotechnical Engineering', 'Transportation Engineering', 'Water Resources Engineering']
+      courses: ['Engineering Mechanics', 'Structural Analysis', 'RCC and Steel Design', 'Geotechnical Engineering', 'Transportation Engineering', 'Water Resources Engineering']
     },
     {
-      title: 'M.Tech in Structural Engineering',
+      title: <a href="https://academic.iiti.ac.in/app/storage/app/coursecurriculum/7xAINJWsbYbISP5Lk9PSY2VJU5daoGrnm2lbjilf.pdf" target="_blank">M.Tech in Structural Engineering</a>,
       duration: '2 Years',
       intake: '11 Students',
       description: 'Advanced program focusing on design, analysis, and behavior of structures with emphasis on modern computational methods and sustainable construction.',
@@ -31,7 +31,7 @@ const Academics = () => {
       courses: ['Advanced Structural Analysis', 'Earthquake Engineering', 'Bridge Engineering', 'High-rise Building Design', 'Finite Element Methods', 'Steel and Concrete Structures']
     },
     {
-      title: 'M.Tech in Water, Climate & Sustainability',
+      title: <a href="https://academic.iiti.ac.in/app/storage/app/coursecurriculum/7xAINJWsbYbISP5Lk9PSY2VJU5daoGrnm2lbjilf.pdf" target="_blank">M.Tech in Water, Climate & Sustainability</a>,
       duration: '2 Years',
       intake: '7 Students',
       description: 'Interdisciplinary program focusing on water resources, climate resilience, and sustainable environmental systems to address emerging global challenges.',
@@ -70,7 +70,7 @@ const Academics = () => {
       courses: ['Advanced Soil Mechanics', 'Foundation Engineering', 'Slope Stability', 'Ground Improvement', 'Rock Mechanics', 'Geosynthetics']
     },
     {
-      title: 'Ph.D. in Civil Engineering',
+      title: <a href="https://academic.iiti.ac.in/app/storage/app/coursecurriculum/7xAINJWsbYbISP5Lk9PSY2VJU5daoGrnm2lbjilf.pdf" target="_blank">Ph.D. in Civil Engineering</a>,
       duration: '3-6 Years',
       // CHANGED: Intake removed
       description: 'Research-intensive doctoral program aimed at producing independent researchers and academics in various specializations of civil engineering.',
@@ -86,14 +86,14 @@ const Academics = () => {
 
   const curriculum = {
     btech: {
-      semester1: ['Engineering Mathematics-I', 'Engineering Physics', 'Engineering Chemistry', 'Basic Electrical Engineering', 'Engineering Graphics', 'Workshop Practice'],
-      semester2: ['Engineering Mathematics-II', 'Engineering Mechanics', 'Thermodynamics', 'Material Science', 'Computer Programming', 'Environmental Science'],
-      semester3: ['Engineering Mathematics-III', 'Strength of Materials', 'Fluid Mechanics', 'Surveying', 'Building Materials', 'Geology'],
-      semester4: ['Engineering Mathematics-IV', 'Structural Analysis-I', 'Soil Mechanics', 'Hydrology', 'Construction Technology', 'Transportation Engineering-I'],
-      semester5: ['Structural Analysis-II', 'Foundation Engineering', 'Hydraulics', 'Highway Engineering', 'Concrete Technology', 'Professional Elective-I'],
-      semester6: ['Design of Concrete Structures', 'Water Resources Engineering', 'Traffic Engineering', 'Environmental Engineering', 'Professional Elective-II', 'Internship'],
-      semester7: ['Design of Steel Structures', 'Advanced Concrete Technology', 'Project Management', 'Professional Elective-III', 'Open Elective', 'Major Project-I'],
-      semester8: ['Earthquake Engineering', 'Professional Elective-IV', 'Open Elective-II', 'Major Project-II', 'Comprehensive Viva', 'Industrial Training']
+      semester1: ['Basic Electrical Engineering', 'Engineering Mechanics', 'Basics of Physics', 'Physics Lab- I', 'Calculus', 'Language and Composition','Makerspace','Computer Programming','Computer Programming Lab'],
+      semester2: ['Biosciences ', 'Linear Algebra', 'Differential Equations-I', 'Environmental Studies', 'Fundamentals of Economics', 'Chemistry','Chemistry Lab','Flexible Elective','Flexible Elective (HSS)'],
+      semester3: ['Complex Analysis','Differential Equations-II', 'Strength of Materials', 'Fluid Mechanics', 'Surveying', 'Building Materials', 'Surveying','Department Elective I'],
+      semester4: ['Numerical Methods', 'Structural Analysis-I', 'Soil Mechanics-I', 'Engineering Geology', 'Environmental Engineering', 'Department Elective II','Institute Elective I'],
+      semester5: ['Structural Analysis-II', 'Soil Mechanics-II', 'Transportation Engineering ', 'Design of Reinforced Concrete Structures', 'Department Elective III', 'Institute Elective II '],
+      semester6: ['Design of steel structures', 'Engineering Hydrology', 'Computer Aided Design Lab', 'Introduction to Finite Element Methods', 'Department Elective IV', 'Department Elective IV','Institute Elective III'],
+      semester7: ['B Tech Project (BTP)','Internship'],
+      semester8: ['Water Resources Engineering', 'Design of Structures-III', 'Transportation Engineering-II', 'Foundation Engineering', 'Department Elective V', 'Institute Elective IV','Institute Elective V']
     }
   };
 

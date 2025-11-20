@@ -349,7 +349,7 @@ const Contact = () => {
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">Emergency Contact</h3>
-                <p className="text-blue-100">Campus Security: +91-731-2438-911</p>
+                <p className="text-blue-100">Campus Security: 0731 660 3524</p>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">Transportation</h3>

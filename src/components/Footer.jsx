@@ -13,9 +13,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
-    { name: 'Facebook', icon: Facebook, href: '#' },
+    { name: 'Twitter', icon: Twitter, href: 'https://www.linkedin.com/in/ced-outreach-iit-indore-a51575390/' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/ced-outreach-iit-indore-a51575390/' },
+    { name: 'Facebook', icon: Facebook, href: 'https://www.linkedin.com/in/ced-outreach-iit-indore-a51575390/' },
   ];
 
   return (
@@ -74,6 +74,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-amber-500 mt-0.5 flex-shrink-0" />
                 <div className="text-sm text-gray-300">
+                  <p>403, POD 1C</p>
                   <p>Indian Institute of Technology Indore</p>
                   <p>Khandwa Road, Simrol</p>
                   <p>Indore 453552, Madhya Pradesh</p>
@@ -81,11 +82,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-amber-500" />
-                <span className="text-sm text-gray-300">+91-731-2438-700</span>
+                <span className="text-sm text-gray-300">0731-660 3477</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-amber-500" />
-                <span className="text-sm text-gray-300">civil@iiti.ac.in</span>
+                <span className="text-sm text-gray-300">ceoffice@iiti.ac.in</span>
               </div>
             </div>
           </div>

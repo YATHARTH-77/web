@@ -14,9 +14,9 @@ const People = () => {
       specialization: 'Transportation Engineering',
       education: '',
       experience: '',
-      email: 'hodce@iiti.ac.in',
+      email: 'hodce@iiti.ac.in , gourabsil@iiti.ac.in',
       phone: '0731-660 3360',
-      room: '405, POD 1D, Chromium',
+      room: '405, POD 1D',
       image: '../src/assets/faculty_pics/Gourab.jpg',
       research: [
         'Performance Based Geometric Design of Highways',
@@ -36,7 +36,7 @@ const People = () => {
       experience: '',
       email: 'schaudhary@iiti.ac.in',
       phone: '0731-660 3256/3469 , +91 9414475375 , +91 9549654195',
-      room: '403, Chromium Building',
+      room: '403, POD 1D',
       image: '../src/assets/faculty_pics/Sandeep Choudhary.png',
       research: [
         'Structural Engineering',
@@ -57,7 +57,7 @@ const People = () => {
       experience: '',
       email: 'neelima.satyam@iiti.ac.in',
       phone: '0731-660 3290 , +91 9440480034',
-      room: '418, Chromium Building',
+      room: '418, POD 1D',
       image: '../src/assets/faculty_pics/neelima_satyam_orig.jpg',
       research: [
         'Geotechnical Earthquake Engineering',
@@ -200,7 +200,7 @@ const People = () => {
       experience: '',
       email: 'priyansh@iiti.ac.in',
       phone: '0731-660 3362',
-      room: '311, POD 1D, Chromium',
+      room: '311, POD 1D',
       image: '../src/assets/faculty_pics/Priyansh.jpg',
       research: [
         'Pavement Materials Characterization and Modeling',
@@ -221,7 +221,7 @@ const People = () => {
       experience: '',
       email: 'as_mandpe@iiti.ac.in',
       phone: '0731-660 3257',
-      room: '316, POD 1D, Chromium',
+      room: '316, POD 1D',
       image: '../src/assets/faculty_pics/Ashootosh Passport_Dark Background.JPG',
       research: [
         'Bio-valorization of solid wastes',
@@ -243,7 +243,7 @@ const People = () => {
       experience: '',
       email: 'priyanksharma@iiti.ac.in',
       phone: '0731-660 3382',
-      room: '422, Pod-1D, Chromium',
+      room: '422, Pod-1D',
       image: '../src/assets/faculty_pics/Dr. Priyank J Sharma.jpg',
       research: [
         'Hydroclimatology and Climate Extremes',
@@ -263,7 +263,7 @@ const People = () => {
       experience: '',
       email: 'mayur.jain@iiti.ac.in',
       phone: '0731-660 3384',
-      room: '605, POD 1A, Silicon',
+      room: '605, POD 1A',
       image: '../src/assets/faculty_pics/M S JAIN.jpg',
       research: [
         'Rapid Composting Techniques',

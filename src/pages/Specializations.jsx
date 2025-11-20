@@ -24,11 +24,11 @@ const Specializations = () => {
         ]
       },
       faculty: [
-        'Dr. Sandeep Chaudhary', 
-        'Dr. Abhishek Rajput', 
-        'Dr. Kaustav Bakshi', 
-        'Dr. Guru Prakash', 
-        'Dr. Ravinder'
+        <a href="https://sustainableconstructionlab.com/" target="_blank">Dr. Sandeep Chaudhary</a>, 
+        <a href="https://people.iiti.ac.in/~abhishekrajput/" target="_blank">Dr. Abhishek Rajput</a>,  
+        <a href="https://sites.google.com/view/kaustavbakshi/home" target="_blank">Dr. Kaustav Bakshi</a>,  
+        <a href="https://sites.google.com/view/guruprakash/home?authuser=0" target="_blank">Dr. Guru Prakash</a>,  
+        <a href="https://ravinderbhattoo.github.io/" target="_blank">Dr. Ravinder</a>, 
       ]
     },
     geotechnical: {
@@ -47,10 +47,10 @@ const Specializations = () => {
         ]
       },
       faculty: [
-        'Dr. Neelima Satyam D', 
-        'Dr. Lalit Borana', 
-        'Dr. Akshay Pratap Singh', 
-        'Dr. Baadiga Ramu'
+        <a href="https://people.iiti.ac.in/~neelima.satyam/" target="_blank">Dr. Neelima Satyam D</a>, 
+        <a href="https://sites.google.com/site/lalitborana/" target="_blank">Dr. Lalit Borana</a>, 
+        <a href="https://sites.google.com/view/apsingh/bio?authuser=0" target="_blank">Dr. Akshay Pratap Singh</a>, 
+        <a href="https://sites.google.com/view/ramubaadiga/" target="_blank">Dr. Baadiga Ramu</a>, 
       ]
     },
     transportation: {
@@ -68,9 +68,9 @@ const Specializations = () => {
         ]
       },
       faculty: [
-        'Dr. Gourab Sil', 
-        'Dr. Priyansh Singh', 
-        'Dr. Pushpa Choudhary'
+        <a href="https://gourabsil.profiles.iiti.ac.in/" target="_blank">Dr. Gourab Sil</a>, 
+        <a href="https://priyanshsingh.com/" target="_blank">Dr. Priyansh Singh</a>, 
+        <a href="https://choudharypushpa.github.io/HumanFRSTLab/pages/team/faculty/pushpa.html" target="_blank">Dr. Pushpa Choudhary</a>, 
       ]
     },
     water: {
@@ -88,9 +88,9 @@ const Specializations = () => {
         ]
       },
       faculty: [
-        'Dr. Manish Kumar Goyal', 
-        'Dr. Priyank J. Sharma', 
-        'Dr. Mohd. Farooq Azam'
+        <a href="https://sites.google.com/view/mkg1/home" target="_blank">Dr. Manish Kumar Goyal</a>,
+        <a href="https://sites.google.com/view/priyank2306" target="_blank">Dr. Priyank J. Sharma</a>,
+        <a href="https://sites.google.com/view/mohdfarooqazam/home" target="_blank">Dr. Mohd. Farooq Azam</a>,
       ]
     },
     environmental: {
@@ -106,8 +106,8 @@ const Specializations = () => {
         ]
       },
       faculty: [
-        'Dr. Ashootosh Mandpe', 
-        'Dr. Mayur Shirish Jain'
+        <a href="https://ashootoshmandpe.profiles.iiti.ac.in/" target="_blank">Dr. Ashootosh Mandpe</a>,
+        <a href="https://sites.google.com/view/mayur-shirish-jain" target="_blank">Dr. Mayur Shirish Jain</a>,
       ]
     }
   };
