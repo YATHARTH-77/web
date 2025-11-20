@@ -35,7 +35,7 @@ const People = () => {
       education: '',
       experience: '',
       email: 'schaudhary@iiti.ac.in',
-      phone: '0731-660 3256/3469',
+      phone: '0731-660 3256/3469, +91 9414475375, +91 9549654195',
       room: '403, Chromium Building',
       image: '../src/assets/faculty_pics/Sandeep Choudhary.png',
       research: [
