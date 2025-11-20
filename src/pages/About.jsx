@@ -72,7 +72,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="..\src\assets\ce\Civil_Engineering_19feb2022.jpeg"
+                src="/assets/ce/Civil_Engineering_19feb2022.jpeg"
                 alt="Department Building"
                 className="rounded-lg shadow-2xl"
               />

@@ -37,7 +37,7 @@ const Home = () => {
   const slides = [
     {
       // CHANGED: Updated to local path
-      image: '../assets/ce/Civil_Engineering_19feb2022.jpeg', 
+      image: '/assets/ce/Civil_Engineering_19feb2022.jpeg', 
       title: 'Excellence in Civil Engineering Education',
       subtitle: 'Shaping the future of infrastructure and sustainable development',
       cta: 'Explore Programs',
@@ -45,7 +45,7 @@ const Home = () => {
     },
     {
       // CHANGED: Updated to local path
-      image: '../assets/ce/Expert_Lecture.jpg',
+      image: '/assets/ce/Expert_Lecture.jpg',
       title: 'Specialized Engineering Areas',
       subtitle: 'Five core specializations with advanced facilities and research',
       cta: 'View Specializations',
@@ -53,7 +53,7 @@ const Home = () => {
     },
     {
       // CHANGED: Updated to local path
-      image: './assets/slide3.jpg',
+      image: '/assets/ce/Civil_front_jpg.jpg',
       title: 'Our Academic Community',
       subtitle: 'Meet our faculty, staff, and students who make up our vibrant community',
       cta: 'Meet Our People',
