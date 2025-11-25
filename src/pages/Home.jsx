@@ -37,7 +37,7 @@ const Home = () => {
   const slides = [
     {
       // CHANGED: Updated to local path
-      image: '/assets/ce/departmentoffice.jpeg', 
+      image: '/assets/ce/groupphoto2.jpeg', 
       title: 'Excellence in Civil Engineering Education',
       subtitle: 'Shaping the future of infrastructure and sustainable development',
       cta: 'Explore Programs',
@@ -53,7 +53,7 @@ const Home = () => {
     },
     {
       // CHANGED: Updated to local path
-      image: '/assets/ce/Civil_front_jpg.jpg',
+      image: '/assets/ce/departmentoffice.jpeg',
       title: 'Our Academic Community',
       subtitle: 'Meet our faculty, staff, and students who make up our vibrant community',
       cta: 'Meet Our People',
