@@ -13,77 +13,77 @@ const Events = () => {
       title: 'ANRF Financial Assistance for International Symposium',
       description: 'Mr. Vikas Rawat receives financial assistance from ANRF for participating in the International Symposium on Land Reclamation in Singapore.',
       category: 'Achievement',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800' // Placeholder
+      image: '/assets/ce/Civil_front_jpg.jpg' // Placeholder
     },
     {
       date: '2025-02-10',
       title: 'Prestigious Humboldt Fellowship Awarded',
       description: 'Ms. Minu Treesa Abraham, PhD Student under Prof. Neelima Satyam, selected for the prestigious Humboldt fellowship for Postdocs.',
       category: 'Award',
-      image: 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=800' // Placeholder
+      image: '/assets/ce/Civil_front_jpg.jpg'  // Placeholder
     },
     {
       date: '2024-03-15', 
       title: 'Himalayan Glaciology Research Featured in Mongabay',
       description: 'Research on western Himalayan glaciers reacting to climate change by Dr. Mohd Farooq Azam\'s team featured in Mongabay magazine.',
       category: 'Research',
-      image: 'https://images.pexels.com/photos/210126/pexels-photo-210126.jpeg?auto=compress&cs=tinysrgb&w=800' // Placeholder
+      image: '/assets/ce/Civil_front_jpg.jpg'  // Placeholder
     },
      {
       date: '2024-02-20',
       title: 'Research Featured in Media: Soil and Rocks of MP',
       description: 'Research work of Dr. Lalit Borana and his group on "Soil and Rocks of Madhyapradesh" has been featured in Hindi and English Media.',
       category: 'Research',
-      image: 'https://images.pexels.com/photos/3865263/pexels-photo-3865263.jpeg?auto=compress&cs=tinysrgb&w=800' // Placeholder
+      image: '/assets/ce/Civil_front_jpg.jpg'  // Placeholder
     },
     {
       date: '2023-11-15',
       title: 'Prof. Biswajeet Pradhan Listed as Highly Cited Researcher',
       description: 'Adjunct Professor Prof. Biswajeet Pradhan listed as one of the highly Cited Researchers announced by Clarivate Analytics.',
       category: 'Award',
-      image: 'https://images.pexels.com/photos/3184164/pexels-photo-3184164.jpeg?auto=compress&cs=tinysrgb&w=800' // Placeholder
+      image: '/assets/ce/Civil_front_jpg.jpg'  // Placeholder
     },
     {
       date: '2023-10-24',
       title: 'PhD Admission Advertisement',
       description: 'Last Date of Online Application: October 24, 2023.',
       category: 'Admission',
-      image: 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=800' // Placeholder
+      image: '/assets/ce/Civil_front_jpg.jpg'  // Placeholder
     },
      {
       date: '2023-09-01',
       title: 'Appointment to NEAT Expert Committee',
       description: 'Prof. Sandeep Chaudhary appointed as an Independent Expert Committee member for the National Educational Alliance for Technology (NEAT).',
       category: 'Appointment',
-      image: 'https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=800' // Placeholder
+      image: '/assets/ce/Civil_front_jpg.jpg'  // Placeholder
     },
     {
       date: '2020-12-15',
       title: 'Editor’s Choice Papers Award-2020',
       description: 'Mr. M. Johnson Singh received the prestigious Editor’s Choice Papers Award from the International Journal of Geosynthetics and Ground Engineering.',
       category: 'Award',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800' // Placeholder
+      image: '/assets/ce/Civil_front_jpg.jpg'  // Placeholder
     },
     {
       date: '2020-07-10',
       title: 'Ph.D. Openings in Transportation Engineering',
       description: 'Immediate openings for Ph.D. in Transportation Engineering Specialization. Application Deadline: 10 July 2020.',
       category: 'Admission',
-      image: 'https://images.pexels.com/photos/2280545/pexels-photo-2280545.jpeg?auto=compress&cs=tinysrgb&w=800' // Placeholder
+      image: '/assets/ce/Civil_front_jpg.jpg'  // Placeholder
     },
     {
       date: '2020-01-20',
       title: 'Executive Member of Indian Society of Engineering Geology',
       description: 'Dr. Neelima Satyam elected as Executive member of Indian Society of Engineering Geology (ISEG) for the term 2020-2021.',
       category: 'Appointment',
-      image: 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=800' // Placeholder
+      image: '/assets/ce/Civil_front_jpg.jpg'  // Placeholder
     },
     {
       date: '2019-12-15',
       title: 'Best Poster Award at International Conference',
       description: 'Mr. Vikas Poonia awarded the best poster award in International Conference of "Recent Advance in Life Science" held at Indore.',
       category: 'Award',
-      image: 'https://images.pexels.com/photos/3862379/pexels-photo-3862379.jpeg?auto=compress&cs=tinysrgb&w=800' // Placeholder
+      image: '/assets/ce/Civil_front_jpg.jpg'  // Placeholder
     }
   ];
 
