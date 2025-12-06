@@ -9,11 +9,35 @@ const Events = () => {
   // Data from Home.jsx news section
   const newsData = [
     {
+      date: '2025-12-06',
+      title: '𝐈𝐧𝐚𝐮𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧 𝐨𝐟 𝐭𝐡𝐞 𝐁𝐈𝐒 𝐒𝐭𝐮𝐝𝐞𝐧𝐭 𝐂𝐡𝐚𝐩𝐭𝐞𝐫 (𝐒𝐂-𝟏𝟏𝟐𝟖𝟑)',
+      description: 'IIT Indore is 𝐝𝐞𝐥𝐢𝐠𝐡𝐭𝐞𝐝 to announce the inauguration of the 𝐁𝐮𝐫𝐞𝐚𝐮 𝐨𝐟 𝐈𝐧𝐝𝐢𝐚𝐧 𝐒𝐭𝐚𝐧𝐝𝐚𝐫𝐝𝐬 (𝐁𝐈𝐒) 𝐒𝐭𝐮𝐝𝐞𝐧𝐭 𝐂𝐡𝐚𝐩𝐭𝐞𝐫 (𝐒𝐂-𝟏𝟏𝟐𝟖𝟑) in the Department of Civil Engineering. he launch featured an insightful workshop on 𝐒𝐭𝐚𝐧𝐝𝐚𝐫𝐝𝐢𝐳𝐚𝐭𝐢𝐨𝐧 𝐢𝐧 𝐂𝐢𝐯𝐢𝐥 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐟𝐨𝐫 𝐑𝐞𝐬𝐢𝐥𝐢𝐞𝐧𝐭 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞, conducted under the aegis of BIS.',
+      category: 'Seminar',
+      image: '/assets/Events/BIS_Inaugration.jpeg',// Placeholder  
+      link: 'https://www.linkedin.com/posts/ced-outreach-iit-indore-a51575390_civilengineering-bis-bureauofindianstandards-activity-7402743045588279296-oVRU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC4ENpUBAjdryz1Wdz50rJf3Sm4YnBT4nM8',
+    },
+    {
+      date: '2025-12-01',
+      title: 'One-Week Short Term Training Programme',
+      description: 'One-Week Short Term Training Programme on Advances in Resilient Infrastructure & Sustainable Initiatives under Climate Change (01-05 Dec 2025) at IIT Indore',
+      category: 'Seminar',
+      image: '/assets/Events/linkedin_post.png', // Placeholder
+      link: 'https://www.linkedin.com/posts/prof-manish-kumar-goyal-8062b86_sttp-ugcPost-7393564039991402497-_AJd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC4ENpUBAjdryz1Wdz50rJf3Sm4YnBT4nM8',
+    },
+    {
       date: '2025-11-26',
       title: 'ANRF Financial Assistance for International Symposium',
       description: 'Mr. Vikas Rawat receives financial assistance from ANRF for participating in the International Symposium on Land Reclamation in Singapore.',
       category: 'Achievement',
       image: '/assets/ce/Civil_front_jpg.jpg' // Placeholder
+    },
+    {
+      date: '2025-11-03',
+      title: '𝐀 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐕𝐢𝐬𝐢𝐭 𝐭𝐨 𝐈𝐧𝐝𝐨𝐫𝐞 𝐀𝐢𝐫𝐩𝐨𝐫𝐭 ✈️',
+      description: 'As part of the course 𝐂𝐄 𝟔𝟓𝟑 – 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐒𝐢𝐭𝐞 𝐕𝐢𝐬𝐢𝐭 𝐈𝐦𝐦𝐞𝐫𝐬𝐢𝐨𝐧 𝐏𝐫𝐨𝐠𝐫𝐚𝐦, the 𝐌.𝐓𝐞𝐜𝐡. 𝐬𝐭𝐮𝐝𝐞𝐧𝐭𝐬 𝐢𝐧 𝐖𝐚𝐭𝐞𝐫, 𝐂𝐥𝐢𝐦𝐚𝐭𝐞, 𝐚𝐧𝐝 𝐒𝐮𝐬𝐭𝐚𝐢𝐧𝐚𝐛𝐢𝐥𝐢𝐭𝐲 from the 𝐃𝐞𝐩𝐚𝐫𝐭𝐦𝐞𝐧𝐭 𝐨𝐟 𝐂𝐢𝐯𝐢𝐥 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠, 𝐈𝐈𝐓 𝐈𝐧𝐝𝐨𝐫𝐞, undertook a remarkable visit to the 𝐀𝐢𝐫 𝐓𝐫𝐚𝐟𝐟𝐢𝐜 𝐂𝐨𝐧𝐭𝐫𝐨𝐥 (𝐀𝐓𝐂) 𝐎𝐟𝐟𝐢𝐜𝐞 at 𝐃𝐞𝐯𝐢 𝐀𝐡𝐢𝐥𝐲𝐚𝐛𝐚𝐢 𝐇𝐨𝐥𝐤𝐚𝐫 𝐈𝐧𝐭𝐞𝐫𝐧𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐀𝐢𝐫𝐩𝐨𝐫𝐭, 𝐈𝐧𝐝𝐨𝐫𝐞, on 𝟑 𝐍𝐨𝐯𝐞𝐦𝐛𝐞𝐫 𝟐𝟎𝟐𝟓.',
+      category: 'Field Visit',
+      image: '/assets/Events/Site_visit_ATCIndore.jpeg', // Placeholder
+      link: 'https://www.linkedin.com/posts/ced-outreach-iit-indore-a51575390_civilengineering-iitindore-waterclimatesustainability-activity-7391437916901781504-MkWJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC4ENpUBAjdryz1Wdz50rJf3Sm4YnBT4nM8'
     },
     {
       date: '2025-02-10',
@@ -93,7 +117,7 @@ const Events = () => {
   const upcomingEvents = []; // Empty as requested previously
   const pastEvents = []; // Empty as requested previously
 
-  const categories = ['All', 'Achievement', 'Award', 'Research', 'Admission', 'Appointment'];
+  const categories = ['All', 'Achievement', 'Award', 'Research', 'Admission', 'Appointment', 'Seminar', 'Field Visit'];
 
   const filterEvents = (events) => {
     return events.filter(event => {
@@ -234,12 +258,15 @@ const Events = () => {
                         <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3">
                           {item.description}
                         </p>
-                        <div className="mt-3 pt-3 border-t border-gray-100">
-                           <button className="text-blue-800 hover:text-amber-600 font-medium text-sm flex items-center transition-colors">
-                            <span>Read Full Story</span>
-                            <ChevronRight className="h-4 w-4 ml-1" />
-                          </button>
-                        </div>
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-800 hover:text-amber-600 font-medium text-sm flex items-center transition-colors"
+                        >
+                         <span>Read Full Story</span>
+                         <ChevronRight className="h-4 w-4 ml-1" />
+                        </a>
                       </div>
                     </div>
                   ))}
