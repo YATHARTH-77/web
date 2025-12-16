@@ -678,29 +678,40 @@ const People = () => {
   );
 
   const renderStudentYearCard = (studentYear, index) => {
-    let IconComponent;
-    let colorClass;
+    // Define exact class strings so Tailwind can detect them
+    const styleConfig = {
+      mtech: {
+        IconComponent: BookOpen,
+        iconBg: 'bg-indigo-100',
+        iconColor: 'text-indigo-700',
+        btnBg: 'bg-indigo-600',
+        btnHover: 'hover:bg-indigo-700'
+      },
+      btech: {
+        IconComponent: User,
+        iconBg: 'bg-teal-100',
+        iconColor: 'text-teal-700',
+        btnBg: 'bg-teal-600',
+        btnHover: 'hover:bg-teal-700'
+      },
+      default: {
+        IconComponent: LinkIcon,
+        iconBg: 'bg-gray-100',
+        iconColor: 'text-gray-700',
+        btnBg: 'bg-gray-600',
+        btnHover: 'hover:bg-gray-700'
+      }
+    };
 
-    switch (activeTab) {
-      case 'mtech':
-        IconComponent = BookOpen;
-        colorClass = 'indigo';
-        break;
-      case 'btech':
-        IconComponent = User;
-        colorClass = 'teal';
-        break;
-      default:
-        IconComponent = LinkIcon;
-        colorClass = 'gray';
-    }
+    const styles = styleConfig[activeTab] || styleConfig.default;
+    const { IconComponent } = styles;
 
     return (
-      <div key={index} className={`bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100`}>
+      <div key={index} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
         <div className="p-6">
           <div className="text-center">
-            <div className={`p-4 bg-${colorClass}-100 rounded-full w-20 h-20 mx-auto flex items-center justify-center mb-4`}>
-              <IconComponent className={`h-10 w-10 text-${colorClass}-700`} />
+            <div className={`p-4 ${styles.iconBg} rounded-full w-20 h-20 mx-auto flex items-center justify-center mb-4`}>
+              <IconComponent className={`h-10 w-10 ${styles.iconColor}`} />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">{studentYear.year}</h3>
             <p className="text-gray-600 text-sm mb-4">List of Students</p>
@@ -708,7 +719,7 @@ const People = () => {
               href={studentYear.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center px-4 py-2 bg-${colorClass}-600 text-white text-sm font-medium rounded-lg hover:bg-${colorClass}-700 transition-colors`}
+              className={`inline-flex items-center px-4 py-2 ${styles.btnBg} text-white text-sm font-medium rounded-lg ${styles.btnHover} transition-colors`}
             >
               View
               <ExternalLink className="h-4 w-4 ml-2" />
@@ -718,7 +729,6 @@ const People = () => {
       </div>
     );
   };
-
 
   const currentData = getCurrentData();
   const filteredData = filterData(currentData);
