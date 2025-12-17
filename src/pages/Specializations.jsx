@@ -18,38 +18,41 @@ const Specializations = () => {
           {
             name: 'Materials Engineering Laboratory',
             equipments: [
-              { name: 'Universal Testing Machine (UTM)', image: '/api/placeholder/400/300' },
-              { name: 'Compression Testing Machine', image: '/api/placeholder/400/300' },
-              { name: 'Concrete Mixer', image: '/api/placeholder/400/300' }
+              { name: 'Servo Compression Testing Machine', image: '/assets/Instruments/Structural/Materials/ServoCompressionTestingMachine.jpg' },
+              { name: 'Fatigue Testing Machine', image: '/assets/Instruments/Structural/Materials/Fatigue.jpg' },
+              { name: 'Dynamic Shear Rheometer', image: '/assets/Instruments/Structural/Materials/DynamicShear.jpg' },
+              { name: 'Le-Chatelier Apparatus', image: '/assets/Instruments/Structural/Materials/LeChatelier.jpg' },
+              { name: 'Wet Seiving of Fly Ash', image: '/assets/Instruments/Structural/Materials/WetSeiving.jpg' },
+              { name: 'Small Size Machine Cleaner', image: '/assets/Instruments/Structural/Materials/Cleaner.jpg' },
+              { name: 'Slump Test for Concretee', image: '/assets/Instruments/Structural/Materials/Slump.jpg' },
+              { name: 'Concrete Permeability Test', image: '/assets/Instruments/Structural/Materials/ConcretePermeability.jpg' },
+              { name: 'Pan Mixer', image: '/assets/Instruments/Structural/Materials/PanMixer.jpg' },
             ]
           },
           {
             name: 'Solid Mechanics Laboratory',
             equipments: [
-              { name: 'Torsion Testing Machine', image: '/api/placeholder/400/300' },
-              { name: 'Impact Tester (Charpy/Izod)', image: '/api/placeholder/400/300' }
-            ]
-          },
-          {
-            name: 'Structure Engineering Laboratory',
-            equipments: [
-              { name: 'Loading Frame', image: '/api/placeholder/400/300' },
-              { name: 'Shake Table', image: '/api/placeholder/400/300' },
-              { name: 'Actuators', image: '/api/placeholder/400/300' }
+               { name: 'Stress and Strain in Bending', image: '/assets/Instruments/Structural/SolidMechanics/StressStrain.png' },
+              { name: 'Beam Bending Moment', image: '/assets/Instruments/Structural/SolidMechanics/BeamBending.png' },
+              { name: 'Unsymmetrical Bending of Beam', image: '/assets/Instruments/Structural/SolidMechanics/UnsymmetricalBending.png' },
+              { name: 'Column Test Rig', image: '/assets/Instruments/Structural/SolidMechanics/ColumnTest.png' },
             ]
           },
           {
             name: 'Impact Loading Laboratory',
             equipments: [
-              { name: 'Split Hopkinson Pressure Bar', image: '/api/placeholder/400/300' },
-              { name: 'Gas Gun', image: '/api/placeholder/400/300' }
+              { name: 'Prestressing jack', image: '/assets/Instruments/Structural/Impact/Prestressing.jpg' },
+              { name: 'Fibre sheet making kit (Vacuum Bag)', image: '/assets/Instruments/Structural/Impact/VacuumBag.jpg' },
+              { name: 'Split Hopkinson Pressure Bar setup (Compression)', image: '/assets/Instruments/Structural/Impact/hopkinson.jpg' }
             ]
           },
           {
             name: 'Brick Manufacturing Laboratory',
             equipments: [
-              { name: 'Extruder', image: '/api/placeholder/400/300' },
-              { name: 'Kiln', image: '/api/placeholder/400/300' }
+              { name: 'Brick manufacturing unit', image: '/assets/Instruments/Structural/Brick/BrickManufacturing.jpg' },
+              { name: 'Abrasion testing machine', image: '/assets/Instruments/Structural/Brick/AbrasionTesting.jpg' },
+              { name: 'Carbonation chamber', image: '/assets/Instruments/Structural/Brick/Carbonation.jpg' },
+              { name: 'Freeze and thaw chamber', image: '/assets/Instruments/Structural/Brick/FreezeThaw.png' },
             ]
           }
         ]
