@@ -65,7 +65,7 @@ const Home = () => {
     // CHANGED: Faculty to 17, Years to 10+
     { icon: Users, label: 'Faculty Members', value: 17, suffix: '' },
     { icon: BookOpen, label: 'Research Projects', value: 50, suffix: '+' },
-    { icon: Award, label: 'Publications', value: 200, suffix: '+' },
+    { icon: Award, label: 'Publications', value: 1000, suffix: '+' },
     { icon: Calendar, label: 'Years of Excellence', value: 10, suffix: '+' }
   ];
 

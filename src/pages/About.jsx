@@ -204,7 +204,7 @@ const About = () => {
               <div className="text-blue-100 font-medium">Alumni</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-amber-500 mb-2">200+</div>
+              <div className="text-4xl font-bold text-amber-500 mb-2">1000+</div>
               <div className="text-blue-100 font-medium">Research Papers</div>
             </div>
             <div className="text-center">

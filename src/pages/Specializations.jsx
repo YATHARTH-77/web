@@ -74,31 +74,38 @@ const Specializations = () => {
       facilities: {
         labs: [
           {
-            name: 'Geotechnical Engineering Laboratory- I',
+            name: 'Geotechnical Engineering Laboratory',
             equipments: [
-              { name: 'Direct Shear Test Apparatus', image: '/api/placeholder/400/300' },
-              { name: 'Consolidation Apparatus', image: '/api/placeholder/400/300' }
-            ]
-          },
-          {
-            name: 'Geotechnical Engineering Laboratory- II',
-            equipments: [
-              { name: 'Triaxial Shear Test System', image: '/api/placeholder/400/300' },
-              { name: 'Permeability Apparatus', image: '/api/placeholder/400/300' }
+              { name: 'Automatic Compaction', image: '/assets/Instruments/Geotechnical/Geotechnical/AutomaticCompaction.png' },
+              { name: 'Environment Chamber', image: '/assets/Instruments/Geotechnical/Geotechnical/EnvironmentChamber.png' },
+              { name: 'California Bearing Ratio Machine - 50 kN', image: '/assets/Instruments/Geotechnical/Geotechnical/CBR.png' },
+              { name: 'Relative Density Apparatus', image: '/assets/Instruments/Geotechnical/Geotechnical/RelativeDensity.png' },
+              { name: 'Direct Shear Machine', image: '/assets/Instruments/Geotechnical/Geotechnical/DirectShear.png' },
+              { name: 'Sieve Shaker', image: '/assets/Instruments/Geotechnical/Geotechnical/SieveShaker.png' },
+              { name: 'Vertical Auto Clave', image: '/assets/Instruments/Geotechnical/Geotechnical/VerticalAuto.png' },
+              { name: 'Hot Air Oven', image: '/assets/Instruments/Geotechnical/Geotechnical/HotAirOven.png' },
+              { name: 'Weighing Balance', image: '/assets/Instruments/Geotechnical/Geotechnical/WeighingBalance.png' },
+              { name: 'Vane Shear Test', image: '/assets/Instruments/Geotechnical/Geotechnical/VaneShear.png' },
+              { name: 'High Speed Starrier', image: '/assets/Instruments/Geotechnical/Geotechnical/HighSpeed.png' },
+              { name: 'Plate Load Test', image: '/assets/Instruments/Geotechnical/Geotechnical/PlateLoad.png' },
+              { name: 'Standard Penetration Test (SPT)', image: '/assets/Instruments/Geotechnical/Geotechnical/SPT.png' },
+              { name: 'Electrical Resistivity Tomography (ERT)', image: '/assets/Instruments/Geotechnical/Geotechnical/ERT.png' },
             ]
           },
           {
             name: 'Computational Laboratory',
             equipments: [
-              { name: 'High Performance Workstations', image: '/api/placeholder/400/300' },
-              { name: 'Plaxis 3D Software', image: '/api/placeholder/400/300' }
+              { name: 'Desktop PCs in Computational Lab', image: '/assets/Instruments/Geotechnical/Computational/PC.jpg' },
             ]
           },
           {
             name: 'Engineering Geology Laboratory',
             equipments: [
-              { name: 'Petrological Microscope', image: '/api/placeholder/400/300' },
-              { name: 'Rock Cutting Machine', image: '/api/placeholder/400/300' }
+              { name: 'Microscope', image: '/assets/Instruments/Geotechnical/Geology/Microscope.jpg' },
+              { name: 'Display Tables for Rock Samples', image: '/assets/Instruments/Geotechnical/Geology/Display.jpg' },
+              { name: 'Display Tables for Mineral Samples', image: '/assets/Instruments/Geotechnical/Geology/DisplayMineral.jpg' },
+              { name: 'Display Tables for 3D Geology Models', image: '/assets/Instruments/Geotechnical/Geology/Display3D.jpg' },
+              { name: 'Wall Models for Different Geologic Cycles', image: '/assets/Instruments/Geotechnical/Geology/WallModels.jpg' },
             ]
           }
         ]
@@ -121,25 +128,47 @@ const Specializations = () => {
           {
             name: 'Geodesy and Surveying Laboratory',
             equipments: [
-              { name: 'Total Station', image: '/api/placeholder/400/300' },
-              { name: 'DGPS', image: '/api/placeholder/400/300' }
+              { name: 'Transit Vernier Theodolite', image: '/assets/Instruments/Transportation/Survey/TransitTheodelite.jpg' },
+              { name: 'Dumpy Level', image: '/assets/Instruments/Transportation/Survey/DumpyLevel.jpg' },
+              { name: 'Auto Level', image: '/assets/Instruments/Transportation/Survey/Autolevel.jpg' },
+              { name: 'Plane Table', image: '/assets/Instruments/Transportation/Survey/PlaneTable.jpg' },
+              { name: 'Prismatic Compass', image: '/assets/Instruments/Transportation/Survey/PrismaticCompass.jpg' },
+              { name: 'Total Station', image: '/assets/Instruments/Transportation/Survey/TotalStation.jpg' },
+              { name: 'DGPS (Differential Global Positioning System)', image: '/assets/Instruments/Transportation/Survey/DGPS 1.jpg' },
+              { name: 'Ranging Rod with Leveling Staff', image: '/assets/Instruments/Transportation/Survey/RangingRod.jpg' },
+              { name: 'Metric Chain', image: '/assets/Instruments/Transportation/Survey/MetricChain.jpg' },
+              { name: 'Measuring Tapes', image: '/assets/Instruments/Transportation/Survey/MeasuringTapes.jpg' },
+              { name: 'Wooden Pegs, Plum-bob, Arrows, Hammer', image: '/assets/Instruments/Transportation/Survey/WoodenPegs.jpg' },
             ]
           },
           {
             name: 'Transportation Engineering Laboratory',
             equipments: [
-              { name: 'Bitumen Extractor', image: '/api/placeholder/400/300' },
-              { name: 'Marshall Stability Apparatus', image: '/api/placeholder/400/300' },
-              { name: 'Los Angeles Abrasion Machine', image: '/api/placeholder/400/300' }
+              { name: 'Aggregate Crushing Value Apparatus', image: '/assets/Instruments/Transportation/Transportation/AggregateCrushing.jpg' },
+              { name: 'Aggregate Impact Value Apparatus', image: '/assets/Instruments/Transportation/Transportation/ImpactValue.png' },
+              { name: 'Kinematic Viscosity Bath', image: '/assets/Instruments/Transportation/Transportation/KViscosity.png' },
+              { name: 'Marshall Stability Test Apparatus', image: '/assets/Instruments/Transportation/Transportation/Marshall.png' },
+              { name: 'Los Angeles Abrasion Testing Machine', image: '/assets/Instruments/Transportation/Transportation/LosAngeles.jpg' },
+              { name: 'Planetary Mixture', image: '/assets/Instruments/Transportation/Transportation/PlanetaryMixture.jpg' },
+              { name: 'Ductility Testing Apparatus', image: '/assets/Instruments/Transportation/Transportation/Ductility.jpg' },
+              { name: 'Digital Ductility Testing Apparatus', image: '/assets/Instruments/Transportation/Transportation/DigitalDuctility.jpg' },
+              { name: 'Cleveland Flash and Fire Point Apparatus', image: '/assets/Instruments/Transportation/Transportation/Cleveland.jpg' },
+              { name: 'Universal Penetrometer', image: '/assets/Instruments/Transportation/Transportation/UniversalPenetrometer.jpg' },
+              { name: 'Ring and Ball Apparatus', image: '/assets/Instruments/Transportation/Transportation/RingBall.jpg' },
+              { name: 'Constant Temperature Water Bath', image: '/assets/Instruments/Transportation/Transportation/WaterBath.png' },
+              { name: 'Mastic Asphalt Hardenss Tester', image: '/assets/Instruments/Transportation/Transportation/HardnessTester.png' },
+              { name: 'Digital Marshall Apparatus', image: '/assets/Instruments/Transportation/Transportation/DigitalMarshall.png' },
+              { name: 'Marshall Compactor', image: '/assets/Instruments/Transportation/Transportation/MarshallCompactor.png' },
+              { name: 'Hot Air Oven', image: '/assets/Instruments/Transportation/Transportation/HotAirOven.jpg' },
+              { name: 'Rolling Thin Film Oven', image: '/assets/Instruments/Transportation/Transportation/ThinFilmOven.png' },
+              { name: 'Vacume Pycnometer for rice test', image: '/assets/Instruments/Transportation/Transportation/VacumePycnometer.jpg' },
             ]
           },
           {
             name: 'NDS Laboratory',
             equipments: [
-              { name: 'Driving Simulator', image: '/api/placeholder/400/300' },
-              { name: 'Traffic Speed Radar', image: '/api/placeholder/400/300' }
             ]
-          }
+          },
         ]
       },
       faculty: [
@@ -157,26 +186,36 @@ const Specializations = () => {
       facilities: {
         labs: [
           {
-            name: 'Glacier Laboratory',
-            equipments: [
-              { name: 'Ice Core Drill', image: '/api/placeholder/400/300' },
-              { name: 'Automatic Weather Station', image: '/api/placeholder/400/300' }
-            ]
-          },
-          {
             name: 'Fluid Mechanics Laboratory',
             equipments: [
-              { name: 'Hydraulic Bench', image: '/api/placeholder/400/300' },
-              { name: 'Reynolds Apparatus', image: '/api/placeholder/400/300' }
+              { name: 'Minor Losses in Pipes Fittings', image: '/assets/Instruments/Water/FluidMechanics/MinorLosses.jpg' },
+              { name: 'Major Losses due to Pipe Friction', image: '/assets/Instruments/Water/FluidMechanics/MajorLosses.jpg' },
+              { name: 'Reynolds Apparatus', image: '/assets/Instruments/Water/FluidMechanics/Reynolds.jpg' },
+              { name: 'Universal Base Module', image: '/assets/Instruments/Water/FluidMechanics/UniversalBase.jpg' },
+              { name: 'Electrical Analogy Apparatus', image: '/assets/Instruments/Water/FluidMechanics/ElectricalAnalogy.jpg' },
+              { name: 'Hele-Shaw Apparatus', image: '/assets/Instruments/Water/FluidMechanics/HeleShaw.jpg' },
+              { name: 'Metacentric Height Apparatus', image: '/assets/Instruments/Water/FluidMechanics/Metacentric.jpg' },
+              { name: 'Venturi Meter', image: '/assets/Instruments/Water/FluidMechanics/Venturi.jpg' },
+              { name: 'Free Vortex Apparatus', image: '/assets/Instruments/Water/FluidMechanics/FreeVortex.jpg' },
+              { name: 'Force Vortex Apparatus', image: '/assets/Instruments/Water/FluidMechanics/ForceVortex.jpg' },
             ]
           },
           {
             name: 'Hydraulics and Hydrology Laboratory',
             equipments: [
-              { name: 'Tilting Flume', image: '/api/placeholder/400/300' },
-              { name: 'Rainfall Simulator', image: '/api/placeholder/400/300' }
+              { name: 'Multipurpose Titling Flume (5 m in length)', image: '/assets/Instruments/Water/Hydrology/Multipurpose.png' },
+              { name: 'Pygmy Type Water Current Meter ', image: '/assets/Instruments/Water/Hydrology/Pygmy.jpg' },
+              { name: 'Advance Hydrology System ', image: '/assets/Instruments/Water/Hydrology/AdvanceHydrology.png' },
+              { name: 'Drainage and Seepage Tank', image: '/assets/Instruments/Water/Hydrology/Drainage.png' },
+              { name: 'Vertical Axis Cup Water Current Meter', image: '/assets/Instruments/Water/Hydrology/VerticalAxis.jpg' },
             ]
-          }
+          },
+          {
+            name: 'Glacier Laboratory',
+            equipments: [
+      
+            ]
+          },
         ]
       },
       faculty: [
