@@ -193,10 +193,19 @@ const Specializations = () => {
           {
             name: 'Environmental Engineering Laboratory',
             equipments: [
-              { name: 'Atomic Absorption Spectrophotometer', image: '/api/placeholder/400/300' },
-              { name: 'Gas Chromatograph (GC)', image: '/api/placeholder/400/300' },
-              { name: 'BOD Incubator', image: '/api/placeholder/400/300' },
-              { name: 'COD Digester', image: '/api/placeholder/400/300' }
+              { name: 'Dissolved Oxygen', image: '/assets/Instruments/Environment/DO.jpg'},
+              { name: 'Turbidity & Free/ Total Chlorine', image: '/assets/Instruments/Environment/Turbidity.png' },
+              { name: 'Autoclave', image: '/assets/Instruments/Environment/Autoclave.png' },
+              { name: 'Hot Plate', image: '/assets/Instruments/Environment/HotPlate.png' },
+              { name: 'Flame Photometer', image: '/assets/Instruments/Environment/FlamePhotometer.png' },
+              { name: 'Weighing Balance', image: '/assets/Instruments/Environment/WeighingBalance.png' },
+              { name: 'Hot Air Oven', image: '/assets/Instruments/Environment/HotAirOven.png' },
+              { name: 'TKN (Total Tkjeldahl Nitrogen)', image: '/assets/Instruments/Environment/TKN.png' },
+              { name: 'Muffle Furnace', image: '/assets/Instruments/Environment/MuffleFurnance.png' },
+              { name: 'Microprocessor Controlled Incubator', image: '/assets/Instruments/Environment/MCL.png' },
+              { name: 'Distillation Apparatus', image: '/assets/Instruments/Environment/DistillationApparatus.png' },
+              { name: 'COD Digestion Unit', image: '/assets/Instruments/Environment/COD.jpg' },
+              { name: 'Weighing Machine', image: '/assets/Instruments/Environment/WeighingMachine.jpg' },
             ]
           }
         ]
