@@ -20,7 +20,7 @@ const Specializations = () => {
               { name: 'Servo Compression Testing Machine', image: '/assets/Instruments/Structural/Materials/ServoCompressionTestingMachine.jpg' },
               { name: 'Fatigue Testing Machine', image: '/assets/Instruments/Structural/Materials/Fatigue.jpg' },
               { name: 'Dynamic Shear Rheometer', image: '/assets/Instruments/Structural/Materials/DynamicShear.jpg' },
-              { name: 'Le-Chatelier Apparatus', image: '/assets/Instruments/Structural/Materials/LeChatelier.jpg' },
+              { name: 'Le-Chatelier Apparatus', image: '/assets/Instruments/Structural/Materials/LeChatlier.jpg' },
               { name: 'Wet Seiving of Fly Ash', image: '/assets/Instruments/Structural/Materials/WetSeiving.jpg' },
               { name: 'Small Size Machine Cleaner', image: '/assets/Instruments/Structural/Materials/Cleaner.jpg' },
               { name: 'Slump Test for Concretee', image: '/assets/Instruments/Structural/Materials/Slump.jpg' },
@@ -83,7 +83,7 @@ const Specializations = () => {
               { name: 'Sieve Shaker', image: '/assets/Instruments/Geotechnical/Geotechnical/SieveShaker.png' },
               { name: 'Vertical Auto Clave', image: '/assets/Instruments/Geotechnical/Geotechnical/VerticalAuto.png' },
               { name: 'Hot Air Oven', image: '/assets/Instruments/Geotechnical/Geotechnical/HotAirOven.png' },
-              { name: 'Weighing Balance', image: '/assets/Instruments/Geotechnical/Geotechnical/WeighingBalance.png' },
+              { name: 'Weighing Balance', image: '/assets/Instruments/Geotechnical/Geotechnical/Weighingbalance.png' },
               { name: 'Vane Shear Test', image: '/assets/Instruments/Geotechnical/Geotechnical/VaneShear.png' },
               { name: 'High Speed Starrier', image: '/assets/Instruments/Geotechnical/Geotechnical/HighSpeed.png' },
               { name: 'Plate Load Test', image: '/assets/Instruments/Geotechnical/Geotechnical/PlateLoad.png' },
@@ -127,7 +127,7 @@ const Specializations = () => {
           {
             name: 'Geodesy and Surveying Laboratory',
             equipments: [
-              { name: 'Transit Vernier Theodolite', image: '/assets/Instruments/Transportation/Survey/TransitTheodelite.jpg' },
+              { name: 'Transit Vernier Theodolite', image: '/assets/Instruments/Transportation/Survey/TransitTheodolite.jpg' },
               { name: 'Dumpy Level', image: '/assets/Instruments/Transportation/Survey/DumpyLevel.jpg' },
               { name: 'Auto Level', image: '/assets/Instruments/Transportation/Survey/Autolevel.jpg' },
               { name: 'Plane Table', image: '/assets/Instruments/Transportation/Survey/PlaneTable.jpg' },
@@ -161,6 +161,12 @@ const Specializations = () => {
               { name: 'Hot Air Oven', image: '/assets/Instruments/Transportation/Transportation/HotAirOven.jpg' },
               { name: 'Rolling Thin Film Oven', image: '/assets/Instruments/Transportation/Transportation/ThinFilmOven.png' },
               { name: 'Vacuum Pycnometer', image: '/assets/Instruments/Transportation/Transportation/VacumePycnometer.jpg' },
+            ]
+          },
+          {
+            name: 'NDS Laboratory',
+            equipments: [
+             
             ]
           }
         ]
@@ -203,6 +209,12 @@ const Specializations = () => {
               { name: 'Drainage and Seepage Tank', image: '/assets/Instruments/Water/Hydrology/Drainage.png' },
               { name: 'Vertical Axis Current Meter', image: '/assets/Instruments/Water/Hydrology/VerticalAxis.jpg' },
             ]
+          },
+          {
+            name: 'Glacier Laboratory',
+            equipments: [
+             
+            ]
           }
         ]
       },
@@ -231,7 +243,7 @@ const Specializations = () => {
               { name: 'Weighing Balance', image: '/assets/Instruments/Environment/WeighingBalance.png' },
               { name: 'Hot Air Oven', image: '/assets/Instruments/Environment/HotAirOven.png' },
               { name: 'TKN Nitrogen Unit', image: '/assets/Instruments/Environment/TKN.png' },
-              { name: 'Muffle Furnace', image: '/assets/Instruments/Environment/MuffleFurnance.png' },
+              { name: 'Muffle Furnace', image: '/assets/Instruments/Environment/MuffleFurnace.png' },
               { name: 'Incubator', image: '/assets/Instruments/Environment/MCL.png' },
               { name: 'Distillation Apparatus', image: '/assets/Instruments/Environment/DistillationApparatus.png' },
               { name: 'COD Digestion Unit', image: '/assets/Instruments/Environment/COD.jpg' },

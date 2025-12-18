@@ -77,9 +77,10 @@ const Home = () => {
       excerpt: 'Mr. Vikas Rawat receives financial assistance from ANRF for participating in the International Symposium on Land Reclamation in Singapore.'
     },
     {
-      date: '2025-02-10',
-      title: 'Prestigious Humboldt Fellowship Awarded',
-      excerpt: 'Ms. Minu Treesa Abraham, PhD Student under Prof. Neelima Satyam, selected for the prestigious Humboldt fellowship for Postdocs.'
+      date: '2025-12-06',
+      title: '𝐈𝐧𝐚𝐮𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧 𝐨𝐟 𝐭𝐡𝐞 𝐁𝐈𝐒 𝐒𝐭𝐮𝐝𝐞𝐧𝐭 𝐂𝐡𝐚𝐩𝐭𝐞𝐫 (𝐒𝐂-𝟏𝟏𝟐𝟖𝟑)',
+      excerpt: 'IIT Indore is 𝐝𝐞𝐥𝐢𝐠𝐡𝐭𝐞𝐝 to announce the inauguration of the 𝐁𝐮𝐫𝐞𝐚𝐮 𝐨𝐟 𝐈𝐧𝐝𝐢𝐚𝐧 𝐒𝐭𝐚𝐧𝐝𝐚𝐫𝐝𝐬 (𝐁𝐈𝐒) 𝐒𝐭𝐮𝐝𝐞𝐧𝐭 𝐂𝐡𝐚𝐩𝐭𝐞𝐫 (𝐒𝐂-𝟏𝟏𝟐𝟖𝟑) in the Department of Civil Engineering. he launch featured an insightful workshop on 𝐒𝐭𝐚𝐧𝐝𝐚𝐫𝐝𝐢𝐳𝐚𝐭𝐢𝐨𝐧 𝐢𝐧 𝐂𝐢𝐯𝐢𝐥 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐟𝐨𝐫 𝐑𝐞𝐬𝐢𝐥𝐢𝐞𝐧𝐭 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞, conducted under the aegis of BIS.',
+      link: 'https://www.linkedin.com/posts/ced-outreach-iit-indore-a51575390_civilengineering-bis-bureauofindianstandards-activity-7402743045588279296-oVRU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC4ENpUBAjdryz1Wdz50rJf3Sm4YnBT4nM8',
     },
     {
       date: '2024-03-15', 
