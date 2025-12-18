@@ -5,7 +5,6 @@ const Specializations = () => {
   const [activeMainTab, setActiveMainTab] = useState('specializations');
   const [activeSpecialization, setActiveSpecialization] = useState('structural');
 
-  // UPDATED DATA STRUCTURE: Labs are now objects with 'name' and 'equipments'
   const specializations = {
     structural: {
       title: 'Structural Engineering',
@@ -58,11 +57,11 @@ const Specializations = () => {
         ]
       },
       faculty: [
-        <a href="https://sustainableconstructionlab.com/" target="_blank" rel="noreferrer">Dr. Sandeep Chaudhary</a>,
-        <a href="https://people.iiti.ac.in/~abhishekrajput/" target="_blank" rel="noreferrer">Dr. Abhishek Rajput</a>,
-        <a href="https://sites.google.com/view/kaustavbakshi/home" target="_blank" rel="noreferrer">Dr. Kaustav Bakshi</a>,
-        <a href="https://sites.google.com/view/guruprakash/home?authuser=0" target="_blank" rel="noreferrer">Dr. Guru Prakash</a>,
-        <a href="https://ravinderbhattoo.github.io/" target="_blank" rel="noreferrer">Dr. Ravinder</a>,
+        <a key="f1" href="https://sustainableconstructionlab.com/" target="_blank" rel="noreferrer">Dr. Sandeep Chaudhary</a>,
+        <a key="f2" href="https://people.iiti.ac.in/~abhishekrajput/" target="_blank" rel="noreferrer">Dr. Abhishek Rajput</a>,
+        <a key="f3" href="https://sites.google.com/view/kaustavbakshi/home" target="_blank" rel="noreferrer">Dr. Kaustav Bakshi</a>,
+        <a key="f4" href="https://sites.google.com/view/guruprakash/home?authuser=0" target="_blank" rel="noreferrer">Dr. Guru Prakash</a>,
+        <a key="f5" href="https://ravinderbhattoo.github.io/" target="_blank" rel="noreferrer">Dr. Ravinder</a>,
       ]
     },
     geotechnical: {
@@ -111,10 +110,10 @@ const Specializations = () => {
         ]
       },
       faculty: [
-        <a href="https://people.iiti.ac.in/~neelima.satyam/" target="_blank" rel="noreferrer">Dr. Neelima Satyam D</a>,
-        <a href="https://sites.google.com/site/lalitborana/" target="_blank" rel="noreferrer">Dr. Lalit Borana</a>,
-        <a href="https://sites.google.com/view/apsingh/bio?authuser=0" target="_blank" rel="noreferrer">Dr. Akshay Pratap Singh</a>,
-        <a href="https://sites.google.com/view/ramubaadiga/" target="_blank" rel="noreferrer">Dr. Baadiga Ramu</a>,
+        <a key="g1" href="https://people.iiti.ac.in/~neelima.satyam/" target="_blank" rel="noreferrer">Dr. Neelima Satyam D</a>,
+        <a key="g2" href="https://sites.google.com/site/lalitborana/" target="_blank" rel="noreferrer">Dr. Lalit Borana</a>,
+        <a key="g3" href="https://sites.google.com/view/apsingh/bio?authuser=0" target="_blank" rel="noreferrer">Dr. Akshay Pratap Singh</a>,
+        <a key="g4" href="https://sites.google.com/view/ramubaadiga/" target="_blank" rel="noreferrer">Dr. Baadiga Ramu</a>,
       ]
     },
     transportation: {
@@ -134,47 +133,42 @@ const Specializations = () => {
               { name: 'Plane Table', image: '/assets/Instruments/Transportation/Survey/PlaneTable.jpg' },
               { name: 'Prismatic Compass', image: '/assets/Instruments/Transportation/Survey/PrismaticCompass.jpg' },
               { name: 'Total Station', image: '/assets/Instruments/Transportation/Survey/TotalStation.jpg' },
-              { name: 'DGPS (Differential Global Positioning System)', image: '/assets/Instruments/Transportation/Survey/DGPS 1.jpg' },
-              { name: 'Ranging Rod with Leveling Staff', image: '/assets/Instruments/Transportation/Survey/RangingRod.jpg' },
+              { name: 'DGPS', image: '/assets/Instruments/Transportation/Survey/DGPS 1.jpg' },
+              { name: 'Ranging Rod', image: '/assets/Instruments/Transportation/Survey/RangingRod.jpg' },
               { name: 'Metric Chain', image: '/assets/Instruments/Transportation/Survey/MetricChain.jpg' },
               { name: 'Measuring Tapes', image: '/assets/Instruments/Transportation/Survey/MeasuringTapes.jpg' },
-              { name: 'Wooden Pegs, Plum-bob, Arrows, Hammer', image: '/assets/Instruments/Transportation/Survey/WoodenPegs.jpg' },
+              { name: 'Wooden Pegs, Hammer', image: '/assets/Instruments/Transportation/Survey/WoodenPegs.jpg' },
             ]
           },
           {
             name: 'Transportation Engineering Laboratory',
             equipments: [
-              { name: 'Aggregate Crushing Value Apparatus', image: '/assets/Instruments/Transportation/Transportation/AggregateCrushing.jpg' },
-              { name: 'Aggregate Impact Value Apparatus', image: '/assets/Instruments/Transportation/Transportation/ImpactValue.png' },
+              { name: 'Aggregate Crushing Apparatus', image: '/assets/Instruments/Transportation/Transportation/AggregateCrushing.jpg' },
+              { name: 'Aggregate Impact Apparatus', image: '/assets/Instruments/Transportation/Transportation/ImpactValue.png' },
               { name: 'Kinematic Viscosity Bath', image: '/assets/Instruments/Transportation/Transportation/KViscosity.png' },
-              { name: 'Marshall Stability Test Apparatus', image: '/assets/Instruments/Transportation/Transportation/Marshall.png' },
-              { name: 'Los Angeles Abrasion Testing Machine', image: '/assets/Instruments/Transportation/Transportation/LosAngeles.jpg' },
+              { name: 'Marshall Stability Test', image: '/assets/Instruments/Transportation/Transportation/Marshall.png' },
+              { name: 'Los Angeles Abrasion', image: '/assets/Instruments/Transportation/Transportation/LosAngeles.jpg' },
               { name: 'Planetary Mixture', image: '/assets/Instruments/Transportation/Transportation/PlanetaryMixture.jpg' },
-              { name: 'Ductility Testing Apparatus', image: '/assets/Instruments/Transportation/Transportation/Ductility.jpg' },
-              { name: 'Digital Ductility Testing Apparatus', image: '/assets/Instruments/Transportation/Transportation/DigitalDuctility.jpg' },
-              { name: 'Cleveland Flash and Fire Point Apparatus', image: '/assets/Instruments/Transportation/Transportation/Cleveland.jpg' },
+              { name: 'Ductility Testing', image: '/assets/Instruments/Transportation/Transportation/Ductility.jpg' },
+              { name: 'Digital Ductility', image: '/assets/Instruments/Transportation/Transportation/DigitalDuctility.jpg' },
+              { name: 'Cleveland Flash/Fire Point', image: '/assets/Instruments/Transportation/Transportation/Cleveland.jpg' },
               { name: 'Universal Penetrometer', image: '/assets/Instruments/Transportation/Transportation/UniversalPenetrometer.jpg' },
               { name: 'Ring and Ball Apparatus', image: '/assets/Instruments/Transportation/Transportation/RingBall.jpg' },
-              { name: 'Constant Temperature Water Bath', image: '/assets/Instruments/Transportation/Transportation/WaterBath.png' },
-              { name: 'Mastic Asphalt Hardenss Tester', image: '/assets/Instruments/Transportation/Transportation/HardnessTester.png' },
-              { name: 'Digital Marshall Apparatus', image: '/assets/Instruments/Transportation/Transportation/DigitalMarshall.png' },
+              { name: 'Constant Temperature Bath', image: '/assets/Instruments/Transportation/Transportation/WaterBath.png' },
+              { name: 'Mastic Asphalt Tester', image: '/assets/Instruments/Transportation/Transportation/HardnessTester.png' },
+              { name: 'Digital Marshall', image: '/assets/Instruments/Transportation/Transportation/DigitalMarshall.png' },
               { name: 'Marshall Compactor', image: '/assets/Instruments/Transportation/Transportation/MarshallCompactor.png' },
               { name: 'Hot Air Oven', image: '/assets/Instruments/Transportation/Transportation/HotAirOven.jpg' },
               { name: 'Rolling Thin Film Oven', image: '/assets/Instruments/Transportation/Transportation/ThinFilmOven.png' },
-              { name: 'Vacume Pycnometer for rice test', image: '/assets/Instruments/Transportation/Transportation/VacumePycnometer.jpg' },
+              { name: 'Vacuum Pycnometer', image: '/assets/Instruments/Transportation/Transportation/VacumePycnometer.jpg' },
             ]
-          },
-          {
-            name: 'NDS Laboratory',
-            equipments: [
-            ]
-          },
+          }
         ]
       },
       faculty: [
-        <a href="https://gourabsil.profiles.iiti.ac.in/" target="_blank" rel="noreferrer">Dr. Gourab Sil</a>,
-        <a href="https://priyanshsingh.com/" target="_blank" rel="noreferrer">Dr. Priyansh Singh</a>,
-        <a href="https://choudharypushpa.github.io/HumanFRSTLab/pages/team/faculty/pushpa.html" target="_blank" rel="noreferrer">Dr. Pushpa Choudhary</a>,
+        <a key="t1" href="https://gourabsil.profiles.iiti.ac.in/" target="_blank" rel="noreferrer">Dr. Gourab Sil</a>,
+        <a key="t2" href="https://priyanshsingh.com/" target="_blank" rel="noreferrer">Dr. Priyansh Singh</a>,
+        <a key="t3" href="https://choudharypushpa.github.io/HumanFRSTLab/pages/team/faculty/pushpa.html" target="_blank" rel="noreferrer">Dr. Pushpa Choudhary</a>,
       ]
     },
     water: {
@@ -188,13 +182,13 @@ const Specializations = () => {
           {
             name: 'Fluid Mechanics Laboratory',
             equipments: [
-              { name: 'Minor Losses in Pipes Fittings', image: '/assets/Instruments/Water/FluidMechanics/MinorLosses.jpg' },
-              { name: 'Major Losses due to Pipe Friction', image: '/assets/Instruments/Water/FluidMechanics/MajorLosses.jpg' },
+              { name: 'Minor Losses in Pipes', image: '/assets/Instruments/Water/FluidMechanics/MinorLosses.jpg' },
+              { name: 'Major Losses in Pipes', image: '/assets/Instruments/Water/FluidMechanics/MajorLosses.jpg' },
               { name: 'Reynolds Apparatus', image: '/assets/Instruments/Water/FluidMechanics/Reynolds.jpg' },
               { name: 'Universal Base Module', image: '/assets/Instruments/Water/FluidMechanics/UniversalBase.jpg' },
-              { name: 'Electrical Analogy Apparatus', image: '/assets/Instruments/Water/FluidMechanics/ElectricalAnalogy.jpg' },
+              { name: 'Electrical Analogy', image: '/assets/Instruments/Water/FluidMechanics/ElectricalAnalogy.jpg' },
               { name: 'Hele-Shaw Apparatus', image: '/assets/Instruments/Water/FluidMechanics/HeleShaw.jpg' },
-              { name: 'Metacentric Height Apparatus', image: '/assets/Instruments/Water/FluidMechanics/Metacentric.jpg' },
+              { name: 'Metacentric Height', image: '/assets/Instruments/Water/FluidMechanics/Metacentric.jpg' },
               { name: 'Venturi Meter', image: '/assets/Instruments/Water/FluidMechanics/Venturi.jpg' },
               { name: 'Free Vortex Apparatus', image: '/assets/Instruments/Water/FluidMechanics/FreeVortex.jpg' },
               { name: 'Force Vortex Apparatus', image: '/assets/Instruments/Water/FluidMechanics/ForceVortex.jpg' },
@@ -203,25 +197,19 @@ const Specializations = () => {
           {
             name: 'Hydraulics and Hydrology Laboratory',
             equipments: [
-              { name: 'Multipurpose Titling Flume (5 m in length)', image: '/assets/Instruments/Water/Hydrology/Multipurpose.png' },
-              { name: 'Pygmy Type Water Current Meter ', image: '/assets/Instruments/Water/Hydrology/Pygmy.jpg' },
-              { name: 'Advance Hydrology System ', image: '/assets/Instruments/Water/Hydrology/AdvanceHydrology.png' },
+              { name: 'Multipurpose Tilting Flume', image: '/assets/Instruments/Water/Hydrology/Multipurpose.png' },
+              { name: 'Pygmy Current Meter', image: '/assets/Instruments/Water/Hydrology/Pygmy.jpg' },
+              { name: 'Advance Hydrology System', image: '/assets/Instruments/Water/Hydrology/AdvanceHydrology.png' },
               { name: 'Drainage and Seepage Tank', image: '/assets/Instruments/Water/Hydrology/Drainage.png' },
-              { name: 'Vertical Axis Cup Water Current Meter', image: '/assets/Instruments/Water/Hydrology/VerticalAxis.jpg' },
+              { name: 'Vertical Axis Current Meter', image: '/assets/Instruments/Water/Hydrology/VerticalAxis.jpg' },
             ]
-          },
-          {
-            name: 'Glacier Laboratory',
-            equipments: [
-      
-            ]
-          },
+          }
         ]
       },
       faculty: [
-        <a href="https://sites.google.com/view/mkg1/home" target="_blank" rel="noreferrer">Dr. Manish Kumar Goyal</a>,
-        <a href="https://sites.google.com/view/priyank2306" target="_blank" rel="noreferrer">Dr. Priyank J. Sharma</a>,
-        <a href="https://sites.google.com/view/mohdfarooqazam/home" target="_blank" rel="noreferrer">Dr. Mohd. Farooq Azam</a>,
+        <a key="w1" href="https://sites.google.com/view/mkg1/home" target="_blank" rel="noreferrer">Dr. Manish Kumar Goyal</a>,
+        <a key="w2" href="https://sites.google.com/view/priyank2306" target="_blank" rel="noreferrer">Dr. Priyank J. Sharma</a>,
+        <a key="w3" href="https://sites.google.com/view/mohdfarooqazam/home" target="_blank" rel="noreferrer">Dr. Mohd. Farooq Azam</a>,
       ]
     },
     environmental: {
@@ -235,16 +223,16 @@ const Specializations = () => {
           {
             name: 'Environmental Engineering Laboratory',
             equipments: [
-              { name: 'Dissolved Oxygen', image: '/assets/Instruments/Environment/DO.jpg'},
-              { name: 'Turbidity & Free/ Total Chlorine', image: '/assets/Instruments/Environment/Turbidity.png' },
+              { name: 'Dissolved Oxygen Meter', image: '/assets/Instruments/Environment/DO.jpg'},
+              { name: 'Turbidity & Chlorine Tester', image: '/assets/Instruments/Environment/Turbidity.png' },
               { name: 'Autoclave', image: '/assets/Instruments/Environment/Autoclave.png' },
               { name: 'Hot Plate', image: '/assets/Instruments/Environment/HotPlate.png' },
               { name: 'Flame Photometer', image: '/assets/Instruments/Environment/FlamePhotometer.png' },
               { name: 'Weighing Balance', image: '/assets/Instruments/Environment/WeighingBalance.png' },
               { name: 'Hot Air Oven', image: '/assets/Instruments/Environment/HotAirOven.png' },
-              { name: 'TKN (Total Tkjeldahl Nitrogen)', image: '/assets/Instruments/Environment/TKN.png' },
+              { name: 'TKN Nitrogen Unit', image: '/assets/Instruments/Environment/TKN.png' },
               { name: 'Muffle Furnace', image: '/assets/Instruments/Environment/MuffleFurnance.png' },
-              { name: 'Microprocessor Controlled Incubator', image: '/assets/Instruments/Environment/MCL.png' },
+              { name: 'Incubator', image: '/assets/Instruments/Environment/MCL.png' },
               { name: 'Distillation Apparatus', image: '/assets/Instruments/Environment/DistillationApparatus.png' },
               { name: 'COD Digestion Unit', image: '/assets/Instruments/Environment/COD.jpg' },
               { name: 'Weighing Machine', image: '/assets/Instruments/Environment/WeighingMachine.jpg' },
@@ -253,14 +241,13 @@ const Specializations = () => {
         ]
       },
       faculty: [
-        <a href="https://ashootoshmandpe.profiles.iiti.ac.in/" target="_blank" rel="noreferrer">Dr. Ashootosh Mandpe</a>,
-        <a href="https://sites.google.com/view/mayur-shirish-jain" target="_blank" rel="noreferrer">Dr. Mayur Shirish Jain</a>,
+        <a key="e1" href="https://ashootoshmandpe.profiles.iiti.ac.in/" target="_blank" rel="noreferrer">Dr. Ashootosh Mandpe</a>,
+        <a key="e2" href="https://sites.google.com/view/mayur-shirish-jain" target="_blank" rel="noreferrer">Dr. Mayur Shirish Jain</a>,
       ]
     }
   };
 
-  // Static Lab Data (for the Table View)
-  const rawLaboratoryData = [
+  const laboratoryData = [
     { name: 'Computational Laboratory', location: '1C-404' },
     { name: 'Engineering Geology Laboratory', location: '1C-404' },
     { name: 'Environmental Engineering Laboratory', location: '1C-402' },
@@ -268,7 +255,7 @@ const Specializations = () => {
     { name: 'Geotechnical Engineering Laboratory- I', location: '1C-102(A)' },
     { name: 'Geotechnical Engineering Laboratory- II', location: '1C-102(B)' },
     { name: 'Geodesy & Surveying Laboratory', location: '1E- 101' },
-    { name: 'Hydraulics ad Hydrology Laboratory', location: '1C-403' },
+    { name: 'Hydraulics and Hydrology Laboratory', location: '1C-403' },
     { name: 'Materials Engineering Laboratory', location: '1C-101(A)' },
     { name: 'Solid Mechanics Laboratory', location: '1C-101(B)' },
     { name: 'Transportation Engineering Laboratory', location: '1A-103' },
@@ -277,9 +264,7 @@ const Specializations = () => {
     { name: 'Impact Loading Laboratory', location: 'Near Balda' },
     { name: 'NDS Laboratory', location: 'LG-01 Carbon building' },
     { name: 'Glacier Laboratory', location: '1C-401' },
-  ];
-
-  const laboratoryData = [...rawLaboratoryData].sort((a, b) => {
+  ].sort((a, b) => {
     const isA1C = a.location.trim().startsWith('1C');
     const isB1C = b.location.trim().startsWith('1C');
     if (isA1C && !isB1C) return -1;
@@ -321,46 +306,33 @@ const Specializations = () => {
           <div className="flex justify-center gap-4">
             <button
               onClick={() => setActiveMainTab('specializations')}
-              className={`px-6 py-3 rounded-lg font-medium text-lg transition-all duration-300 flex items-center gap-2 ${activeMainTab === 'specializations'
-                  ? 'bg-blue-700 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-50'
-                }`}
+              className={`px-6 py-3 rounded-lg font-medium text-lg transition-all duration-300 flex items-center gap-2 ${activeMainTab === 'specializations' ? 'bg-blue-700 text-white shadow-lg' : 'bg-white text-gray-700 hover:bg-gray-50'}`}
             >
-              <Award className="h-5 w-5" />
-              Specializations
+              <Award className="h-5 w-5" /> Specializations
             </button>
             <button
               onClick={() => setActiveMainTab('laboratories')}
-              className={`px-6 py-3 rounded-lg font-medium text-lg transition-all duration-300 flex items-center gap-2 ${activeMainTab === 'laboratories'
-                  ? 'bg-blue-700 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-50'
-                }`}
+              className={`px-6 py-3 rounded-lg font-medium text-lg transition-all duration-300 flex items-center gap-2 ${activeMainTab === 'laboratories' ? 'bg-blue-700 text-white shadow-lg' : 'bg-white text-gray-700 hover:bg-gray-50'}`}
             >
-              <HardHat className="h-5 w-5" />
-              Laboratories
+              <HardHat className="h-5 w-5" /> Laboratories
             </button>
           </div>
         </div>
       </section>
 
-      {/* Conditional Content Display */}
       {activeMainTab === 'specializations' ? (
         <>
-          {/* Specialization Navigation */}
+          {/* Sub Navigation */}
           <section className="py-8 bg-gray-50 sticky top-0 z-30 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex flex-wrap justify-center gap-2">
                 {specializationKeys.map((key) => {
                   const spec = specializations[key];
-                  const isActive = activeSpecialization === key;
                   return (
                     <button
                       key={key}
                       onClick={() => setActiveSpecialization(key)}
-                      className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 flex items-center space-x-2 ${isActive
-                          ? `${getColorClasses(spec.color, 'bg')} text-white shadow-lg`
-                          : `bg-white ${getColorClasses(spec.color, 'text')} ${getColorClasses(spec.color, 'border')} border hover:shadow-md`
-                        }`}
+                      className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 flex items-center space-x-2 ${activeSpecialization === key ? `${getColorClasses(spec.color, 'bg')} text-white shadow-lg` : `bg-white ${getColorClasses(spec.color, 'text')} ${getColorClasses(spec.color, 'border')} border hover:shadow-md`}`}
                     >
                       <spec.icon className="h-4 w-4" />
                       <span>{spec.title}</span>
@@ -374,29 +346,19 @@ const Specializations = () => {
           {/* Specialization Content */}
           <section className="py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              {/* Header */}
               <div className="text-center mb-12">
                 <div className={`inline-flex items-center space-x-3 ${getColorClasses(currentSpec.color, 'text')} mb-4`}>
                   <currentSpec.icon className="h-8 w-8" />
                   <h2 className="text-4xl font-bold text-gray-900">{currentSpec.title}</h2>
                 </div>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                  {currentSpec.description}
-                </p>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">{currentSpec.description}</p>
               </div>
 
-              {/* Overview Image */}
               <div className="mb-16">
-                <img
-                  src={currentSpec.image}
-                  alt={currentSpec.title}
-                  className="w-full h-64 md:h-80 object-cover rounded-lg shadow-xl"
-                />
+                <img src={currentSpec.image} alt={currentSpec.title} className="w-full h-64 md:h-80 object-cover rounded-lg shadow-xl" />
               </div>
 
-              {/* Content Grid (Labs List & Faculty) */}
               <div className="grid lg:grid-cols-2 gap-12 mb-16">
-                {/* Laboratory Facilities List */}
                 <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
                   <div className="flex items-center mb-6">
                     <div className={`${getColorClasses(currentSpec.color, 'bg')} text-white p-3 rounded-lg mr-4`}>
@@ -404,21 +366,16 @@ const Specializations = () => {
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900">Laboratory Facilities</h3>
                   </div>
-
-                  <div className="mb-6">
-                    <ul className="space-y-3">
-                      {/* UPDATED MAP: Accessing lab.name */}
-                      {currentSpec.facilities.labs.map((lab, idx) => (
-                        <li key={idx} className="flex items-start text-gray-700">
-                          <span className={`mt-2 mr-2 h-2 w-2 rounded-full ${getColorClasses(currentSpec.color, 'bg')}`} />
-                          <span className="text-lg font-medium">{lab.name}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="space-y-3">
+                    {currentSpec.facilities.labs.map((lab, idx) => (
+                      <li key={idx} className="flex items-start text-gray-700">
+                        <span className={`mt-2 mr-2 h-2 w-2 rounded-full ${getColorClasses(currentSpec.color, 'bg')}`} />
+                        <span className="text-lg font-medium">{lab.name}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                {/* Faculty Members */}
                 <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
                   <div className="flex items-center mb-6">
                     <div className={`${getColorClasses(currentSpec.color, 'bg')} text-white p-3 rounded-lg mr-4`}>
@@ -426,7 +383,6 @@ const Specializations = () => {
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900">Faculty Members</h3>
                   </div>
-
                   <div className="space-y-3">
                     {currentSpec.faculty.map((faculty, idx) => (
                       <div key={idx} className="flex items-center p-3 bg-gray-50 rounded-lg border border-gray-100">
@@ -438,49 +394,34 @@ const Specializations = () => {
                 </div>
               </div>
 
-              {/* NEW SECTION: Laboratory Equipments */}
+              {/* Equipments Section */}
               <div className="border-t border-gray-200 pt-16">
                 <div className="text-center mb-10">
                   <div className={`inline-flex items-center space-x-2 ${getColorClasses(currentSpec.color, 'text')} mb-2`}>
                     <Settings className="h-6 w-6" />
-                    <h3 className="text-3xl font-bold text-gray-900">Research Infrastructure & Equipment</h3>
+                    <h3 className="text-3xl font-bold text-gray-900">Research Infrastructure</h3>
                   </div>
-                  <p className="text-gray-600">Advanced instrumentation available in our laboratories</p>
                 </div>
 
                 <div className="space-y-12">
                   {currentSpec.facilities.labs.map((lab, labIdx) => (
                     <div key={labIdx} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                      {/* Lab Header */}
                       <div className={`${getColorClasses(currentSpec.color, 'light')} px-6 py-4 border-b border-gray-100`}>
-                        <h4 className={`text-xl font-bold ${getColorClasses(currentSpec.color, 'text')}`}>
-                          {lab.name}
-                        </h4>
+                        <h4 className={`text-xl font-bold ${getColorClasses(currentSpec.color, 'text')}`}>{lab.name}</h4>
                       </div>
-
-                      {/* Equipment Grid */}
                       <div className="p-6">
-                        {lab.equipments && lab.equipments.length > 0 ? (
+                        {lab.equipments?.length > 0 ? (
                           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {lab.equipments.map((eq, eqIdx) => (
-                              <div key={eqIdx} className="group cursor-pointer">
+                              <div key={eqIdx} className="group">
                                 <div className="relative overflow-hidden rounded-lg shadow-md aspect-video mb-3">
-                                  <img 
-                                    src={eq.image} 
-                                    alt={eq.name}
-                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                                  />
-                                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300" />
+                                  <img src={eq.image} alt={eq.name} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
                                 </div>
-                                <h5 className="text-gray-800 font-semibold group-hover:text-blue-600 transition-colors">
-                                  {eq.name}
-                                </h5>
+                                <h5 className="text-gray-800 font-semibold group-hover:text-blue-600 transition-colors">{eq.name}</h5>
                               </div>
                             ))}
                           </div>
-                        ) : (
-                          <p className="text-gray-500 italic">Equipment details coming soon.</p>
-                        )}
+                        ) : <p className="text-gray-500 italic">Equipment details coming soon.</p>}
                       </div>
                     </div>
                   ))}
@@ -488,78 +429,35 @@ const Specializations = () => {
               </div>
             </div>
           </section>
-
-          {/* Call to Action */}
-          <section className={`py-20 bg-gradient-to-r ${getColorClasses(currentSpec.color, 'bg')} to-blue-600`}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center">
-                <h2 className="text-4xl font-bold text-white mb-6">
-                  Interested in {currentSpec.title}?
-                </h2>
-                <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                  Learn more about our programs, research opportunities, and how you can be part of our specialized team.
-                </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <button className="bg-white hover:bg-gray-100 text-blue-800 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    Learn More
-                  </button>
-                  <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    Contact Faculty
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
         </>
       ) : (
-        <>
-          {/* Laboratories Content Table - Unchanged except for ensuring component validity */}
-          <section className="py-20 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900">Department Laboratories</h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mt-4">
-                  Our department is equipped with a wide range of specialized laboratories for teaching and research.
-                </p>
-              </div>
-
-              <div className="shadow-lg overflow-hidden border-b border-gray-200 rounded-lg">
-                <div className="overflow-x-auto">
-                  <table className="min-w-full divide-y divide-gray-200">
-                    <thead className="bg-gray-100">
-                      <tr>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                          Sr. No.
-                        </th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                          Laboratory Name
-                        </th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase tracking-wider">
-                          Location
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
-                      {laboratoryData.map((lab, index) => (
-                        <tr key={index} className="hover:bg-gray-50">
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                            {index + 1}
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                            {lab.name}
-                          </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                            {lab.location}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900">Department Laboratories</h2>
             </div>
-          </section>
-        </>
+            <div className="shadow-lg overflow-hidden border-b border-gray-200 rounded-lg">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase">Sr. No.</th>
+                    <th className="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase">Laboratory Name</th>
+                    <th className="px-6 py-3 text-left text-xs font-bold text-gray-700 uppercase">Location</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {laboratoryData.map((lab, index) => (
+                    <tr key={index} className="hover:bg-gray-50">
+                      <td className="px-6 py-4 text-sm font-medium text-gray-900">{index + 1}</td>
+                      <td className="px-6 py-4 text-sm text-gray-700">{lab.name}</td>
+                      <td className="px-6 py-4 text-sm text-gray-700">{lab.location}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
       )}
     </div>
   );
