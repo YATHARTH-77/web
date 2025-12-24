@@ -189,7 +189,7 @@ const People = () => {
       experience: '',
       email: 'guruprakash@iiti.ac.in',
       phone: '0731-660 3215',
-      room: '',
+      room: '313, Pod 1D',
       image: '/assets/faculty_pics/GuruFinal.jpg',
       research: [
         'Stochastic degradation modeling using condition monitoring data',
@@ -297,7 +297,7 @@ const People = () => {
       experience: '',
       email: 'apsingh@iiti.ac.in',
       phone: '+91-9454208610',
-      room: '402, POD-1C',
+      room: 'Lab Complex Room No. 18',
       image: '/assets/faculty_pics/Dr. Akshay Photo.JPG',
       research: [
         'Numerical Modeling in Geomechanics',
@@ -318,7 +318,7 @@ const People = () => {
       experience: '',
       email: 'baadigaramu@iiti.ac.in',
       phone: '+91-7675015763',
-      room: '',
+      room: 'Lab Complex Room No. 16',
       image: '/assets/faculty_pics/Dr Baadiga Ramu.jpg',
       research: [
         'Geosynthetic Engineering',
@@ -340,7 +340,7 @@ const People = () => {
       experience: '',
       email: 'ravinder@iiti.ac.in',
       phone: '',
-      room: '403, POD-1C',
+      room: 'Lab Complex Room No. 17',
       image: '/assets/faculty_pics/ravinder.png',
       research: [
         'Structural Health Monitoring',
@@ -362,7 +362,7 @@ const People = () => {
       experience: '',
       email: 'pushpa@iiti.ac.in',
       phone: '',
-      room: 'POD-1C',
+      room: '402, POD-1C',
       image: '/assets/faculty_pics/Pushpa.jpg',
       research: [
         'Human factors in road safety',
