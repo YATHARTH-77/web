@@ -81,7 +81,7 @@ const People = () => {
       experience: '',
       email: 'mkgoyal@iiti.ac.in',
       phone: '0731-660 3288',
-      room: '209, Pod 1A',
+      room: '209, POD 1A',
       image: '/assets/faculty_pics/mkgoyal.jpg',
       research: [
         'Resilience of River Basins and Hydrological Modeling',
@@ -124,7 +124,7 @@ const People = () => {
       experience: '',
       email: 'lalitborana@iiti.ac.in',
       phone: '0731-660 3332',
-      room: '407, Pod 1D',
+      room: '407, POD 1D',
       image: '/assets/faculty_pics/Lalit_Borana.jpg',
       research: [
         'Unsaturated Soil Mechanics',
@@ -167,7 +167,7 @@ const People = () => {
       experience: '',
       email: 'kaustav.bakshi@iiti.ac.in',
       phone: '0731-660 3233',
-      room: '102, Pod 1C',
+      room: '102, POD 1C',
       image: '/assets/faculty_pics/Kaustav.png',
       research: [
         'Static and dynamic studies on laminated composite shell roofs',
@@ -189,7 +189,7 @@ const People = () => {
       experience: '',
       email: 'guruprakash@iiti.ac.in',
       phone: '0731-660 3215',
-      room: '313, Pod 1D',
+      room: '313, POD 1D',
       image: '/assets/faculty_pics/GuruFinal.jpg',
       research: [
         'Stochastic degradation modeling using condition monitoring data',
@@ -254,7 +254,7 @@ const People = () => {
       experience: '',
       email: 'priyanksharma@iiti.ac.in',
       phone: '0731-660 3382',
-      room: '422, Pod-1D',
+      room: '422, POD-1D',
       image: '/assets/faculty_pics/Dr. Priyank J Sharma.jpg',
       research: [
         'Hydroclimatology and Climate Extremes',
@@ -457,8 +457,8 @@ const People = () => {
     { name: 'Arpita', image: '/assets/stu_images/phd/Arpita.jpg', email: 'phd2301104003@iiti.ac.in' },
     { name: 'Ashish Giri', image: '/assets/stu_images/phd/Ashish Giri.jpg', email: 'phd2201204001@iiti.ac.in' },
     { name: 'Ashok Kumar', image: '/assets/stu_images/phd/Ashok Kumar.jpg', email: 'phd2501104002@iiti.ac.in' },
-    { name: 'ASTHA SHARMA', image: '/assets/stu_images/phd/ASTHA SHARMA (PhD).jpg', email: 'phd2101204001@iiti.ac.in' },
-    { name: 'astha', image: '/assets/stu_images/phd/astha.jpg', email: 'phd2301204008@iiti.ac.in' },
+    // { name: '', image: '/assets/stu_images/phd/ASTHA SHARMA (PhD).jpg', email: 'phd2101204001@iiti.ac.in' },
+    { name: 'ASTHA SHARMA', image: '/assets/stu_images/phd/astha.jpg', email: 'phd2301204008@iiti.ac.in' },
     { name: 'Bodhanam S Praveen', image: '/assets/stu_images/phd/Bodhanam.jpg', email: 'phd2401104005@iiti.ac.in' },
     { name: 'Deepak Mishra', image: '/assets/stu_images/phd/Deepak Mishra (PhD).jpg', email: 'phd2301104004@iiti.ac.in' },
     { name: 'Denis Jangeed', image: '/assets/stu_images/phd/Denis Jangeed.jpg', email: 'phd2501104016@iiti.ac.in' },
