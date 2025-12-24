@@ -37,23 +37,23 @@ const Specializations = () => {
               { name: 'Column Test Rig', image: '/assets/Instruments/Structural/SolidMechanics/ColumnTest.png' },
             ]
           },
-          {
-            name: 'Impact Loading Laboratory',
-            equipments: [
-              { name: 'Prestressing jack', image: '/assets/Instruments/Structural/Impact/Prestressing.jpg' },
-              { name: 'Fibre sheet making kit (Vacuum Bag)', image: '/assets/Instruments/Structural/Impact/VacuumBag.jpg' },
-              { name: 'Split Hopkinson Pressure Bar setup (Compression)', image: '/assets/Instruments/Structural/Impact/hopkinson.jpg' }
-            ]
-          },
-          {
-            name: 'Brick Manufacturing Laboratory',
-            equipments: [
-              { name: 'Brick manufacturing unit', image: '/assets/Instruments/Structural/Brick/BrickManufacturing.jpg' },
-              { name: 'Abrasion testing machine', image: '/assets/Instruments/Structural/Brick/AbrasionTesting.jpg' },
-              { name: 'Carbonation chamber', image: '/assets/Instruments/Structural/Brick/Carbonation.jpg' },
-              { name: 'Freeze and thaw chamber', image: '/assets/Instruments/Structural/Brick/FreezeThaw.png' },
-            ]
-          }
+          // {
+          //   name: 'Impact Loading Laboratory',
+          //   equipments: [
+          //     { name: 'Prestressing jack', image: '/assets/Instruments/Structural/Impact/Prestressing.jpg' },
+          //     { name: 'Fibre sheet making kit (Vacuum Bag)', image: '/assets/Instruments/Structural/Impact/VacuumBag.jpg' },
+          //     { name: 'Split Hopkinson Pressure Bar setup (Compression)', image: '/assets/Instruments/Structural/Impact/hopkinson.jpg' }
+          //   ]
+          // },
+          // {
+          //   name: 'Brick Manufacturing Laboratory',
+          //   equipments: [
+          //     { name: 'Brick manufacturing unit', image: '/assets/Instruments/Structural/Brick/BrickManufacturing.jpg' },
+          //     { name: 'Abrasion testing machine', image: '/assets/Instruments/Structural/Brick/AbrasionTesting.jpg' },
+          //     { name: 'Carbonation chamber', image: '/assets/Instruments/Structural/Brick/Carbonation.jpg' },
+          //     { name: 'Freeze and thaw chamber', image: '/assets/Instruments/Structural/Brick/FreezeThaw.png' },
+          //   ]
+          // }
         ]
       },
       faculty: [
@@ -163,12 +163,12 @@ const Specializations = () => {
               { name: 'Vacuum Pycnometer', image: '/assets/Instruments/Transportation/Transportation/VacumePycnometer.jpg' },
             ]
           },
-          {
-            name: 'NDS Laboratory',
-            equipments: [
+          // {
+          //   name: 'NDS Laboratory',
+          //   equipments: [
              
-            ]
-          }
+          //   ]
+          // }
         ]
       },
       faculty: [
@@ -210,12 +210,12 @@ const Specializations = () => {
               { name: 'Vertical Axis Current Meter', image: '/assets/Instruments/Water/Hydrology/VerticalAxis.jpg' },
             ]
           },
-          {
-            name: 'Glacier Laboratory',
-            equipments: [
+          // {
+          //   name: 'Glacier Laboratory',
+          //   equipments: [
              
-            ]
-          }
+          //   ]
+          // }
         ]
       },
       faculty: [
@@ -272,10 +272,10 @@ const Specializations = () => {
     { name: 'Solid Mechanics Laboratory', location: '1C-101(B)' },
     { name: 'Transportation Engineering Laboratory', location: '1A-103' },
     { name: 'Structure Engineering Laboratory', location: '1E- 101' },
-    { name: 'Brick Manufacturing Laboratory', location: 'Near VSB Hostel' },
-    { name: 'Impact Loading Laboratory', location: 'Near Balda' },
-    { name: 'NDS Laboratory', location: 'LG-01 Carbon building' },
-    { name: 'Glacier Laboratory', location: '1C-401' },
+    // { name: 'Brick Manufacturing Laboratory', location: 'Near VSB Hostel' },
+    // { name: 'Impact Loading Laboratory', location: 'Near Balda' },
+    // { name: 'NDS Laboratory', location: 'LG-01 Carbon building' },
+    // { name: 'Glacier Laboratory', location: '1C-401' },
   ].sort((a, b) => {
     const isA1C = a.location.trim().startsWith('1C');
     const isB1C = b.location.trim().startsWith('1C');
