@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Search, GraduationCap } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react'; // Removed GraduationCap
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,11 +50,15 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* Logo Section */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="bg-gradient-to-br from-blue-800 to-blue-600 p-2 rounded-lg group-hover:shadow-lg transition-all duration-300">
-              <GraduationCap className="h-6 w-6 text-white" />
-            </div>
+            {/* UPDATED: Replaced Hat Icon with Image */}
+            <img 
+              src="/assets/ce/logo.png" 
+              alt="IIT Indore Logo" 
+              className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+            
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-blue-800">IIT Indore</h1>
               <p className="text-sm text-gray-600 -mt-1">Civil Engineering</p>
