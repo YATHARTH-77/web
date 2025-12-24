@@ -339,7 +339,7 @@ const People = () => {
       education: '',
       experience: '',
       email: 'ravinder@iiti.ac.in',
-      phone: '',
+      phone: '07316605279',
       room: 'Lab Complex Room No. 17',
       image: '/assets/faculty_pics/ravinder.png',
       research: [
@@ -361,7 +361,7 @@ const People = () => {
       education: '',
       experience: '',
       email: 'pushpa@iiti.ac.in',
-      phone: '',
+      phone: '07316605172',
       room: '402, POD-1C',
       image: '/assets/faculty_pics/Pushpa.jpg',
       research: [
