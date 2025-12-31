@@ -296,7 +296,7 @@ const People = () => {
       education: '',
       experience: '',
       email: 'apsingh@iiti.ac.in',
-      phone: '+91-9454208610',
+      phone: '0731-660 5171 , +91-9454208610',
       room: 'Lab Complex Room No. 18',
       image: '/assets/faculty_pics/Dr. Akshay Photo.JPG',
       research: [
@@ -317,7 +317,7 @@ const People = () => {
       education: '',
       experience: '',
       email: 'baadigaramu@iiti.ac.in',
-      phone: '+91-7675015763',
+      phone: '0731-660 5170 , +91-7675015763',
       room: 'Lab Complex Room No. 16',
       image: '/assets/faculty_pics/Dr Baadiga Ramu.jpg',
       research: [
@@ -339,7 +339,7 @@ const People = () => {
       education: '',
       experience: '',
       email: 'ravinder@iiti.ac.in',
-      phone: '07316605279',
+      phone: '0731-660 5279',
       room: 'Lab Complex Room No. 17',
       image: '/assets/faculty_pics/ravinder.png',
       research: [
@@ -361,7 +361,7 @@ const People = () => {
       education: '',
       experience: '',
       email: 'pushpa@iiti.ac.in',
-      phone: '07316605172',
+      phone: '0731-660 5172',
       room: '402, POD-1C',
       image: '/assets/faculty_pics/Pushpa.jpg',
       research: [
