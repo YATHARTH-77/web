@@ -1,17 +1,34 @@
 import React, { useState } from 'react';
-import { Calendar, Search, ChevronRight } from 'lucide-react';
+import { Calendar, Search, ChevronRight, MapPin, Clock } from 'lucide-react';
 
 const Events = () => {
-  const [activeTab, setActiveTab] = useState('news'); 
+  const [activeTab, setActiveTab] = useState('upcoming'); // Changed default to 'upcoming' so you see the new event immediately
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  // Data from Home.jsx news section
+  // --- Data Section ---
+
+  // 1. Upcoming Events Data (Extracted from your image)
+  const upcomingEvents = [
+    {
+      date: '2026-01-22',
+      title: 'Technical Seminar: Steel for the Next Generation',
+      description: 'Reimagining Construction Paradigms. A seminar exploring approaches to steel infrastructure, structural innovation, steel-concrete composite design, and lifecycle sustainability. Organized by IIT Indore and INSDAG.',
+      time: '09:00 AM - 05:00 PM',
+      venue: '1D-105, IIT Indore Campus',
+      category: 'Seminar',
+      // Note: Make sure to save the image you uploaded as 'steel_seminar.jpeg' in your assets folder
+      image: '/assets/Events/steel_seminar.jpeg', 
+      registrationLink: '#' // Add the actual Google Form/Registration link here if you have it
+    }
+  ];
+
+  // 2. News Data (From your previous code)
   const newsData = [
     {
       date: '2025-12-06',
       title: '𝐈𝐧𝐚𝐮𝐠𝐮𝐫𝐚𝐭𝐢𝐨𝐧 𝐨𝐟 𝐭𝐡𝐞 𝐁𝐈𝐒 𝐒𝐭𝐮𝐝𝐞𝐧𝐭 𝐂𝐡𝐚𝐩𝐭𝐞𝐫 (𝐒𝐂-𝟏𝟏𝟐𝟖𝟑)',
-      description: 'IIT Indore is 𝐝𝐞𝐥𝐢𝐠𝐡𝐭𝐞𝐝 to announce the inauguration of the 𝐁𝐮𝐫𝐞𝐚𝐮 𝐨𝐟 𝐈𝐧𝐝𝐢𝐚𝐧 𝐒𝐭𝐚𝐧𝐝𝐚𝐫𝐝𝐬 (𝐁𝐈𝐒) 𝐒𝐭𝐮𝐝𝐞𝐧𝐭 𝐂𝐡𝐚𝐩𝐭𝐞𝐫 (𝐒𝐂-𝟏𝟏𝟐𝟖𝟑) in the Department of Civil Engineering. he launch featured an insightful workshop on 𝐒𝐭𝐚𝐧𝐝𝐚𝐫𝐝𝐢𝐳𝐚𝐭𝐢𝐨𝐧 𝐢𝐧 𝐂𝐢𝐯𝐢𝐥 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐟𝐨𝐫 𝐑𝐞𝐬𝐢𝐥𝐢𝐞𝐧𝐭 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞, conducted under the aegis of BIS.',
+      description: 'IIT Indore is 𝐝𝐞𝐥𝐢𝐠𝐡𝐭𝐞𝐝 to announce the inauguration of the 𝐁𝐮𝐫𝐞𝐚𝐮 𝐨𝐟 𝐈𝐧𝐝𝐢𝐚𝐧 𝐒𝐭𝐚𝐧𝐝𝐚𝐫𝐝𝐬 (𝐁𝐈𝐒) 𝐒𝐭𝐮𝐝𝐞𝐧𝐭 𝐂𝐡𝐚𝐩𝐭𝐞𝐫 (𝐒𝐂-𝟏𝟏𝟐𝟖𝟑) in the Department of Civil Engineering. The launch featured an insightful workshop on 𝐒𝐭𝐚𝐧𝐝𝐚𝐫𝐝𝐢𝐳𝐚𝐭𝐢𝐨𝐧 𝐢𝐧 𝐂𝐢𝐯𝐢𝐥 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠 𝐟𝐨𝐫 𝐑𝐞𝐬𝐢𝐥𝐢𝐞𝐧𝐭 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞.',
       category: 'Seminar',
       image: '/assets/Events/BIS_Inaugration.jpeg',
       link: 'https://www.linkedin.com/posts/ced-outreach-iit-indore-a51575390_civilengineering-bis-bureauofindianstandards-activity-7402743045588279296-oVRU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC4ENpUBAjdryz1Wdz50rJf3Sm4YnBT4nM8',
@@ -34,7 +51,7 @@ const Events = () => {
     {
       date: '2025-11-03',
       title: '𝐀 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐕𝐢𝐬𝐢𝐭 𝐭𝐨 𝐈𝐧𝐝𝐨𝐫𝐞 𝐀𝐢𝐫𝐩𝐨𝐫𝐭 ✈️',
-      description: 'As part of the course 𝐂𝐄 𝟔𝟓𝟑 – 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐒𝐢𝐭𝐞 𝐕𝐢𝐬𝐢𝐭 𝐈𝐦𝐦𝐞𝐫𝐬𝐢𝐨𝐧 𝐏𝐫𝐨𝐠𝐫𝐚𝐦, the 𝐌.𝐓𝐞𝐜𝐡. 𝐬𝐭𝐮𝐝𝐞𝐧𝐭𝐬 𝐢𝐧 𝐖𝐚𝐭𝐞𝐫, 𝐂𝐥𝐢𝐦𝐚𝐭𝐞, 𝐚𝐧𝐝 𝐒𝐮𝐬𝐭𝐚𝐢𝐧𝐚𝐛𝐢𝐥𝐢𝐭𝐲 from the 𝐃𝐞𝐩𝐚𝐫𝐭𝐦𝐞𝐧𝐭 𝐨𝐟 𝐂𝐢𝐯𝐢𝐥 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫𝐢𝐧𝐠, 𝐈𝐈𝐓 𝐈𝐧𝐝𝐨𝐫𝐞, undertook a remarkable visit to the 𝐀𝐢𝐫 𝐓𝐫𝐚𝐟𝐟𝐢𝐜 𝐂𝐨𝐧𝐭𝐫𝐨𝐥 (𝐀𝐓𝐂) 𝐎𝐟𝐟𝐢𝐜𝐞 at 𝐃𝐞𝐯𝐢 𝐀𝐡𝐢𝐥𝐲𝐚𝐛𝐚𝐢 𝐇𝐨𝐥𝐤𝐚𝐫 𝐈𝐧𝐭𝐞𝐫𝐧𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐀𝐢𝐫𝐩𝐨𝐫𝐭, 𝐈𝐧𝐝𝐨𝐫𝐞, on 𝟑 𝐍𝐨𝐯𝐞𝐦𝐛𝐞𝐫 𝟐𝟎𝟐𝟓.',
+      description: 'As part of the course 𝐂𝐄 𝟔𝟓𝟑 – 𝐓𝐞𝐜𝐡𝐧𝐢𝐜𝐚𝐥 𝐒𝐢𝐭𝐞 𝐕𝐢𝐬𝐢𝐭 𝐈𝐦𝐦𝐞𝐫𝐬𝐢𝐨𝐧 𝐏𝐫𝐨𝐠𝐫𝐚𝐦, the 𝐌.𝐓𝐞𝐜𝐡. 𝐬𝐭𝐮𝐝𝐞𝐧𝐭𝐬 in Water, Climate, and Sustainability visited the ATC Office at Devi Ahilyabai Holkar International Airport.',
       category: 'Field Visit',
       image: '/assets/Events/Site_visit_ATCIndore.jpeg', 
       link: 'https://www.linkedin.com/posts/ced-outreach-iit-indore-a51575390_civilengineering-iitindore-waterclimatesustainability-activity-7391437916901781504-MkWJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC4ENpUBAjdryz1Wdz50rJf3Sm4YnBT4nM8'
@@ -53,7 +70,7 @@ const Events = () => {
       category: 'Research',
       image: '/assets/ce/Civil_front_jpg.jpg' 
     },
-     {
+    {
       date: '2024-02-20',
       title: 'Research Featured in Media: Soil and Rocks of MP',
       description: 'Research work of Dr. Lalit Borana and his group on "Soil and Rocks of Madhyapradesh" has been featured in Hindi and English Media.',
@@ -111,11 +128,12 @@ const Events = () => {
     }
   ];
 
+  const pastEvents = []; 
+
+  // --- Logic Section ---
+
   // Sort news by date (Newest first)
   const sortedNews = [...newsData].sort((a, b) => new Date(b.date) - new Date(a.date));
-
-  const upcomingEvents = []; 
-  const pastEvents = []; 
 
   const categories = ['All', 'Achievement', 'Award', 'Research', 'Admission', 'Appointment', 'Seminar', 'Field Visit'];
 
@@ -130,12 +148,13 @@ const Events = () => {
   };
 
   const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
 
   return (
-    <div className="bg-white pt-24 md:pt-28">
+    <div className="bg-white pt-0">
+      
       {/* Hero Section */}
       <section className="relative py-12 md:py-20 bg-gradient-to-r from-blue-800 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -156,7 +175,7 @@ const Events = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
               <input
                 type="text"
-                placeholder="Search news by title, description, or category..."
+                placeholder="Search events by title, description, or category..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -233,14 +252,12 @@ const Events = () => {
                       key={index}
                       className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
                     >
-                      {/* FIX: Changed to object-contain so full logo/text is visible. Added padding and white bg. */}
                       <div className="relative h-56 bg-white p-2 flex items-center justify-center">
                           <img
                           src={item.image}
                           alt={item.title}
                           className="max-w-full max-h-full object-contain"
                         />
-                        {/* FIX: Moved category badge to top-RIGHT to avoid covering the logo on the left */}
                         <div className="absolute top-2 right-2">
                           <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium shadow-sm border border-blue-200">
                             {item.category}
@@ -278,17 +295,65 @@ const Events = () => {
             </div>
           )}
 
-          {/* Upcoming Events */}
+          {/* Upcoming Events Tab */}
           {activeTab === 'upcoming' && (
             <div>
               {filterEvents(upcomingEvents).length === 0 ? (
                 <div className="text-center py-12">
-                  <p className="text-gray-500 text-lg">No events</p>
+                  <p className="text-gray-500 text-lg">No upcoming events at the moment.</p>
                 </div>
               ) : (
                 <div className="grid lg:grid-cols-2 gap-8">
                   {filterEvents(upcomingEvents).map((event, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+                    <div key={index} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col">
+                         {/* Event Image */}
+                         <div className="relative h-64 bg-gray-100">
+                            {/* You can use object-cover if the image is a photo, or object-contain if it's a flyer */}
+                            <img 
+                                src={event.image} 
+                                alt={event.title}
+                                className="w-full h-full object-contain"
+                            />
+                            <div className="absolute top-4 right-4">
+                                <span className="px-3 py-1 bg-amber-500 text-white rounded-full text-sm font-medium shadow-sm">
+                                    {event.category}
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* Event Details */}
+                        <div className="p-6 flex-1 flex flex-col">
+                            <div className="flex items-center text-blue-800 font-semibold mb-2">
+                                <Calendar className="h-5 w-5 mr-2" />
+                                <span>{formatDate(event.date)}</span>
+                            </div>
+                            
+                            <h3 className="text-2xl font-bold text-gray-900 mb-3">{event.title}</h3>
+                            
+                            <div className="space-y-2 mb-4 text-gray-600">
+                                <div className="flex items-start">
+                                    <Clock className="h-5 w-5 mr-2 mt-0.5 text-gray-400 flex-shrink-0" />
+                                    <span>{event.time}</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <MapPin className="h-5 w-5 mr-2 mt-0.5 text-gray-400 flex-shrink-0" />
+                                    <span>{event.venue}</span>
+                                </div>
+                            </div>
+
+                            <p className="text-gray-600 mb-6 leading-relaxed border-t pt-4 border-gray-100">
+                                {event.description}
+                            </p>
+
+                            <div className="mt-auto">
+                                <a 
+                                    href={event.registrationLink}
+                                    className="inline-flex items-center justify-center w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 transition-colors shadow-sm"
+                                >
+                                    Register Now
+                                </a>
+                            </div>
+                        </div>
                     </div>
                   ))}
                 </div>
@@ -296,17 +361,21 @@ const Events = () => {
             </div>
           )}
 
-          {/* Past Events */}
+          {/* Past Events Tab */}
           {activeTab === 'past' && (
             <div>
               {filterEvents(pastEvents).length === 0 ? (
                 <div className="text-center py-12">
-                  <p className="text-gray-500 text-lg">No events</p>
+                  <p className="text-gray-500 text-lg">No past events recorded recently.</p>
                 </div>
               ) : (
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filterEvents(pastEvents).map((event, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100">
+                        {/* Add structure for past events when you have data */}
+                        <div className="p-4">
+                            <h3 className="font-bold">{event.title}</h3>
+                        </div>
                     </div>
                   ))}
                 </div>
@@ -316,28 +385,7 @@ const Events = () => {
         </div>
       </section>
 
-      {/* Newsletter Signup */}
-      {/* <section className="py-20 bg-gradient-to-r from-blue-800 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Stay Updated</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Subscribe to our newsletter to receive notifications about upcoming events, 
-              workshops, and important announcements from the Civil Engineering Department.
-            </p>
-            <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg border border-transparent focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-              />
-              <button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </section> */}
+      
     </div>
   );
 };

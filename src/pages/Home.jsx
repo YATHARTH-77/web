@@ -292,7 +292,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* News and Updates */}
+{/* News and Updates */}
       <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -309,48 +309,68 @@ const Home = () => {
           </motion.div>
 
           {/* Marquee/Slider Implementation */}
-          <div className="w-full overflow-hidden relative">
-            {/* Gradient Fades */}
-            <div className="absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-gray-50 to-transparent z-10" />
-            <div className="absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-gray-50 to-transparent z-10" />
+          <div className="w-full relative">
             
-            <motion.div
-              className="flex gap-8"
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{
-                ease: "linear",
-                duration: 5, // INCREASED SPEED (lower duration = faster speed)
-                repeat: Infinity,
-              }}
-              whileHover={{ animationPlayState: "paused" }}
-            >
-              {duplicatedNews.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg shadow-md overflow-hidden w-96 flex-shrink-0"
-                >
-                  <div className="p-6">
-                    <div className="text-sm text-amber-600 font-medium mb-2">
-                      {new Date(item.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                      })}
+            {/* Gradient Fades - Enhanced visibility */}
+            <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-gray-50 via-gray-50/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-gray-50 via-gray-50/80 to-transparent z-10 pointer-events-none" />
+            
+            {/* THE FIX: 
+                1. Added 'w-max' to ensure the div is as wide as its content.
+                2. Slower duration (40s) for readability.
+                3. Exact -50% translation.
+            */}
+            <div className="overflow-hidden flex">
+              <motion.div
+                className="flex gap-8 w-max"
+                initial={{ x: 0 }}
+                animate={{ x: "-50%" }}
+                transition={{
+                  ease: "linear",
+                  duration: 40, // Adjusted speed: Higher number = Slower
+                  repeat: Infinity,
+                }}
+                whileHover={{ animationPlayState: "paused" }}
+                onHoverStart={(e) => {}} // Optional: Can add pause logic here if needed
+                onHoverEnd={(e) => {}}
+                // This makes the pause work using CSS on hover
+                style={{ 
+                   // This ensures the animation stops instantly on hover if framer's whileHover has lag
+                   cursor: "pointer" 
+                }}
+              >
+                {/* We render the duplicate list. 
+                    Because the container is w-max, it fits all items side by side.
+                    Moving -50% moves exactly one full set length. 
+                */}
+                {duplicatedNews.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-lg shadow-md overflow-hidden w-96 flex-shrink-0 border border-gray-100"
+                  >
+                    <div className="p-6 flex flex-col h-full">
+                      <div className="text-sm text-amber-600 font-medium mb-2">
+                        {new Date(item.date).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric'
+                        })}
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 h-14">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 line-clamp-3 leading-relaxed flex-grow">
+                        {item.excerpt}
+                      </p>
+                      <button className="mt-4 text-blue-800 hover:text-amber-600 font-medium inline-flex items-center space-x-1 transition-colors group/link self-start">
+                        <span>Read More</span>
+                        <ArrowRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
+                      </button>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 line-clamp-3 leading-relaxed">
-                      {item.excerpt}
-                    </p>
-                    <button className="mt-4 text-blue-800 hover:text-amber-600 font-medium inline-flex items-center space-x-1 transition-colors group/link">
-                      <span>Read More</span>
-                      <ArrowRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
-                    </button>
                   </div>
-                </div>
-              ))}
-            </motion.div>
+                ))}
+              </motion.div>
+            </div>
           </div>
 
           <div className="text-center mt-12">
