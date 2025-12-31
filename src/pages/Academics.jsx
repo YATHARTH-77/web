@@ -7,7 +7,7 @@ const Academics = () => {
       title: <a href="https://academic.iiti.ac.in/app/storage/app/coursecurriculum/9NVdg9JRdMxVbWQmnp0vHGM10r2lwjBN8Oy4aSP6.pdf" target="_blank">B.Tech in Civil Engineering</a>,
       duration: '4 Years',
       // CHANGED: Intake updated to 53 Students
-      intake: 'Students intake: 53',
+      intake: 'Intake: 53',
       description: 'Comprehensive undergraduate program covering all major areas of civil engineering with strong emphasis on practical learning and industry exposure.',
       highlights: [
         'Strong foundation in mathematics, physics, and engineering sciences',
