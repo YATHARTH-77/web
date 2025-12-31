@@ -20,7 +20,7 @@ const Academics = () => {
     {
       title: <a href="https://academic.iiti.ac.in/app/storage/app/coursecurriculum/7xAINJWsbYbISP5Lk9PSY2VJU5daoGrnm2lbjilf.pdf" target="_blank">M.Tech in Structural Engineering</a>,
       duration: '2 Years',
-      intake: 'Students intake: 10',
+      intake: 'Intake: 10 (TA Category)',
       description: 'Advanced program focusing on design, analysis, and behavior of structures with emphasis on modern computational methods and sustainable construction.',
       highlights: [
         'Advanced structural analysis and design',
@@ -33,7 +33,7 @@ const Academics = () => {
     {
       title: <a href="https://academic.iiti.ac.in/app/storage/app/coursecurriculum/7xAINJWsbYbISP5Lk9PSY2VJU5daoGrnm2lbjilf.pdf" target="_blank">M.Tech in Water, Climate & Sustainability</a>,
       duration: '2 Years',
-      intake: 'Students intake: 10',
+      intake: 'Intake: 10 (TA Category)',
       description: 'Interdisciplinary program focusing on water resources, climate resilience, and sustainable environmental systems to address emerging global challenges.',
       highlights: [
         'Advanced hydrology and climate modelling',
@@ -46,7 +46,7 @@ const Academics = () => {
     {
       title: 'M.Tech in Transportation Systems Engineering (Upcoming)',
       duration: '2 Years',
-      intake: 'Students intake: 10',
+      intake: 'Intake: 10 (TA Category)',
       description: 'Program dedicated to planning, design, and optimization of modern transportation networks with a focus on smart mobility and sustainable infrastructure.',
       highlights: [
       'Advanced traffic engineering and transport planning',
@@ -59,7 +59,7 @@ const Academics = () => {
     {
       title: 'M.Tech in Geotechnical Engineering (Upcoming)',
       duration: '2 Years',
-      intake: 'Students intake: 10',
+      intake: 'Intake: 10 (TA Category)',
       description: 'Specialized program in soil mechanics, foundation engineering, and geoenvironmental engineering with modern testing and analysis techniques.',
       highlights: [
         'Comprehensive soil and rock mechanics',
