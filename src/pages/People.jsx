@@ -38,7 +38,7 @@ const People = () => {
       email: 'schaudhary@iiti.ac.in',
       phone: '0731-660 3256/3469 , +91 9414475375 , +91 9549654195',
       room: '403, POD 1D',
-      image: '/assets/faculty_pics/Sandeep Choudhary.png',
+      image: '/assets/faculty_pics/Sandeep.jpeg',
       research: [
         'Structural Engineering',
         'Sustainable Construction Practices',
@@ -167,7 +167,7 @@ const People = () => {
       experience: '',
       email: 'kaustav.bakshi@iiti.ac.in',
       phone: '0731-660 3233',
-      room: '314, Pod 1D',
+      room: '314, POD 1D',
       image: '/assets/faculty_pics/Kaustav.png',
       research: [
         'Static and dynamic studies on laminated composite shell roofs',
