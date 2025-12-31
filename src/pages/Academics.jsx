@@ -105,15 +105,15 @@ const Academics = () => {
     'Geotechnical Engineering Laboratory- 01',
     'Geotechnical Engineering Laboratory- 02',
     'Geodesy & Surveying Laboratory',
-    'Hydraulics ad Hydrology Laboratory',
+    'Hydraulics and Hydrology Laboratory',
     'Materials Engineering Laboratory',
     'Solid Mechanics Laboratory',
     'Transportation Engineering Laboratory',
     'Structure Engineering Laboratory',
-    'Brick Manufacturing Laboratory',
-    'Impact Loading Laboratory',
-    'NDS Laboratory',
-    'Glacier Laboratory'
+    // 'Brick Manufacturing Laboratory',
+    // 'Impact Loading Laboratory',
+    // 'NDS Laboratory',
+    // 'Glacier Laboratory'
   ];
 
   return (
