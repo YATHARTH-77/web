@@ -7,7 +7,7 @@ const Academics = () => {
       title: <a href="https://academic.iiti.ac.in/app/storage/app/coursecurriculum/9NVdg9JRdMxVbWQmnp0vHGM10r2lwjBN8Oy4aSP6.pdf" target="_blank">B.Tech in Civil Engineering</a>,
       duration: '4 Years',
       // CHANGED: Intake updated to 53 Students
-      intake: '53 Students',
+      intake: 'Intake: 53',
       description: 'Comprehensive undergraduate program covering all major areas of civil engineering with strong emphasis on practical learning and industry exposure.',
       highlights: [
         'Strong foundation in mathematics, physics, and engineering sciences',
@@ -15,12 +15,12 @@ const Academics = () => {
         'Industry internships and live projects',
         'Professional development and communication skills'
       ],
-      courses: ['Engineering Mechanics', 'Structural Analysis', 'RCC and Steel Design', 'Geotechnical Engineering', 'Transportation Engineering', 'Water Resources Engineering']
+      courses: ['Engineering Mechanics', 'Structural Analysis', 'RCC and Steel Design', 'Geotechnical Engineering', 'Transportation Systems Engineering', 'Water Resources Engineering']
     },
     {
       title: <a href="https://academic.iiti.ac.in/app/storage/app/coursecurriculum/7xAINJWsbYbISP5Lk9PSY2VJU5daoGrnm2lbjilf.pdf" target="_blank">M.Tech in Structural Engineering</a>,
       duration: '2 Years',
-      intake: '11 Students',
+      intake: 'Intake: 10 (TA Category)',
       description: 'Advanced program focusing on design, analysis, and behavior of structures with emphasis on modern computational methods and sustainable construction.',
       highlights: [
         'Advanced structural analysis and design',
@@ -33,7 +33,7 @@ const Academics = () => {
     {
       title: <a href="https://academic.iiti.ac.in/app/storage/app/coursecurriculum/7xAINJWsbYbISP5Lk9PSY2VJU5daoGrnm2lbjilf.pdf" target="_blank">M.Tech in Water, Climate & Sustainability</a>,
       duration: '2 Years',
-      intake: '7 Students',
+      intake: 'Intake: 10 (TA Category)',
       description: 'Interdisciplinary program focusing on water resources, climate resilience, and sustainable environmental systems to address emerging global challenges.',
       highlights: [
         'Advanced hydrology and climate modelling',
@@ -44,9 +44,9 @@ const Academics = () => {
       courses: [ 'Advanced Hydrology','Water Resources Systems Engineering','Climate Change Impact Assessment','Environmental Data Analytics','Sustainable Water Infrastructure','Hydraulic Modelling & Simulation']
     },
     {
-      title: 'M.Tech in Transportation Systems (Upcoming)',
+      title: 'M.Tech in Transportation Systems Engineering (Upcoming)',
       duration: '2 Years',
-      intake: '10 Students',
+      intake: 'Intake: 10 (TA Category)',
       description: 'Program dedicated to planning, design, and optimization of modern transportation networks with a focus on smart mobility and sustainable infrastructure.',
       highlights: [
       'Advanced traffic engineering and transport planning',
@@ -59,7 +59,7 @@ const Academics = () => {
     {
       title: 'M.Tech in Geotechnical Engineering (Upcoming)',
       duration: '2 Years',
-      intake: '20 Students',
+      intake: 'Intake: 10 (TA Category)',
       description: 'Specialized program in soil mechanics, foundation engineering, and geoenvironmental engineering with modern testing and analysis techniques.',
       highlights: [
         'Comprehensive soil and rock mechanics',

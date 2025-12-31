@@ -117,7 +117,7 @@ const Specializations = () => {
       ]
     },
     transportation: {
-      title: 'Transportation Engineering',
+      title: 'Transportation Systems Engineering',
       description: 'Highway engineering, traffic management, and intelligent transportation systems with advanced simulation capabilities.',
       color: 'green',
       icon: Target,
@@ -260,18 +260,18 @@ const Specializations = () => {
   };
 
   const laboratoryData = [
-    { name: 'Computational Laboratory', location: '1C-404' },
-    { name: 'Engineering Geology Laboratory', location: '1C-404' },
+    { name: 'Computational Laboratory', location: '1C-404(A)' },
+    { name: 'Engineering Geology Laboratory', location: '1C-404(B)' },
     { name: 'Environmental Engineering Laboratory', location: '1C-402' },
-    { name: 'Fluid Mechanics Laboratory', location: '1C-403' },
+    { name: 'Fluid Mechanics Laboratory', location: '1C-403(A)' },
     { name: 'Geotechnical Engineering Laboratory- I', location: '1C-102(A)' },
     { name: 'Geotechnical Engineering Laboratory- II', location: '1C-102(B)' },
-    { name: 'Geodesy & Surveying Laboratory', location: '1E- 101' },
-    { name: 'Hydraulics and Hydrology Laboratory', location: '1C-403' },
+    { name: 'Geodesy & Surveying Laboratory', location: '1E- 101(A)' },
+    { name: 'Hydraulics and Hydrology Laboratory', location: '1C-403(B)' },
     { name: 'Materials Engineering Laboratory', location: '1C-101(A)' },
     { name: 'Solid Mechanics Laboratory', location: '1C-101(B)' },
     { name: 'Transportation Engineering Laboratory', location: '1A-103' },
-    { name: 'Structure Engineering Laboratory', location: '1E- 101' },
+    { name: 'Structure Engineering Laboratory', location: '1E- 101(B)' },
     // { name: 'Brick Manufacturing Laboratory', location: 'Near VSB Hostel' },
     // { name: 'Impact Loading Laboratory', location: 'Near Balda' },
     // { name: 'NDS Laboratory', location: 'LG-01 Carbon building' },

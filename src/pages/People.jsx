@@ -11,7 +11,7 @@ const People = () => {
     {
       name: 'Dr. Gourab Sil',
       designation: 'Assistant Professor & Head of Department',
-      specialization: 'Transportation Engineering',
+      specialization: 'Transportation Systems Engineering',
       education: '',
       experience: '',
       email: 'hodce@iiti.ac.in , gourabsil@iiti.ac.in',
@@ -38,7 +38,7 @@ const People = () => {
       email: 'schaudhary@iiti.ac.in',
       phone: '0731-660 3256/3469 , +91 9414475375 , +91 9549654195',
       room: '403, POD 1D',
-      image: '/assets/faculty_pics/Sandeep Choudhary.png',
+      image: '/assets/faculty_pics/Sandeep.jpeg',
       research: [
         'Structural Engineering',
         'Sustainable Construction Practices',
@@ -167,7 +167,7 @@ const People = () => {
       experience: '',
       email: 'kaustav.bakshi@iiti.ac.in',
       phone: '0731-660 3233',
-      room: '102, POD 1C',
+      room: '314, POD 1D',
       image: '/assets/faculty_pics/Kaustav.png',
       research: [
         'Static and dynamic studies on laminated composite shell roofs',
@@ -204,7 +204,7 @@ const People = () => {
     {
       name: 'Dr. Priyansh Singh',
       designation: 'Assistant Professor',
-      specialization: 'Transportation Engineering',
+      specialization: 'Transportation Systems Engineering',
       education: '',
       experience: '',
       email: 'priyansh@iiti.ac.in',
@@ -296,7 +296,7 @@ const People = () => {
       education: '',
       experience: '',
       email: 'apsingh@iiti.ac.in',
-      phone: '+91-9454208610',
+      phone: '0731-660 5171 , +91-9454208610',
       room: 'Lab Complex Room No. 18',
       image: '/assets/faculty_pics/Dr. Akshay Photo.JPG',
       research: [
@@ -317,7 +317,7 @@ const People = () => {
       education: '',
       experience: '',
       email: 'baadigaramu@iiti.ac.in',
-      phone: '+91-7675015763',
+      phone: '0731-660 5170 , +91-7675015763',
       room: 'Lab Complex Room No. 16',
       image: '/assets/faculty_pics/Dr Baadiga Ramu.jpg',
       research: [
@@ -339,7 +339,7 @@ const People = () => {
       education: '',
       experience: '',
       email: 'ravinder@iiti.ac.in',
-      phone: '07316605279',
+      phone: '0731-660 5279',
       room: 'Lab Complex Room No. 17',
       image: '/assets/faculty_pics/ravinder.png',
       research: [
@@ -357,11 +357,11 @@ const People = () => {
     {
       name: 'Dr. Pushpa Choudhary',
       designation: 'Assistant Professor',
-      specialization: 'Transportation Engineering',
+      specialization: 'Transportation Systems Engineering',
       education: '',
       experience: '',
       email: 'pushpa@iiti.ac.in',
-      phone: '07316605172',
+      phone: '0731-660 5172',
       room: '402, POD-1C',
       image: '/assets/faculty_pics/Pushpa.jpg',
       research: [
@@ -393,7 +393,7 @@ const People = () => {
     },
     {
       name: 'Mr. Amit Jadhav',
-      designation: 'Junior Assistant (Lab)',
+      designation: 'Junior Technical Superintendent',
       department: 'Laboratory Management',
       experience: '',
       email: 'jadhavamit@iiti.ac.in',
