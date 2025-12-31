@@ -167,11 +167,7 @@ const People = () => {
       experience: '',
       email: 'kaustav.bakshi@iiti.ac.in',
       phone: '0731-660 3233',
-<<<<<<< HEAD
       room: '314, Pod 1D',
-=======
-      room: '102, POD 1C',
->>>>>>> 130e595c3f0fe64303997d730935f070e090b0a4
       image: '/assets/faculty_pics/Kaustav.png',
       research: [
         'Static and dynamic studies on laminated composite shell roofs',
