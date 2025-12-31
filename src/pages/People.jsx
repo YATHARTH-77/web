@@ -167,7 +167,7 @@ const People = () => {
       experience: '',
       email: 'kaustav.bakshi@iiti.ac.in',
       phone: '0731-660 3233',
-      room: '102, Pod 1C',
+      room: '314, Pod 1D',
       image: '/assets/faculty_pics/Kaustav.png',
       research: [
         'Static and dynamic studies on laminated composite shell roofs',
@@ -393,7 +393,7 @@ const People = () => {
     },
     {
       name: 'Mr. Amit Jadhav',
-      designation: 'Junior Assistant (Lab)',
+      designation: 'Junior Technical Superintendent',
       department: 'Laboratory Management',
       experience: '',
       email: 'jadhavamit@iiti.ac.in',
