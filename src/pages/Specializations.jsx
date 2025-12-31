@@ -117,7 +117,7 @@ const Specializations = () => {
       ]
     },
     transportation: {
-      title: 'Transportation Engineering',
+      title: 'Transportation Systems and Engineering',
       description: 'Highway engineering, traffic management, and intelligent transportation systems with advanced simulation capabilities.',
       color: 'green',
       icon: Target,
@@ -141,7 +141,7 @@ const Specializations = () => {
             ]
           },
           {
-            name: 'Transportation Engineering Laboratory',
+            name: 'Transportation Systems and Engineering Laboratory',
             equipments: [
               { name: 'Aggregate Crushing Apparatus', image: '/assets/Instruments/Transportation/Transportation/AggregateCrushing.jpg' },
               { name: 'Aggregate Impact Apparatus', image: '/assets/Instruments/Transportation/Transportation/ImpactValue.png' },
