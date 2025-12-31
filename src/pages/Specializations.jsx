@@ -117,7 +117,7 @@ const Specializations = () => {
       ]
     },
     transportation: {
-      title: 'Transportation Systems and Engineering',
+      title: 'Transportation Systems Engineering',
       description: 'Highway engineering, traffic management, and intelligent transportation systems with advanced simulation capabilities.',
       color: 'green',
       icon: Target,

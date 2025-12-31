@@ -44,7 +44,7 @@ const Academics = () => {
       courses: [ 'Advanced Hydrology','Water Resources Systems Engineering','Climate Change Impact Assessment','Environmental Data Analytics','Sustainable Water Infrastructure','Hydraulic Modelling & Simulation']
     },
     {
-      title: 'M.Tech in Transportation Systems (Upcoming)',
+      title: 'M.Tech in Transportation Systems Engineering (Upcoming)',
       duration: '2 Years',
       intake: '10 Students',
       description: 'Program dedicated to planning, design, and optimization of modern transportation networks with a focus on smart mobility and sustainable infrastructure.',
