@@ -141,7 +141,7 @@ const Specializations = () => {
             ]
           },
           {
-            name: 'Transportation Systems and Engineering Laboratory',
+            name: 'Transportation Engineering Laboratory',
             equipments: [
               { name: 'Aggregate Crushing Apparatus', image: '/assets/Instruments/Transportation/Transportation/AggregateCrushing.jpg' },
               { name: 'Aggregate Impact Apparatus', image: '/assets/Instruments/Transportation/Transportation/ImpactValue.png' },
