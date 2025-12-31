@@ -11,7 +11,7 @@ const People = () => {
     {
       name: 'Dr. Gourab Sil',
       designation: 'Assistant Professor & Head of Department',
-      specialization: 'Transportation Engineering',
+      specialization: 'Transportation Systems Engineering',
       education: '',
       experience: '',
       email: 'hodce@iiti.ac.in , gourabsil@iiti.ac.in',
@@ -204,7 +204,7 @@ const People = () => {
     {
       name: 'Dr. Priyansh Singh',
       designation: 'Assistant Professor',
-      specialization: 'Transportation Engineering',
+      specialization: 'Transportation Systems Engineering',
       education: '',
       experience: '',
       email: 'priyansh@iiti.ac.in',
@@ -357,7 +357,7 @@ const People = () => {
     {
       name: 'Dr. Pushpa Choudhary',
       designation: 'Assistant Professor',
-      specialization: 'Transportation Engineering',
+      specialization: 'Transportation Systems Engineering',
       education: '',
       experience: '',
       email: 'pushpa@iiti.ac.in',

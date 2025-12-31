@@ -15,7 +15,7 @@ const Academics = () => {
         'Industry internships and live projects',
         'Professional development and communication skills'
       ],
-      courses: ['Engineering Mechanics', 'Structural Analysis', 'RCC and Steel Design', 'Geotechnical Engineering', 'Transportation Engineering', 'Water Resources Engineering']
+      courses: ['Engineering Mechanics', 'Structural Analysis', 'RCC and Steel Design', 'Geotechnical Engineering', 'Transportation Systems Engineering', 'Water Resources Engineering']
     },
     {
       title: <a href="https://academic.iiti.ac.in/app/storage/app/coursecurriculum/7xAINJWsbYbISP5Lk9PSY2VJU5daoGrnm2lbjilf.pdf" target="_blank">M.Tech in Structural Engineering</a>,
