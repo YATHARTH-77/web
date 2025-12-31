@@ -12,14 +12,14 @@ const Events = () => {
   const upcomingEvents = [
     {
       date: '2026-01-22',
-      title: 'Technical Seminar: Steel for the Next Generation',
-      description: 'Reimagining Construction Paradigms. A seminar exploring approaches to steel infrastructure, structural innovation, steel-concrete composite design, and lifecycle sustainability. Organized by IIT Indore and INSDAG.',
+      title: 'REIMAGINING CONSTRUCTION PARADIGMS: STEEL FOR THE NEXT GENERATION',
+      description: 'The Indian Institute of Technology Indore (IITI), in association with the Institute for Steel Development and Growth (INSDAG), is pleased to invite students, researchers, faculty members, and industry professionals to a one-day Technical Seminar.',
       time: '09:00 AM - 05:00 PM',
       venue: '1D-105, IIT Indore Campus',
       category: 'Seminar',
       // Note: Make sure to save the image you uploaded as 'steel_seminar.jpeg' in your assets folder
       image: '/assets/Events/steel_seminar.jpeg', 
-      registrationLink: '#' // Add the actual Google Form/Registration link here if you have it
+      registrationLink: 'https://docs.google.com/forms/d/1oTXpXYolZUIVl8vKsj0q_HRgBIjvkn-NXKQ5Nc4qKCQ/edit?ts=69390ad1&pli=1' 
     }
   ];
 
