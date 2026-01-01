@@ -81,7 +81,14 @@ const Contact = () => {
       email: 'ceoffice@iiti.ac.in',
       phone: '0731-660 3477',
       office: 'Pod 1C-403, IIT Indore' // Location same as department
-    }
+    },
+    {
+      name: 'Ms. Divya Bangar',
+      designation: 'Senior Assistant',
+      email: 'ceoffice@iiti.ac.in',
+      phone: '0731-660 3550',
+      office: 'Pod 1C-403, IIT Indore' // Location same as department
+    },
   ];
 
   const quickLinks = [
@@ -266,7 +273,7 @@ const Contact = () => {
           </div>
 
           {/* CHANGED: Grid adjusted for 2 contacts centered */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {facultyContacts.map((contact, index) => (
               <div
                 key={index}

@@ -392,6 +392,16 @@ const People = () => {
       responsibilities: [],
     },
     {
+      name: 'Ms. Divya Bangar',
+      designation: 'Senior Assistant',
+      department: 'Administration',
+      experience: '',
+      email: 'divya@iiti.ac.in',
+      phone: '0731-660 3550',
+      image: '',
+      responsibilities: [],
+    },
+    {
       name: 'Mr. Amit Jadhav',
       designation: 'Junior Technical Superintendent',
       department: 'Laboratory Management',
