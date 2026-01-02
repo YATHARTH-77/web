@@ -269,13 +269,14 @@ const Events = () => {
                       key={index}
                       className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
                     >
-                      <div className="relative h-56 bg-white p-2 flex items-center justify-center">
-                          <img
-                          src={item.image}
-                          alt={item.title}
-                          className="max-w-full max-h-full object-contain cursor-pointer hover:scale-105 transition-transform"
-                          onClick={() => setSelectedImage(item.image)}
-                        />
+                      <div className="relative h-56 overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300"
+                        onClick={() => setSelectedImage(item.image)}
+                      />
+
                         <div className="absolute top-2 right-2">
                           <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium shadow-sm border border-blue-200">
                             {item.category}
@@ -325,14 +326,14 @@ const Events = () => {
                   {filterEvents(upcomingEvents).map((event, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col">
                          {/* Event Image */}
-                         <div className="relative h-64 bg-gray-100">
-                            {/* You can use object-cover if the image is a photo, or object-contain if it's a flyer */}
-                            <img 
-                                src={event.image} 
-                                alt={event.title}
-                                className="w-full h-full object-contain cursor-pointer hover:scale-105 transition-transform"
-                                onClick={() => setSelectedImage(event.image)}
-                            />
+                         <div className="relative h-64 overflow-hidden">
+                          <img 
+                            src={event.image} 
+                            alt={event.title}
+                            className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-300"
+                            onClick={() => setSelectedImage(event.image)}
+                          />
+
                             <div className="absolute top-4 right-4">
                                 <span className="px-3 py-1 bg-amber-500 text-white rounded-full text-sm font-medium shadow-sm">
                                     {event.category}

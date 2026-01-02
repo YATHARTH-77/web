@@ -111,7 +111,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-amber-500 transition-colors duration-200">
+                <a href="https://alumni.iiti.ac.in/" className="text-gray-300 hover:text-amber-500 transition-colors duration-200">
                   Alumni Network
                 </a>
               </li>

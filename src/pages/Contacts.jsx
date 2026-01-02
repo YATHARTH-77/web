@@ -95,7 +95,7 @@ const Contact = () => {
     { title: 'Admission Information', description: 'Details about admission procedures and requirements' },
     { title: 'Research Collaboration', description: 'Opportunities for research partnerships and projects' },
     { title: 'Industry Partnership', description: 'Corporate collaboration and consultancy services' },
-    { title: 'Alumni Network', description: 'Connect with our alumni community' },
+    { title: 'Alumni Network', description: 'Connect with our alumni community', url: 'https://alumni.iiti.ac.in/' },
     { title: 'Student Services', description: 'Academic support and student facilities' },
     { title: 'Media Inquiries', description: 'Press releases and media-related queries' }
   ];
@@ -247,7 +247,7 @@ const Contact = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="h-full">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.123456789!2d75.81234567890123!3d22.5123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f1234567890%3A0x1234567890abcdef!2sIIT%20Indore!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://www.google.com/maps?q=IIT+Indore+Pod+1C&output=embed"
                   width="100%"
                   height="500"
                   style={{ border: 0 }}
@@ -318,15 +318,20 @@ const Contact = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {quickLinks.map((link, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer border border-gray-200 group"
-              >
+             <a
+              key={index}
+              href={link.url || '#'}
+              target={link.url ? '_blank' : undefined}
+              rel={link.url ? 'noopener noreferrer' : undefined}
+              className={`block bg-white rounded-lg p-6 border border-gray-200 transition-shadow duration-300 group
+                ${link.url ? 'cursor-pointer hover:shadow-lg' : 'cursor-default opacity-60'}`}
+            >
+
                 <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-800 transition-colors">
                   {link.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{link.description}</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
