@@ -5,6 +5,7 @@ const Events = () => {
   const [activeTab, setActiveTab] = useState('upcoming'); // Changed default to 'upcoming' so you see the new event immediately
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedImage, setSelectedImage] = useState(null);
 
   // --- Data Section ---
 
@@ -151,7 +152,23 @@ const Events = () => {
     const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
+  const ImageModal = () => {
+  if (!selectedImage) return null;
 
+  return (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
+      onClick={() => setSelectedImage(null)}
+    >
+      <img
+        src={selectedImage}
+        alt="Preview"
+        className="max-h-full max-w-full object-contain rounded-lg shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      />
+    </div>
+        );
+  };
   return (
     <div className="bg-white pt-0">
       
@@ -256,7 +273,8 @@ const Events = () => {
                           <img
                           src={item.image}
                           alt={item.title}
-                          className="max-w-full max-h-full object-contain"
+                          className="max-w-full max-h-full object-contain cursor-pointer hover:scale-105 transition-transform"
+                          onClick={() => setSelectedImage(item.image)}
                         />
                         <div className="absolute top-2 right-2">
                           <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium shadow-sm border border-blue-200">
@@ -312,7 +330,8 @@ const Events = () => {
                             <img 
                                 src={event.image} 
                                 alt={event.title}
-                                className="w-full h-full object-contain"
+                                className="w-full h-full object-contain cursor-pointer hover:scale-105 transition-transform"
+                                onClick={() => setSelectedImage(event.image)}
                             />
                             <div className="absolute top-4 right-4">
                                 <span className="px-3 py-1 bg-amber-500 text-white rounded-full text-sm font-medium shadow-sm">
@@ -385,7 +404,7 @@ const Events = () => {
         </div>
       </section>
 
-      
+      <ImageModal />
     </div>
   );
 };

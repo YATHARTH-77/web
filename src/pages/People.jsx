@@ -393,12 +393,12 @@ const People = () => {
     },
     {
       name: 'Ms. Divya Bangar',
-      designation: 'Senior Assistant',
+      designation: 'Junior Superintendent',
       department: 'Administration',
       experience: '',
       email: 'divya@iiti.ac.in',
       phone: '0731-660 3550',
-      image: '',
+      image: '/assets/staff pics/Divya.jpeg',
       responsibilities: [],
     },
     {

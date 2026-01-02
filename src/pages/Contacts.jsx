@@ -84,9 +84,9 @@ const Contact = () => {
     },
     {
       name: 'Ms. Divya Bangar',
-      designation: 'Senior Assistant',
+      designation: 'Junior Superintendent',
       email: 'ceoffice@iiti.ac.in',
-      phone: '0731-660 3550',
+      phone: '0731-660 3477',
       office: 'Pod 1C-403, IIT Indore' // Location same as department
     },
   ];
