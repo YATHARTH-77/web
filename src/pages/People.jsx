@@ -58,7 +58,7 @@ const People = () => {
       education: '',
       experience: '',
       email: 'neelima.satyam@iiti.ac.in',
-      phone: '0731-660 3290 , +91 9440480034',
+      phone: '0731-660 3290 , +91 9440488034',
       room: '418, POD 1D',
       image: '/assets/faculty_pics/neelime.jpeg',
       research: [
